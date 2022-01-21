@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/api/")
 public class EmployeeController {
     private Logger logger = LogManager.getLogger(this.getClass());
 
@@ -33,11 +33,12 @@ public class EmployeeController {
         logger.info("-----------------inside get all method for customer controller ------------------");
         return "Hello World!";
     }
-    @RequestMapping("/getAll")
+    @RequestMapping("/getAllEmployees")
     @ResponseBody
-    public List<EmployeeData> getAll() {
+    public List<EmployeeData> getAllEmployees() {
         logger.info("-----------------inside get all method for customer controller ");
         List<EmployeeData> listOfEmployeeData = null;
+        /*return employeeDAO.findAll();*/
         try {
             HibernateUtil util = new HibernateUtil();
             SessionFactory sessionFactory =  util.getSessionFactory("hrTest");
@@ -70,30 +71,36 @@ public class EmployeeController {
             ex.printStackTrace();
         }
         return cus;
+    }*/
+
+    @RequestMapping(value ="/getEmployeeDetailsFromEmployeeCode/employeeCode={employeeCode}",
+            method = RequestMethod.GET)
+    @ResponseBody
+    public EmployeeData getEmployeeDetailsFromFromEmployeeCode(@PathVariable("employeeCode")
+                                                                           String employeeCode) {
+        logger.info("---> inside getEmployeeDetailsFromFromEmployeeCode controller method");
+        EmployeeData tblEmployeeData = new EmployeeData();
+        /*EmployeeOutput employeeOutput = new EmployeeOutput();*/
+        try {
+            HibernateUtil util = new HibernateUtil();
+            SessionFactory sessionFactory = util.getSessionFactory("hrTest");
+            Session session = sessionFactory.openSession();
+            tblEmployeeData = employeeDAO.getEmployeeDataByEmployeeCode(session, employeeCode);
+           /* if (tblEmployeeData != null) {
+                tblEmployeeData =
+                        fetchEmployeeDetailsUsingEmployeeCodeApiService.fetchData(tblEmployeeData,
+                                employeeCode);
+            }*/
+
+            session.close();
+            sessionFactory.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return tblEmployeeData;
     }
 
-  @RequestMapping(value =
-  "/getCustomerDetailsFromTraderCode/traderCode={traderCode}", method =
-  RequestMethod.GET)
-
-  @ResponseBody public CustomerOutput
-  getCustomerDetailsFromTraderCode(@PathVariable("traderCode") String
-  traderCode) {
-  logger.info("---> inside getCustomerDetailsFromTraderCode controller method"
-  ); CustomerData tblCustomerDataData = null; CustomerOutput customerOutput =
-  new CustomerOutput(); try { HibernateUtil util = new HibernateUtil();
-  SessionFactory sessionFactory =
-  util.getSessionFactoryForInventory("MotorwayS"); Session session =
-  sessionFactory.openSession(); tblCustomerDataData =
-  customerDAO.getVehicleOwnerByTraderCode(session, traderCode);
-  if(tblCustomerDataData !=null) { customerOutput =
-  fetchCustomerDetailsUsingTraderCodeApiService.fetchData(tblCustomerDataData,
-  traderCode); }
-
-  session.close(); sessionFactory.close(); } catch (Exception ex) {
-  ex.printStackTrace(); } return customerOutput; }
-
-    @RequestMapping(value = "/getCustomerDetailsFromTraderCode/traderCode={traderCode}", method = RequestMethod.GET)
+   /* @RequestMapping(value = "/getCustomerDetailsFromTraderCode/traderCode={traderCode}", method = RequestMethod.GET)
     @ResponseBody
     public CustomerOutput getCustomerDetailsFromTraderCode(@PathVariable("traderCode") String traderCode) {
         logger.info("---> inside getCustomerDetailsFromTraderCode controller method");
@@ -101,10 +108,10 @@ public class EmployeeController {
         CustomerOutput customerOutput = new CustomerOutput();
         try {
             HibernateUtil util = new HibernateUtil();
-            SessionFactory sessionFactory =  util.getSessionFactoryForInventory("platformDBWS");
+            SessionFactory sessionFactory = util.getSessionFactoryForInventory("platformDBWS");
             Session session = sessionFactory.openSession();
             tblCustomerDataData = customerDAO.getVehicleOwnerByTraderCode(session, traderCode);
-            if(tblCustomerDataData !=null) {
+            if (tblCustomerDataData != null) {
                 //customerOutput = fetchCustomerDetailsUsingTraderCodeApiService.fetchData(tblCustomerDataData, traderCode, session);
             }
             session.close();
