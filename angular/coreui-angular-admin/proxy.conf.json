@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://localhost:3000",
+      "target": "https://success-payroll.azurewebsites.net/",
       "secure": false,
       "loglevel": "debug"
     }
