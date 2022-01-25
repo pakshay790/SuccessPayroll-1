@@ -12,10 +12,10 @@ variables:
   azureSubscription: 'ec7be79a-8b2b-485b-aec6-575f7713a518'
 
   # Web app name
-  webAppName: ''
+  webAppName: 'success-payroll'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'success-payroll'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -34,6 +34,25 @@ stages:
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
+
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '10.x'
+        displayName: 'Install Node.js'
+
+    - task: AzureStaticWebApp@0
+      inputs:
+        app_location: "/SuccessPayroll/angular/coreui-angular-admin"
+        api_location: "/SuccessPayroll/src/main/java/com.successpayroll"
+        output_location: "/SuccessPayroll/output"
+        env:
+          azure_static_web_apps_api_token: ${deployment_token}
+
+    - script:
+        npm install -g @angular/cli
+        npm install
+        ng build --prod
+        displayName: 'npm install and build'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
