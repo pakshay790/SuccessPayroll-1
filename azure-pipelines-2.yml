@@ -18,12 +18,12 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
-    ng build --prod
+    ng build
   displayName: 'npm install and build'
 - task: AzureStaticWebApp@0
   inputs:
       app_location: "/"
       api_location: "api"
-      output_location: "/output"
+      output_location: "/dist/"
   env: 
     azure_static_web_apps_api_token: ${deployment_token}
