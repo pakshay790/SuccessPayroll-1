@@ -17,6 +17,7 @@ steps:
 
 - script: |
     npm install -g @angular/cli
+    npm init
     npm install
     ng update
     npm cache clean
