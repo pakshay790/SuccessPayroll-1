@@ -23,8 +23,8 @@ steps:
   displayName: 'npm install and build'
 - task: AzureStaticWebApp@0
   inputs: 
-      app_location: "/angular/coreui-angular-admin"
-      api_location: "/src/main/java/com.successpayroll"
-      output_location: "/dist"
+      app_location: "../angular/coreui-angular-admin"
+      api_location: "../src/main/java/com.successpayroll"
+      output_location: "../dist"
   env:
     azure_static_web_app_api_token: ${deployment_token}
