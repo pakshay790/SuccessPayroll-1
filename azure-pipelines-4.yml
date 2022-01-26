@@ -17,7 +17,11 @@ steps:
 
 - script: |
     npm install -g @angular/cli
+    npm init
     npm install
+    npm cache clean
+    npm i
+    ng update
     ng build --prod
   displayName: 'npm install and build'
 - task: AzureStaticWebApp@0
