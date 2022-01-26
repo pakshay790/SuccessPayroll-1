@@ -51,7 +51,7 @@ public class EmployeeData {
     private String placeOfIssue;
 
     @Column(name = "DateOfIssue", nullable = false)
-    private Timestamp DateOfIssue;
+    private Timestamp dateOfIssue;
 
     @Column(name = "PassportNo", nullable = false)
     private String passportNo;
@@ -120,7 +120,7 @@ public class EmployeeData {
     private Double height;
 
     @Column(name = "HireDate", nullable = false)
-    private Timestamp HireDate;
+    private Timestamp hireDate;
 
     @Column(name = "ConfirmDate", nullable = false)
     private Timestamp confirmDate;
@@ -135,7 +135,7 @@ public class EmployeeData {
     private Boolean byMonth;
 
     @Column(name = "NoitcePeriod", nullable = false)
-    private Float noitcePeriod;
+    private Float noticePeriod;
 
     @Column(name = "NoticeDate", nullable = false)
     private Timestamp noticeDate;
@@ -282,13 +282,13 @@ public class EmployeeData {
     private String addressType;
 
     @Column(name = "DOBChild", nullable = false)
-    private Timestamp DOBChild;
+    private Timestamp dobChild;
 
     @Column(name = "Payee", nullable = false)
-    private String Payee;
+    private String payee;
 
     @Column(name = "ACode", nullable = false)
-    private String ACode;
+    private String acode;
 
     @Column(name = "DateModify", nullable = false)
     private Timestamp dateModify;
@@ -319,7 +319,34 @@ public class EmployeeData {
 
     public EmployeeData(){}
 
-    public EmployeeData(String employeeCode, Timestamp dateEntry, String name, String nameChinese, String address1, String address2, String address3, String address4, String postCode, String icno, String iccolour, String placeOfIssue, Timestamp dateOfIssue, String passportNo, Timestamp passportExpiryDate, String prStatus, Timestamp prDateIssue, Timestamp birthDay, String placeOfBirth, String nationality, Double mbfAmount, String race, String maritalStatus, String sex, String religion, String nsStatus, Timestamp nsDateCompleted, String handPhone, String pager, String email, String education, String schoolHistory, String employmentHistory, Double weight, Double height, Timestamp hireDate, Timestamp confirmDate, Float probation, String terminationStatus, Boolean byMonth, Float noitcePeriod, Timestamp noticeDate, Timestamp terminationDate, String imsPermitPassNo, Timestamp imsIssueDate, Timestamp imsExpiryDate, Timestamp imsAppealDate, String cpfAccNo, String bankCode, String bankAccountCode, String incomeTaxNo, String remarks, Boolean active, String branch, String department, String sectionCode, String line, String occupation, String category, String supervisor, String workCalendar, String workingTimeSchedule, Float hrsPerDay, String payType, String payFreq, Double hourlyRate, Double dailyRate, Double monthlyRate, Float bonusFactor, String fund1, String fund2, String fund3, String nplCalc, String cpf, String fwl, Boolean ot, Float otRate1, Float otRate2, Float otRate3, Double adjSalary, Double adjBonus, Double adjCPF, String reviewedBy, String notify1, String notify2, String approvedBy, String supervisor2, String employeeCodeThumb, String addressType, Timestamp DOBChild, String payee, String ACode, Timestamp dateModify, String userId, String userIdEntry, String bldName, String icPlaceOfIssue, Timestamp icDateOfIssue, String altTel1, String altTel2, Double employerTaxBornAmt) {
+    public EmployeeData(String employeeCode, Timestamp dateEntry, String name, String nameChinese,
+                        String address1, String address2, String address3, String address4,
+                        String postCode, String icno, String iccolour, String placeOfIssue,
+                        Timestamp dateOfIssue, String passportNo, Timestamp passportExpiryDate,
+                        String prStatus, Timestamp prDateIssue, Timestamp birthDay,
+                        String placeOfBirth, String nationality, Double mbfAmount, String race,
+                        String maritalStatus, String sex, String religion, String nsStatus,
+                        Timestamp nsDateCompleted, String handPhone, String pager, String email,
+                        String education, String schoolHistory, String employmentHistory,
+                        Double weight, Double height, Timestamp hireDate, Timestamp confirmDate,
+                        Float probation, String terminationStatus, Boolean byMonth,
+                        Float noticePeriod, Timestamp noticeDate, Timestamp terminationDate,
+                        String imsPermitPassNo, Timestamp imsIssueDate, Timestamp imsExpiryDate,
+                        Timestamp imsAppealDate, String cpfAccNo, String bankCode,
+                        String bankAccountCode, String incomeTaxNo, String remarks, Boolean active,
+                        String branch, String department, String sectionCode, String line,
+                        String occupation, String category, String supervisor, String workCalendar,
+                        String workingTimeSchedule, Float hrsPerDay, String payType, String payFreq,
+                        Double hourlyRate, Double dailyRate, Double monthlyRate, Float bonusFactor,
+                        String fund1, String fund2, String fund3, String nplCalc, String cpf,
+                        String fwl, Boolean ot, Float otRate1, Float otRate2, Float otRate3,
+                        Double adjSalary, Double adjBonus, Double adjCPF, String reviewedBy,
+                        String notify1, String notify2, String approvedBy, String supervisor2,
+                        String employeeCodeThumb, String addressType, Timestamp dobChild,
+                        String payee, String acode, Timestamp dateModify, String userId,
+                        String userIdEntry, String bldName, String icPlaceOfIssue,
+                        Timestamp icDateOfIssue, String altTel1, String altTel2,
+                        Double employerTaxBornAmt) {
         this.employeeCode = employeeCode;
         this.dateEntry = dateEntry;
         this.name = name;
@@ -332,7 +359,7 @@ public class EmployeeData {
         this.icno = icno;
         this.iccolour = iccolour;
         this.placeOfIssue = placeOfIssue;
-        DateOfIssue = dateOfIssue;
+        this.dateOfIssue = dateOfIssue;
         this.passportNo = passportNo;
         this.passportExpiryDate = passportExpiryDate;
         this.prStatus = prStatus;
@@ -355,12 +382,12 @@ public class EmployeeData {
         this.employmentHistory = employmentHistory;
         this.weight = weight;
         this.height = height;
-        HireDate = hireDate;
+        this.hireDate = hireDate;
         this.confirmDate = confirmDate;
         this.probation = probation;
         this.terminationStatus = terminationStatus;
         this.byMonth = byMonth;
-        this.noitcePeriod = noitcePeriod;
+        this.noticePeriod = noticePeriod;
         this.noticeDate = noticeDate;
         this.terminationDate = terminationDate;
         this.imsPermitPassNo = imsPermitPassNo;
@@ -409,9 +436,9 @@ public class EmployeeData {
         this.supervisor2 = supervisor2;
         this.employeeCodeThumb = employeeCodeThumb;
         this.addressType = addressType;
-        this.DOBChild = DOBChild;
-        Payee = payee;
-        this.ACode = ACode;
+        this.dobChild = dobChild;
+        this.payee = payee;
+        this.acode = acode;
         this.dateModify = dateModify;
         this.userId = userId;
         this.userIdEntry = userIdEntry;
@@ -528,11 +555,11 @@ public class EmployeeData {
     }
 
     public Timestamp getDateOfIssue() {
-        return DateOfIssue;
+        return dateOfIssue;
     }
 
     public void setDateOfIssue(Timestamp dateOfIssue) {
-        DateOfIssue = dateOfIssue;
+        dateOfIssue = dateOfIssue;
     }
 
     public String getPassportNo() {
@@ -712,11 +739,11 @@ public class EmployeeData {
     }
 
     public Timestamp getHireDate() {
-        return HireDate;
+        return hireDate;
     }
 
     public void setHireDate(Timestamp hireDate) {
-        HireDate = hireDate;
+        hireDate = hireDate;
     }
 
     public Timestamp getConfirmDate() {
@@ -751,12 +778,12 @@ public class EmployeeData {
         this.byMonth = byMonth;
     }
 
-    public Float getNoitcePeriod() {
-        return noitcePeriod;
+    public Float getNoticePeriod() {
+        return noticePeriod;
     }
 
-    public void setNoitcePeriod(Float noitcePeriod) {
-        this.noitcePeriod = noitcePeriod;
+    public void setNoticePeriod(Float noticePeriod) {
+        this.noticePeriod = noticePeriod;
     }
 
     public Timestamp getNoticeDate() {
@@ -1143,28 +1170,28 @@ public class EmployeeData {
         this.addressType = addressType;
     }
 
-    public Timestamp getDOBChild() {
-        return DOBChild;
+    public Timestamp getDobChild() {
+        return dobChild;
     }
 
-    public void setDOBChild(Timestamp DOBChild) {
-        this.DOBChild = DOBChild;
+    public void setDobChild(Timestamp DOBChild) {
+        this.dobChild = dobChild;
     }
 
     public String getPayee() {
-        return Payee;
+        return payee;
     }
 
     public void setPayee(String payee) {
-        Payee = payee;
+        payee = payee;
     }
 
-    public String getACode() {
-        return ACode;
+    public String getAcode() {
+        return acode;
     }
 
-    public void setACode(String ACode) {
-        this.ACode = ACode;
+    public void setAcode(String acode) {
+        this.acode = acode;
     }
 
     public Timestamp getDateModify() {
@@ -1255,7 +1282,7 @@ public class EmployeeData {
                 ", icno='" + icno + '\'' +
                 ", iccolour='" + iccolour + '\'' +
                 ", placeOfIssue='" + placeOfIssue + '\'' +
-                ", DateOfIssue=" + DateOfIssue +
+                ", DateOfIssue=" + dateOfIssue +
                 ", passportNo='" + passportNo + '\'' +
                 ", passportExpiryDate=" + passportExpiryDate +
                 ", prStatus='" + prStatus + '\'' +
@@ -1278,12 +1305,12 @@ public class EmployeeData {
                 ", employmentHistory='" + employmentHistory + '\'' +
                 ", weight=" + weight +
                 ", height=" + height +
-                ", HireDate=" + HireDate +
+                ", hireDate=" + hireDate +
                 ", confirmDate=" + confirmDate +
                 ", probation=" + probation +
                 ", terminationStatus='" + terminationStatus + '\'' +
                 ", byMonth=" + byMonth +
-                ", noitcePeriod=" + noitcePeriod +
+                ", noticePeriod=" + noticePeriod +
                 ", noticeDate=" + noticeDate +
                 ", terminationDate=" + terminationDate +
                 ", imsPermitPassNo='" + imsPermitPassNo + '\'' +
@@ -1332,9 +1359,9 @@ public class EmployeeData {
                 ", supervisor2='" + supervisor2 + '\'' +
                 ", employeeCodeThumb='" + employeeCodeThumb + '\'' +
                 ", addressType='" + addressType + '\'' +
-                ", DOBChild=" + DOBChild +
-                ", Payee='" + Payee + '\'' +
-                ", ACode='" + ACode + '\'' +
+                ", dobChild=" + dobChild +
+                ", payee='" + payee + '\'' +
+                ", acode='" + acode + '\'' +
                 ", dateModify=" + dateModify +
                 ", userId='" + userId + '\'' +
                 ", userIdEntry='" + userIdEntry + '\'' +

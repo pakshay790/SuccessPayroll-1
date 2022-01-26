@@ -80,9 +80,9 @@ public class EmployeeController {
 
     @RequestMapping("/getAllEmployeeLeaveType")
     @ResponseBody
-    public List<EmployeeLeaveTypeDAO> getAllEmployeeLeaveType() {
+    public List<EmployeeLeaveTypeData> getAllEmployeeLeaveType() {
         logger.info("-----------------inside get all method for all employee leave type controller ");
-        List<EmployeeLeaveTypeDAO> listOfEmployeeLeaveData = null;
+        List<EmployeeLeaveTypeData> listOfEmployeeLeaveData = null;
         try {
             HibernateUtil util = new HibernateUtil();
             SessionFactory sessionFactory =  util.getSessionFactory("hrTest");
@@ -100,7 +100,7 @@ public class EmployeeController {
         return listOfEmployeeLeaveData;
     }
 
-    @RequestMapping(value ="/getEmployeeLeaveTypeFromEmployeeCode/employeeCode={employeeCode}",
+    @RequestMapping(value ="getEmployeeLeaveTypeFromEmployeeCode/employeeCode={employeeCode}",
             method = RequestMethod.GET)
     @ResponseBody
     public List<EmployeeLeaveTypeData> getEmployeeLeaveTypeFromEmployeeCode(@PathVariable("employeeCode")

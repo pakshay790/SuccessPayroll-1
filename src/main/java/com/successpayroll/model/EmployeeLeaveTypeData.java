@@ -12,7 +12,7 @@ public class EmployeeLeaveTypeData {
     @Column(name = "KeyID", nullable = false)
     private Integer id;
 
-    @Column(name = "EmployeeCode", nullable = false)
+    @Column(name = "EmployeeCode", nullable = true)
     private String employeeCode;
 
     @Column(name = "LeaveType", nullable = true)
