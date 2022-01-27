@@ -10,7 +10,7 @@ export class EmployeeService {
 
   /*private baseURL = "http://localhost:8026/api/getAllEmployees"; */
 
-   private baseURL = "/api/getEmployeeDetailsFromEmployeeCode/employeeCode=S1155047I"; 
+   private baseURL = "http://localhost:8026/api/getEmployeeDetailsFromEmployeeCode/employeeCode=S1155047I"; 
 
   /* private baseURL = "http://localhost:3000/api/getEmployeeDetailsFromEmployeeCode/employeeCode=S1155047I"; */
 
