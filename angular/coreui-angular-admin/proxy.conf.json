@@ -1,7 +1,0 @@
-{
-    "/api/*": {
-      "target": "https://lemon-grass-0d0ced510.1.azurestaticapps.net",
-      "secure": false,
-      "loglevel": "debug"
-    }
-  }
