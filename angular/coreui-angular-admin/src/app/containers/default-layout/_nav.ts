@@ -1,10 +1,7 @@
 import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
-  {
-      title: true,
-       name: 'Sales & Purches'
-   },
+  
   {
     name: 'Sales',
     url: '/sales',
