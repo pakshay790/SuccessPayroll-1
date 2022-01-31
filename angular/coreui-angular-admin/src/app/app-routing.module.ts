@@ -1,3 +1,4 @@
+import { AccountingModule } from './views/accounting/accounting.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -24,6 +25,11 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'accounting',
+        loadChildren: () =>
+          import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
       },
       {
         path: 'theme',

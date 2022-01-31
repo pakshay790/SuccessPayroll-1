@@ -14,19 +14,19 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Transactions',
-    url: '',
+    url: '/accounting/transactions',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-credit-card' }
   },
   {
     name: 'Reconciliation',
-    url: '',
+    url: '/accounting/recon',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-notes' }
   },
   {
     name: 'Chart of Accounts',
-    url: '',
+    url: '/accounting/coa',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-chart-pie' }
   },
