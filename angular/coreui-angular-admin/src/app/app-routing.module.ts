@@ -6,6 +6,10 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { DashboardComponent } from './payroll/dashboard/dashboard.component';
+import { EmployeeComponent } from './payroll/employee/employee.component';
+import { VacationComponent } from './payroll/vacation/vacation.component';
+import { PendingComponent } from './payroll/pending/pending.component';
 
 const routes: Routes = [
   {
@@ -70,6 +74,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
+      {
+        path: 'payroll',
+        loadChildren: () =>
+          import('./payroll/payroll.module').then((m) => m.PayrollModule)
+      },
     ]
   },
   {
@@ -98,6 +107,34 @@ const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: {
+      title: 'Dashboard'
+    }
+  },
+  {
+    path: 'employee',
+    component: EmployeeComponent,
+    data: {
+      title: 'Employee'
+    }
+  },
+  {
+    path: 'vacation',
+    component: VacationComponent,
+    data: {
+      title: 'Apply Vacation'
+    }
+  },
+  {
+    path: 'pending',
+    component: PendingComponent,
+    data: {
+      title: 'Pending Approval'
     }
   },
   {path: '**', redirectTo: 'dashboard'}

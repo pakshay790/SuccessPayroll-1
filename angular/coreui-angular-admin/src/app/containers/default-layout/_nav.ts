@@ -2,6 +2,33 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
+    name: 'Payroll',
+    url: '/payroll',
+    iconComponent: { name: 'cil-calculator' },
+    children: [
+      {
+        name: 'Dashboard',
+        url: '/payroll/dashboard',
+        iconComponent: { name: 'cil-speedometer' },
+      },
+      {
+        name: 'Employees',
+        url: '/payroll/employee',
+        iconComponent: { name: 'cil-User' },
+      },
+      {
+        name: 'Apply Vacation',
+        url: '/payroll/vacation',
+        iconComponent: { name: 'cil-Calendar' },
+      },
+      {
+        name: 'Pending Approval',
+        url: '/payroll/pending',
+        iconComponent: { name: 'cil-bell' },
+      }
+    ]
+  },
+  {
     name: 'Dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
@@ -25,12 +52,12 @@ export const navItems: INavData[] = [
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-pencil' }
   },
-  {
+ /* {
     name: 'Employees',
     url: '/theme/Test',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-pencil' }
-  },
+  },*/
   {
     name: 'Components',
     title: true
