@@ -70,6 +70,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
+      {
+        path: 'sales',
+        loadChildren: () =>
+          import('./views/sales/sales.module').then((m) => m.SalesModule)
+      },
     ]
   },
   {

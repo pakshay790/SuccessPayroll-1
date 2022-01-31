@@ -11,8 +11,9 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-Basket' },
     children: [
       {
-        name: 'Estimates',
-        url: '/sales/estimates'
+        name: 'Quotation',
+        
+        url: '/sales/quotation'
       },
       {
         name: 'Invoice',
@@ -37,17 +38,7 @@ export const navItems: INavData[] = [
       
     ]
   },
-  {
-    name: 'Purchases',
-    url: '/purches',
-    iconComponent: { name: 'cil-CreditCard' },
-    children: [
-      {
-        name: '',
-        url: '/Sales/'
-      },
-    ]
-  },
+  
   
   // {
   //   name: 'Dashboard',
