@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { IconSetService } from '@coreui/icons-angular';
+
+import { cilCheckAlt,cilListNumbered, cilPaperPlane, brandSet } from '@coreui/icons';
+
 
 @Component({
   selector: 'app-transactions',
