@@ -8,16 +8,16 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-Basket' },
     children: [
       {
-        name: 'Quotation',
+        name: 'Quotations',
         
         url: '/sales/quotation'
       },
       {
-        name: 'Invoice',
+        name: 'Invoices',
         url: '/sales/invoice'
       },
       {
-        name: 'Reccuring Invoice',
+        name: 'Reccuring Invoices',
         url: '/sales/reccuring'
       },
       {
@@ -25,17 +25,17 @@ export const navItems: INavData[] = [
         url: '/sales/customerstatements '
       },
       {
-        name: 'Customer',
+        name: 'Customers',
         url: '/sales/customer'
       },
       {
-        name: 'Product & Services',
+        name: 'Products & Services',
         url: '/sales/product'
       },
       {
         name: 'Purchases',
         url: '/purchases',
-        iconComponent: { name: 'cil-CreditCard' },
+        iconComponent: { name: 'cil-Tags' },
         children: [
           {
             name: '',
