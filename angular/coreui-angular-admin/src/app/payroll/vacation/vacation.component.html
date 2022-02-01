@@ -1,1 +1,65 @@
 <p>vacation works!</p>
+
+<div class="fade-in">
+    <c-row>
+        <c-col xs="12">
+            <c-card class="mb-4">
+                <c-card-header>
+                    <strong>List of Employee</strong> <small></small>
+                </c-card-header>
+                <c-card-body>
+                    <form cForm>
+                        <c-row class="mb-3">
+                            <label [sm]="2" cCol cLabel="col" for="inputDate">
+                                Start Date
+                            </label>
+                            <c-col [sm]="3">
+                                <input cFormControl id="inputDate" type="date" value="" />
+                            </c-col>
+                            <!--</c-row>
+                  <c-row class="mb-3">-->
+                            <label [sm]="2" cCol cLabel="col" for="inputEndDate">
+                                End Date
+                            </label>
+                            <c-col [sm]="3">
+                                <input cFormControl id="inputEndDate" type="date" value="" />
+                            </c-col>
+                        </c-row>
+                        <c-row>
+                            <label [sm]="2" cCol cLabel="col" for="inputEndDate">
+                                End Date
+                            </label>
+                            <c-col [sm]="6">
+                                <select aria-label="Default select example" cSelect>
+                                    <option>-- select options --</option>
+                                    <option value="Annual Leave">Annual Leave</option>
+                                    <option value="Compensate Leave">Compensate Leave</option>
+                                    <option value="Hospitalisation Leave">Hospitalisation Leave</option>
+                                    <option value="Company Holidays">Company Holidays</option>
+                                    <option value="Medical Leave (Sick Leave)">Compensate Leave</option>
+                                    <option value="Marriage Leave">Marriage Leave</option>
+                                    <option value="Maternity Leave">Maternity Leave</option>
+                                    <option value="No pay leave">No pay leave</option>
+                                    <option value="Absence from Work">Absence from Work</option>
+                                    <option value="National Services Leave">National Services Leave</option>
+                                    <option value="Child Care Leave">Child Care Leave</option>
+                                    <option value="Compassionate Leave">Compassionate Leave</option>
+                                    <option value="Annual Leave Balance Not Used">Annual Leave Balance Not Used</option>
+                                    <option value="OT Convert to Annual Leave">OT Convert to Annual Leave</option>
+                                </select>
+                            </c-col>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <!--<c-col [sm]="12">-->
+                                <input cButton color="light" type="reset" value="Reset" style="float:right;" />
+                                <!--<c-col [sm]="1"><span>&nbsp;</span></c-col>-->
+                                <input cButton color="success" type="submit" value="Save" style="float:right;" />
+
+                                <!--</c-col>-->
+                            </div>
+                        </c-row>
+                    </form>
+                </c-card-body>
+            </c-card>
+        </c-col>
+    </c-row>
+</div>

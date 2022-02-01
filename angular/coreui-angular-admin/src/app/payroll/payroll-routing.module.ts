@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from '../payroll/dashboard/dashboard.component';
 import { EmployeeComponent } from '../payroll/employee/employee.component';
 import { VacationComponent } from '../payroll/vacation/vacation.component';
 import { PendingComponent } from '../payroll/pending/pending.component';
@@ -15,14 +14,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dashboard'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-        data: {
-          title: 'Dashboard'
-        }
+        redirectTo: 'employee'
       },
       {
         path: 'employee',

@@ -47,7 +47,6 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { DashboardComponent } from './payroll/dashboard/dashboard.component';
 import { EmployeeComponent } from './payroll/employee/employee.component';
 import { PendingComponent } from './payroll/pending/pending.component';
 import { VacationComponent } from './payroll/vacation/vacation.component';
@@ -63,7 +62,8 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent, DashboardComponent, EmployeeComponent, PendingComponent, VacationComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent, 
+    EmployeeComponent, PendingComponent, VacationComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

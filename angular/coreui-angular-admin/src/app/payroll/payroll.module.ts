@@ -19,9 +19,10 @@ import {
 
 import { ComponentsModule } from '../../components/components.module';
 import { PayrollRoutingModule } from './payroll-routing.module';
-import { DashboardComponent } from '../payroll/dashboard/dashboard.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [],

@@ -6,7 +6,6 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
-import { DashboardComponent } from './payroll/dashboard/dashboard.component';
 import { EmployeeComponent } from './payroll/employee/employee.component';
 import { VacationComponent } from './payroll/vacation/vacation.component';
 import { PendingComponent } from './payroll/pending/pending.component';
@@ -109,13 +108,13 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {
+  /*{
     path: 'dashboard',
-    component: DashboardComponent,
+    component: PayrollDashboardComponent,
     data: {
       title: 'Dashboard'
     }
-  },
+  },*/
   {
     path: 'employee',
     component: EmployeeComponent,

@@ -6,11 +6,7 @@ export const navItems: INavData[] = [
     url: '/payroll',
     iconComponent: { name: 'cil-calculator' },
     children: [
-      {
-        name: 'Dashboard',
-        url: '/payroll/dashboard',
-        iconComponent: { name: 'cil-speedometer' },
-      },
+      
       {
         name: 'Employees',
         url: '/payroll/employee',
