@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,7 +11,7 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'accounting',
+      title: 'Accounting',
     },
     children: [
       {
@@ -37,7 +38,6 @@ const routes: Routes = [
         data: {
           title: 'Chart of Accounts',
         },
-    
       },
     ],
   },
