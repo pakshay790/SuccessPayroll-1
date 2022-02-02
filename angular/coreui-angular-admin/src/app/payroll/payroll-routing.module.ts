@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from '../payroll/employee/employee.component';
 import { VacationComponent } from '../payroll/vacation/vacation.component';
 import { PendingComponent } from '../payroll/pending/pending.component';
+import { PayrollDashboardComponent } from '../payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,14 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'employee'
+        redirectTo: 'payroll_dashboard'
+      },
+      {
+        path: 'payroll_dashboard',
+        component: PayrollDashboardComponent,
+        data: {
+          title: 'Payroll Dashboard'
+        }
       },
       {
         path: 'employee',

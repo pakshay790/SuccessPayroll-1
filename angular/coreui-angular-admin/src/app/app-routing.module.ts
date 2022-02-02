@@ -9,6 +9,7 @@ import { RegisterComponent } from './views/pages/register/register.component';
 import { EmployeeComponent } from './payroll/employee/employee.component';
 import { VacationComponent } from './payroll/vacation/vacation.component';
 import { PendingComponent } from './payroll/pending/pending.component';
+import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -108,13 +109,13 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
-  /*{
-    path: 'dashboard',
+  {
+    path: 'payroll-dashboard',
     component: PayrollDashboardComponent,
     data: {
-      title: 'Dashboard'
+      title: 'Payroll Dashboard'
     }
-  },*/
+  },
   {
     path: 'employee',
     component: EmployeeComponent,
