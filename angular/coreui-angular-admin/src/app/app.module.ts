@@ -106,6 +106,7 @@ const APP_CONTAINERS = [
     Title
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {
 }
