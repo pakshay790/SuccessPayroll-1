@@ -46,7 +46,9 @@ import { WidgetsModule } from '../widgets/widgets.module';
     TableModule,
     WidgetsModule
   ],
-  declarations: [NewquoteComponent]
+  declarations: [NewquoteComponent],
+  
+
 })
 export class NewquoteModule {
 }
