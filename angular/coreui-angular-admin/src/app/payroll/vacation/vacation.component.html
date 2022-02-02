@@ -1,5 +1,5 @@
 <p>vacation works!</p>
-
+<router-outlet></router-outlet>
 <div class="fade-in">
     <c-row>
         <c-col xs="12">
@@ -49,11 +49,12 @@
                                 </select>
                             </c-col>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <!--<c-col [sm]="12">-->
-                                <input cButton color="light" type="reset" value="Reset" style="float:right;" (click)="goToPage('payroll-dashboard')"/>
+                                <!--<c-col [sm]="12"> <input cButton color="light" type="reset" value="Reset" style="float:right;" (click)="goToPage('payroll-dashboard')"/>-->
+                                
+                                <input cButton color="light" type="reset" value="Reset" style="float:right;"  routerLink="/payroll/pending"/>
                                 <!--<c-col [sm]="1"><span>&nbsp;</span></c-col>-->
-                                <input cButton color="success" type="submit" value="Save" style="float:right;" />
-
+                                <input cButton color="success" type="submit" value="Save" style="float:right;" routerLink="/payroll/pending" />
+    
                                 <!--</c-col>-->
                             </div>
                         </c-row>

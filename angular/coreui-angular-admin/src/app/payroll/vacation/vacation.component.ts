@@ -13,8 +13,15 @@ export class VacationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
   goToPage(PageName:string):void{
-    this.router.navigate([`${PageName}`])
+    this.router.navigate([`${'/payroll/pending'}`])
   }
+  
+  
+
+  onSubmit() {  
+    this.router.navigateByUrl('/payroll-dashboard');
+} 
 
 }

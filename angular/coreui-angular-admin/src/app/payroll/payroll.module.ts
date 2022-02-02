@@ -21,12 +21,17 @@ import { ComponentsModule } from '../../components/components.module';
 import { PayrollRoutingModule } from './payroll-routing.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { WidgetsModule } from '../views/widgets/widgets.module';
+import { CalloutModule, NavModule, TabsModule } from '@coreui/angular';
+import { IconModule } from '@coreui/icons-angular';
+import { RouterModule } from '@angular/router';
+import { PayrollDashboardComponent } from './payroll-dashboard/payroll-dashboard.component';
+import { PendingComponent } from './pending/pending.component';
+import { VacationComponent } from './vacation/vacation.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
-  declarations: [
-    
+  declarations: [ PayrollDashboardComponent, PendingComponent, VacationComponent, EmployeeComponent
   ],
   imports: [
     CommonModule,
@@ -41,11 +46,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     ModalModule,
     ToastModule,
     SharedModule,
-    UtilitiesModule,
     TooltipModule,
     PopoverModule,
     ProgressModule,
     PayrollRoutingModule,
+    WidgetsModule,
+    NavModule,
+    IconModule,
+    RouterModule,
+    TabsModule,
+    UtilitiesModule,
+    CalloutModule,
   ],
 })
 export class PayrollModule {

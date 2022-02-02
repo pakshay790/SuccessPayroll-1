@@ -1,1 +1,25 @@
 <p>payroll-dashboard works!</p>
+<router-outlet></router-outlet>
+<div class="body flex-grow-1 px-3">
+    <c-container breakpoint="lg" class="h-auto container-lg">
+        <router-outlet></router-outlet>
+        <app-widgets-dropdown>
+            <c-row class="justify-content-evenly">
+                <c-col xs="3">
+                    <c-card class="mb-4">
+                        <c-card-header>Widgets</c-card-header>
+                        <c-card-body>
+                            <app-docs-example href="components/">
+                                <app-widgets-dropdown>
+
+                                </app-widgets-dropdown>
+                            </app-docs-example>
+                            <app-docs-example href="components/widgets/#cwidgetstatsb">
+                            </app-docs-example>
+                        </c-card-body>
+                    </c-card>
+                </c-col>
+            </c-row>
+        </app-widgets-dropdown>
+    </c-container>
+</div>

@@ -15,10 +15,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'payroll_dashboard'
+        redirectTo: 'payroll-dashboard'
       },
       {
-        path: 'payroll_dashboard',
+        path: 'payroll-dashboard',
         component: PayrollDashboardComponent,
         data: {
           title: 'Payroll Dashboard'
@@ -46,6 +46,13 @@ const routes: Routes = [
         }
       }
     ]
+  },
+  {
+    path: 'payroll-dashboard',
+    component: PayrollDashboardComponent,
+    data: {
+      title: 'Payroll Dashboard'
+    }
   }
 ];
 

@@ -47,11 +47,6 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { EmployeeComponent } from './payroll/employee/employee.component';
-import { PendingComponent } from './payroll/pending/pending.component';
-import { VacationComponent } from './payroll/vacation/vacation.component';
-import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
-import { PayrollRoutingModule } from './payroll/payroll-routing.module';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -65,7 +60,7 @@ const APP_CONTAINERS = [
 
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent, 
-    EmployeeComponent, PendingComponent, VacationComponent, PayrollDashboardComponent],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
