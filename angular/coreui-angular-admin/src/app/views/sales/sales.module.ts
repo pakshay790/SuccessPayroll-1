@@ -36,6 +36,8 @@ import { IconModule } from '@coreui/icons-angular';
 import { ComponentsModule } from '../../../components/components.module';
 
 
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -65,10 +67,12 @@ import { ComponentsModule } from '../../../components/components.module';
     PopoverModule,
     TableModule,
     ComponentsModule,
+    
   ],
   declarations: [
     QuotationComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    
     
   ],
 })

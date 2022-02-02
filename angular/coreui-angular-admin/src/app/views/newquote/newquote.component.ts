@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-quotation',
-  templateUrl: './quotation.component.html',
-  styleUrls: ['./quotation.component.scss']
+  selector: 'app-newquote',
+  templateUrl: './newquote.component.html',
+  styleUrls: ['./newquote.component.scss']
 })
-export class QuotationComponent implements OnInit {
+export class NewquoteComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -16,4 +15,5 @@ export class QuotationComponent implements OnInit {
   goToPage(PageName:string):void{
     this.router.navigate([`${'/newquote'}`])
   }
+ 
 }

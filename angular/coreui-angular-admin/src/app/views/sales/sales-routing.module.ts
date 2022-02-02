@@ -1,5 +1,9 @@
+
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { InvoiceComponent } from './invoice/invoice.component';
 import { QuotationComponent } from './quotation/quotation.component';
 
@@ -27,6 +31,8 @@ const routes: Routes = [{
         title: 'Invoice',
       },
     },
+   
+    
     
   ],
 },

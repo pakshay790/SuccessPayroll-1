@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'CoreUI Free Angular Admin Template';
+  title = 'Success Book';
 
   constructor(
     private router: Router,
@@ -29,5 +29,8 @@ export class AppComponent implements OnInit {
         return;
       }
     });
+  }
+  goToPage(PageName:string):void{
+    this.router.navigate([`${'/newquote'}`])
   }
 }

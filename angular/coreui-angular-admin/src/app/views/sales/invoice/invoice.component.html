@@ -1,124 +1,178 @@
-<div class="card">
-  <div class="card-body">
-    <div id="table" class="table-editable">
-      <span class="table-add float-right mb-3 mr-2"
-        ><a href="#!" class="text-success"
-          ><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a
-      ></span>
-      <table class="table table-bordered table-responsive-md table-striped text-center">
-        <thead>
-          <tr>
-            <th class="text-center">QUOTE NO</th>
-            <th class="text-center">QUOTE DATE</th>
-            <th class="text-center">CUSTOMER CODE</th>
-            <th class="text-center">TOTAL DUE AMOUNT</th>
-            <th class="text-center">CUSTOMER NAME</th>
-            <th class="text-center">DELIVERY ADD</th>
-            <th class="text-center">ACTION</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Aurelia Vega</td>
-            <td class="pt-3-half" contenteditable="true">30</td>
-            <td class="pt-3-half" contenteditable="true">Deepends</td>
-            <td class="pt-3-half" contenteditable="true">Spain</td>
-            <td class="pt-3-half" contenteditable="true">Madrid</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Guerra Cortez</td>
-            <td class="pt-3-half" contenteditable="true">45</td>
-            <td class="pt-3-half" contenteditable="true">Insectus</td>
-            <td class="pt-3-half" contenteditable="true">USA</td>
-            <td class="pt-3-half" contenteditable="true">San Francisco</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Guadalupe House</td>
-            <td class="pt-3-half" contenteditable="true">26</td>
-            <td class="pt-3-half" contenteditable="true">Isotronic</td>
-            <td class="pt-3-half" contenteditable="true">Germany</td>
-            <td class="pt-3-half" contenteditable="true">Frankfurt am Main</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr class="hide">
-            <td class="pt-3-half" contenteditable="true">Elisa Gallagher</td>
-            <td class="pt-3-half" contenteditable="true">31</td>
-            <td class="pt-3-half" contenteditable="true">Portica</td>
-            <td class="pt-3-half" contenteditable="true">United Kingdom</td>
-            <td class="pt-3-half" contenteditable="true">London</td>
-            <td class="pt-3-half">
-              <span class="table-up"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a
-              ></span>
-              <span class="table-down"
-                ><a href="#!" class="indigo-text"
-                  ><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a
-              ></span>
-            </td>
-            <td>
-              <span class="table-remove"
-                ><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">
-                  Remove
-                </button></span
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+<c-container>
+  <c-row>
+    <c-col>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button cButton color="info" shape="rounded-pill" variant="outline" class="me-md-2"  >Advance Search</button>
+             <button cButton color="info" shape="rounded-pill" variant="outline" routeLink="/newquote">New Invoice</button>
+  <button cButton color="info" shape="rounded-pill" variant="outline">Colunm Setting</button>
+        <button cButton color="info" shape="rounded-pill" variant="outline">Export To Excel</button>
+
+       
+      </div>
+
+    </c-col>
+  </c-row>
+</c-container>
+<br>
+<table cTable>
+  <thead cTableColor="light">
+    <tr>
+      <th scope="col">INVOICE NUMBER</th>
+      <th scope="col">INVOICE DATE DATE</th>
+      <th scope="col">CUSTOMER CODE</th>
+      <th scope="col">TOTAL DUE AMOUNT</th>
+      <th scope="col">CUSTOMER NAME</th>
+      <th scope="col">DELIVERY ADD</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+      <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+        
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL90020792</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm"  title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm"  title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm"  title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+        </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+       </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+       </td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+</td>
+    </tr>
+
+    <tr>
+      <th scope="row">BL9002079</th>
+      <td>	13/08/2021</td>
+      <td>A000432</td>
+      <td>	127.33</td>
+      <td>	ALAN NG-96884338</td>
+      <td>Jan 27, 2022</td>
+     <td>
+        <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+       </td>
+    </tr>
+
+
+
+  </tbody>
+</table>

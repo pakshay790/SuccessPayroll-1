@@ -1,9 +1,12 @@
+
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -47,6 +50,7 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,

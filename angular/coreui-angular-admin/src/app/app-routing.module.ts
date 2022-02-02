@@ -75,6 +75,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/sales/sales.module').then((m) => m.SalesModule)
       },
+      {
+        path: 'newquote',
+        loadChildren: () =>
+          import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
+      },
     ]
   },
   {
