@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { ReconciliationComponent } from './reconciliation/reconciliation.component';
 import { CoaComponent } from './coa/coa.component';
+import { MiscpaymentComponent } from '../miscpayment/miscpayment.component';
 
 
 const routes: Routes = [
@@ -39,8 +40,10 @@ const routes: Routes = [
           title: 'Chart of Accounts',
         },
       },
+      
     ],
   },
+  
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
-import { AccountingModule } from './views/accounting/accounting.module';
+import { MiscPaymentModule } from './views/miscpayment/miscpayment.module';
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -30,6 +32,11 @@ const routes: Routes = [
         path: 'accounting',
         loadChildren: () =>
           import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
+      },
+      {
+        path: 'miscpayment',
+        loadChildren: () =>
+          import('./views/miscpayment/miscpayment.module').then((m) => m.MiscPaymentModule)
       },
       {
         path: 'theme',
@@ -106,6 +113,7 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
+  
   {path: '**', redirectTo: 'dashboard'}
 ];
 
