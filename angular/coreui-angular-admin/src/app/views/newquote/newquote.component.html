@@ -1,170 +1,79 @@
-<form cForm class="row g-3">
-    
-  <c-col [md]="2">
-    <label cLabel for="lblcode">Code</label>
-    <input cFormControl id="code" type="text" value="">
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lblname">Name</label>
-    <input cFormControl id="name" placeholder="ABC112233" />
-  </c-col>
-
-  <c-col [md]="5">
-    <label cLabel for="lbltel">Tel</label>
-    <input cFormControl id="tel" type="text" value="eg.1234567891" />
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lblemaild">Email</label>
-    <input cFormControl id="email" placeholder="@example" />
-  </c-col>
-
-  <c-col [md]="5">
-    <label cLabel for="lbladdress1">Address 1</label>
-    <input cFormControl id="address1" placeholder="Enter Address  here..." />
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lbladdress2">Address 2</label>
-    <input cFormControl id="permitNo" placeholder="Enter Address  here..." />
-  </c-col>
-
-  <c-col [md]="10">
-    <label cLabel for="lbladdress3">Address 3</label>
-    <input cFormControl id="address3" placeholder="Enter Address  here..." />
-  </c-col>
-
-  
-
-  <c-col [md]="3">
-    <button cButton type="submit">New Customer</button>
-  </c-col>
-
-
-  <c-col [md]="3">
-    <c-container fluid>
-     
-       
-          <button cButton cOffcanvasToggle="OffcanvasBottom">Edit Customer</button>
-  
-          <!-- <c-offcanvas  [scroll]="true" placement="bottom" id="OffcanvasBottom">
-            <c-offcanvas-header>
-              <h5 cOffcanvasTitle> Transaction Records</h5>
-              <button cButtonClose class="text-reset" cOffcanvasToggle="OffcanvasBottom" aria-label="Close"></button>
-            </c-offcanvas-header> -->
-            <!-- <c-offcanvas-body>
-              <form cForm class="row g-3">
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsdate" type="date" value="2020-12-31" />
-                    <label cLabel for="lblchequenumber">Date</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsdesc" placeholder="Write a Description" />
-                    <label cLabel for="lblchequenumber">Description</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvsaccount">
-                      <option>4-1000</option>
-                      <option>4-1001</option>
-                      <option>4-1002</option>
-                      <option>4-1003</option>
-                      
-                    </select>
-                    <label cLabel for="lblchequenumber">Accout</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvstranstype">
-                      <option>Debit</option>
-                      <option>Credit</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Transaction Type</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsamount" placeholder="SGD" />
-                    <label cLabel for="lblchequenumber">Amount</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvscatogury">
-                      <option>Income</option>
-                      <option>Expense</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Category</label>
-                  </div>
-                </c-col>
-  
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvscustomer">
-                      <option>Tan hui cha</option>
-                      <option>Nilkantha</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Customer</label>
-                  </div>
-                </c-col>
-                <c-col [md]="3">
-                  <div class="mb-2">
-                    <button cButton color="info" size="lg" routerLink="./">Info</button>
-                  </div>
-                </c-col>
-              </form>
-             
-             
-            </c-offcanvas-body>
-          </c-offcanvas>
+<c-container fluid>
+  <c-row>
+    <c-col>
+      <form cForm class="row g-3">
+        <c-col [md]="6">
+          <label cLabel for="lablecode">code</label>
+          <input cFormControl id="code" type="text" />
         </c-col>
-      </c-row>
-    </c-container>
-  </c-col>
+        <c-col [md]="6">
+          <label cLabel for="lblname">Name</label>
+          <input cFormControl id="name" type="text" />
+        </c-col>
+        <c-col [md]="6">
+          <label cLabel for="labletel">Tel</label>
+          <input cFormControl id="tel" type="text" />
+        </c-col>
+        <c-col [md]="6">
+          <label cLabel for="lblemail">Email</label>
+          <input cFormControl id="Email" type="Email" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lbladress1">Address 1</label>
+          <input cFormControl id="Address1" placeholder="1234 Main St" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblAddress2">Address 2</label>
+          <input cFormControl id="Address2" placeholder="Apartment, studio, or floor" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblAddress">Address 3</label>
+          <input cFormControl id="Address3" placeholder="1234 Main St" />
+        </c-col>
+        <c-col [md]="12" >
+          <button cButton type="submit" cButton color="secondary" size="sm">New Customer</button>
+          <button cButton type="submit" cButton color="secondary" size="sm" disabled>edit Customer</button>
+ </c-col>
+       
+      </form>
 
-  <c-col [md]="10">
-    <table [striped]="true" cTable>
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Date</th>
-        <th scope="col">Description</th>
-        <th scope="col">Account</th>
-        <th scope="col">Transaction Type</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Category</th>
-        <th scope="col">Customer</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colSpan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      </tbody>
-    </table>
-  </c-col>
-  
 
-</form> -->
+    </c-col>
+
+    <!-- second form -->
+    <c-col>
+      <form cForm class="row g-3">
+        <c-col [md]="6">
+          <label cLabel for="lblquotationno">Quotation No</label>
+          <input cFormControl id="quotationno" type="text" />
+        </c-col>
+        <c-col [md]="6">
+          <label cLabel for="lblqdate">Quotation Date</label>
+          <input cFormControl id="Qdate" type="Date" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblclientref">Client Ref</label>
+          <input cFormControl id="lblclientref" placeholder="" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblsman">S'man</label>
+          <input cFormControl id="sman" placeholder="" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblagent">Agent</label>
+          <input cFormControl id="agent" placeholder="" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblpaymentterm">Payment Term</label>
+          <input cFormControl id="paymentterm" placeholder="" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblsupplier">Supplier</label>
+          <input cFormControl id="supplier" />
+        </c-col>
+      
+      </form>
+    </c-col>
+    
+  </c-row>
+  </c-container>
