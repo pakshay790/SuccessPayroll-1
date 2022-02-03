@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -112,4 +111,3 @@ const APP_CONTAINERS = [
 })
 export class AppModule {
 }
-

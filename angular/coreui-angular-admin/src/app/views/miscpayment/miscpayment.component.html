@@ -1,174 +1,174 @@
 <form cForm class="row g-3">
-  <c-col [md]="5">
-    <label cLabel for="lblrefno">RefNo</label>
-    <input aria-label="RefNo" cFormControl disabled id="refNo" type="text">
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lblchequenumber">Cheque No</label>
-    <input cFormControl id="chqNumber" placeholder="ABC112233" />
-  </c-col>
-
-  <c-col [md]="5">
-    <label cLabel for="lbldateissued">Date Issued</label>
-    <input cFormControl id="dateIssued" type="date" value="" />
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lblamountpaid">Amount Paid</label>
-    <input cFormControl id="amtPaid" placeholder="$20" />
-  </c-col>
-
-  <c-col [md]="5">
-    <label cLabel for="lblvoucherno">Voucher No</label>
-    <input cFormControl id="vouchernumber" placeholder="Vm01020" />
-  </c-col>
-  <c-col [md]="5">
-    <label cLabel for="lblpermitNo">Permit No</label>
-    <input cFormControl id="permitNo" placeholder="PM01022022" />
-  </c-col>
-
-  <c-col [md]="10">
-    <label cLabel for="lblDesc">Description</label>
-    <input cFormControl id="desc" placeholder="Enter description here..." />
-  </c-col>
-
-  <c-col [md]="12">
-    <label cLabel for="lblpayto">Pay To</label>
-    <input cFormControl id="payTo" placeholder="Mr. XYZ" />
-  </c-col>
-
-  <c-col [md]="1">
-    <button cButton type="submit">Save</button>
-  </c-col>
-
-
-  <c-col [md]="11">
-    <c-container fluid>
-      <c-row>
-        <c-col>
-          <button cButton cOffcanvasToggle="OffcanvasBottom">Add transaction</button>
+    <c-col [md]="5">
+      <label cLabel for="lblrefno">RefNo</label>
+      <input aria-label="RefNo" cFormControl disabled id="refNo" type="text">
+    </c-col>
+    <c-col [md]="5">
+      <label cLabel for="lblchequenumber">Cheque No</label>
+      <input cFormControl id="chqNumber" placeholder="ABC112233" />
+    </c-col>
   
-          <c-offcanvas  [scroll]="true" placement="bottom" id="OffcanvasBottom">
-            <c-offcanvas-header>
-              <h5 cOffcanvasTitle> Transaction Records</h5>
-              <button cButtonClose class="text-reset" cOffcanvasToggle="OffcanvasBottom" aria-label="Close"></button>
-            </c-offcanvas-header>
-            <c-offcanvas-body>
-              <form cForm class="row g-3">
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsdate" type="date" value="2020-12-31" />
-                    <label cLabel for="lblchequenumber">Date</label>
-                  </div>
-                </c-col>
+    <c-col [md]="5">
+      <label cLabel for="lbldateissued">Date Issued</label>
+      <input cFormControl id="dateIssued" type="date" value="" />
+    </c-col>
+    <c-col [md]="5">
+      <label cLabel for="lblamountpaid">Amount Paid</label>
+      <input cFormControl id="amtPaid" placeholder="$20" />
+    </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsdesc" placeholder="Write a Description" />
-                    <label cLabel for="lblchequenumber">Description</label>
-                  </div>
-                </c-col>
+    <c-col [md]="5">
+      <label cLabel for="lblvoucherno">Voucher No</label>
+      <input cFormControl id="vouchernumber" placeholder="Vm01020" />
+    </c-col>
+    <c-col [md]="5">
+      <label cLabel for="lblpermitNo">Permit No</label>
+      <input cFormControl id="permitNo" placeholder="PM01022022" />
+    </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvsaccount">
-                      <option>4-1000</option>
-                      <option>4-1001</option>
-                      <option>4-1002</option>
-                      <option>4-1003</option>
-                      
-                    </select>
-                    <label cLabel for="lblchequenumber">Accout</label>
-                  </div>
-                </c-col>
+    <c-col [md]="10">
+      <label cLabel for="lblDesc">Description</label>
+      <input cFormControl id="desc" placeholder="Enter description here..." />
+    </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvstranstype">
-                      <option>Debit</option>
-                      <option>Credit</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Transaction Type</label>
-                  </div>
-                </c-col>
+    <c-col [md]="12">
+      <label cLabel for="lblpayto">Pay To</label>
+      <input cFormControl id="payTo" placeholder="Mr. XYZ" />
+    </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <input cFormControl id="cvsamount" placeholder="SGD" />
-                    <label cLabel for="lblchequenumber">Amount</label>
-                  </div>
-                </c-col>
+    <c-col [md]="1">
+      <button cButton type="submit">Save</button>
+    </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvscatogury">
-                      <option>Income</option>
-                      <option>Expense</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Category</label>
-                  </div>
-                </c-col>
   
-                <c-col [md]="3">
-                  <div [cFormFloating]="true" class="mb-2">
-                    <select cSelect id="cvscustomer">
-                      <option>Tan hui cha</option>
-                      <option>Nilkantha</option>
-                    </select>
-                    <label cLabel for="lblchequenumber">Customer</label>
-                  </div>
-                </c-col>
-                <c-col [md]="3">
-                  <div class="mb-2">
-                    <button cButton size="lg" routerLink="./">Add</button>
-                  </div>
-                </c-col>
-              </form>
-             
-             
-            </c-offcanvas-body>
-          </c-offcanvas>
-        </c-col>
-      </c-row>
-    </c-container>
-  </c-col>
-
-  <c-col [md]="12">
-    <table [striped]="true" cTable>
-      <thead>
-      <tr>
-        <th scope="col">
-        </th>
-        <th scope="col">Date</th>
-        <th scope="col">Description</th>
-        <th scope="col">Account</th>
-        <th scope="col">Transaction Type</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Category</th>
-        <th scope="col">Customer</th>
-        <th scope="col">Action</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">
-          <c-form-check>
-            <input cFormCheckInput id="checkOne" type="checkbox" />
-            <label cFormCheckLabel for="checkOne"></label>
-          </c-form-check>
-        </th>
-        <td>Feb 3, 2022</td>
-        <td>Write a Description</td>
-        <td>4-1000</td>
-        <td>Debit</td>
-        <td>20</td>
-        <td>Income</td>
-        <td>Tan hui cha</td>
-        <td><svg cIcon name="cilPaperPlane" size="xl" title="Paper Plane Icon"></svg></td>
-      </tr>
-     
-      </tbody>
-    </table>
-  </c-col>
+    <c-col [md]="11">
+      <c-container fluid>
+        <c-row>
+          <c-col>
+            <button cButton cOffcanvasToggle="OffcanvasBottom">Add transaction</button>
+    
+            <c-offcanvas  [scroll]="true" placement="bottom" id="OffcanvasBottom">
+              <c-offcanvas-header>
+                <h5 cOffcanvasTitle> Transaction Records</h5>
+                <button cButtonClose class="text-reset" cOffcanvasToggle="OffcanvasBottom" aria-label="Close"></button>
+              </c-offcanvas-header>
+              <c-offcanvas-body>
+                <form cForm class="row g-3">
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <input cFormControl id="cvsdate" type="date" value="2020-12-31" />
+                      <label cLabel for="lblchequenumber">Date</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <input cFormControl id="cvsdesc" placeholder="Write a Description" />
+                      <label cLabel for="lblchequenumber">Description</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <select cSelect id="cvsaccount">
+                        <option>4-1000</option>
+                        <option>4-1001</option>
+                        <option>4-1002</option>
+                        <option>4-1003</option>
+                        
+                      </select>
+                      <label cLabel for="lblchequenumber">Accout</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <select cSelect id="cvstranstype">
+                        <option>Debit</option>
+                        <option>Credit</option>
+                      </select>
+                      <label cLabel for="lblchequenumber">Transaction Type</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <input cFormControl id="cvsamount" placeholder="SGD" />
+                      <label cLabel for="lblchequenumber">Amount</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <select cSelect id="cvscatogury">
+                        <option>Income</option>
+                        <option>Expense</option>
+                      </select>
+                      <label cLabel for="lblchequenumber">Category</label>
+                    </div>
+                  </c-col>
+    
+                  <c-col [md]="3">
+                    <div [cFormFloating]="true" class="mb-2">
+                      <select cSelect id="cvscustomer">
+                        <option>Tan hui cha</option>
+                        <option>Nilkantha</option>
+                      </select>
+                      <label cLabel for="lblchequenumber">Customer</label>
+                    </div>
+                  </c-col>
+                  <c-col [md]="3">
+                    <div class="mb-2">
+                      <button cButton size="lg" routerLink="./">Add</button>
+                    </div>
+                  </c-col>
+                </form>
+               
+               
+              </c-offcanvas-body>
+            </c-offcanvas>
+          </c-col>
+        </c-row>
+      </c-container>
+    </c-col>
   
-
-</form>
+    <c-col [md]="12">
+      <table [striped]="true" cTable>
+        <thead>
+        <tr>
+          <th scope="col">
+          </th>
+          <th scope="col">Date</th>
+          <th scope="col">Description</th>
+          <th scope="col">Account</th>
+          <th scope="col">Transaction Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Category</th>
+          <th scope="col">Customer</th>
+          <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">
+            <c-form-check>
+              <input cFormCheckInput id="checkOne" type="checkbox" />
+              <label cFormCheckLabel for="checkOne"></label>
+            </c-form-check>
+          </th>
+          <td>Feb 3, 2022</td>
+          <td>Write a Description</td>
+          <td>4-1000</td>
+          <td>Debit</td>
+          <td>20</td>
+          <td>Income</td>
+          <td>Tan hui cha</td>
+          <td><svg cIcon name="cilPaperPlane" size="xl" title="Paper Plane Icon"></svg></td>
+        </tr>
+       
+        </tbody>
+      </table>
+    </c-col>
+    
+  
+  </form>
