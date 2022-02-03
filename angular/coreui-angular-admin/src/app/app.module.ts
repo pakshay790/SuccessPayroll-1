@@ -51,6 +51,9 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 import { CoaComponent } from './views/accounting/coa/coa.component';
 import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component';
+import { NewquoteComponent } from './views/newquote/newquote.component';
+import { QuotationComponent } from './views/sales/quotation/quotation.component';
+import { InvoiceComponent } from './views/sales/invoice/invoice.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,

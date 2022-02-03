@@ -98,6 +98,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('./payroll/payroll.module').then((m) => m.PayrollModule)
       },
+      {
+        path: 'sales',
+        loadChildren: () =>
+          import('./views/sales/sales.module').then((m) => m.SalesModule)
+      },
+      {
+        path: 'newquote',
+        loadChildren: () =>
+          import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
+      },
     ]
   },
   {
