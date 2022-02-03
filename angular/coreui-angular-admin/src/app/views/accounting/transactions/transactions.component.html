@@ -5,10 +5,10 @@
   <c-row>
     <c-col>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button cButton color="info" shape="rounded-pill" variant="outline" class="me-md-2" routerLink="/miscpayment" >New Misc Payment</button>
-        <button cButton color="info" shape="rounded-pill" variant="outline" routerLink="/miscreceipt">New Misc Receipt</button>
-        <button cButton color="info" shape="rounded-pill" variant="outline">Add Journal Transaction</button>
-        <button cButton color="info" shape="rounded-pill" variant="outline">Upload a Bank Statement</button>
+        <button cButton color="info" variant="outline" class="me-md-2" routerLink="/miscpayment" >New Misc Payment</button>
+        <button cButton color="info" variant="outline" routerLink="/miscreceipt">New Misc Receipt</button>
+        <button cButton color="info" variant="outline">Add Journal Transaction</button>
+        <button cButton color="info" variant="outline">Upload a Bank Statement</button>
 
          <!--<button (click)="toggleCollapse()" cButton color="info" shape="rounded-pill" variant="outline" cDropdownToggle>More</button>
         <ul cDropdownMenu>
@@ -21,7 +21,7 @@
   </c-row>
 </c-container>
 <br>
-<table cTable>
+<table cTable [striped]="true">
   <thead cTableColor="light">
     <tr>
       <th scope="col">Ref No.</th>
