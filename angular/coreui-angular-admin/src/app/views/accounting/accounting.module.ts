@@ -37,6 +37,7 @@ import {
   import { IconModule } from '@coreui/icons-angular';
 
 
+
  
 
 @NgModule({
@@ -74,6 +75,7 @@ import {
         TransactionsComponent,
         ReconciliationComponent,
         CoaComponent,
+        
     ],
 })
 

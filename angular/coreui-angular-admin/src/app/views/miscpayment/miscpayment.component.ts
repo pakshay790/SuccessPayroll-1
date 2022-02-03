@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DefaultLayoutComponent} from 'src/app/containers';
+import { IconSetService } from '@coreui/icons-angular';
+import { cilListNumbered, cilPaperPlane, brandSet } from '@coreui/icons';
 
 @Component({
   selector: 'app-miscpayment',
@@ -10,7 +12,11 @@ export class MiscpaymentComponent implements OnInit {
 
   public show:boolean = false;
   public buttonName:any = 'Show';
-  constructor() { }
+  constructor(
+    public iconSet: IconSetService
+  ){
+    iconSet.icons = { cilListNumbered, cilPaperPlane, ...brandSet };
+  }
 
   ngOnInit(): void {
   }

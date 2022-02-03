@@ -1,4 +1,5 @@
-import { MiscPaymentModule } from './views/miscpayment/miscpayment.module';
+
+
 
 
 import { NgModule } from '@angular/core';
@@ -37,6 +38,11 @@ const routes: Routes = [
         path: 'miscpayment',
         loadChildren: () =>
           import('./views/miscpayment/miscpayment.module').then((m) => m.MiscPaymentModule)
+      },
+      {
+        path: 'miscreceipt',
+        loadChildren: () =>
+          import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
       },
       {
         path: 'theme',
