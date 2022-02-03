@@ -1,7 +1,9 @@
 <c-container fluid>
     <c-row>
         <c-col>
+          
             <form cForm class="row g-3">
+              
                 <c-col [md]="6">
                     <label cLabel for="lablecode">code</label>
                     <input cFormControl id="code" type="text" />
@@ -55,7 +57,7 @@
                 </c-col>
 
 
-
+            
             </form>
 
 
@@ -187,7 +189,7 @@
 
                 <label cLabel for="lblheader">Header</label>
 
-                <textarea cFormControl id="header" rows="3"></textarea>
+                <textarea cFormControl id="header" rows="3" placeholder="Dear sir/mdm"></textarea>
 
             </c-col>
 
@@ -228,21 +230,38 @@
 
             <form cForm class="row g-3">
 
-                <c-col [md]="3">
+              <c-col [md]="3">
 
-                    <label cLabel for="lblattn">ATTN</label>
+                <label cLabel for="lbldefault">Default Dsc to Item%</label>
 
-                    <input cFormControl id="attn" type="text" />
+                <input cFormControl id="default" type="text" />
 
-                </c-col>
+            </c-col>
 
-                <c-col [md]="3">
+            <c-col [md]="3">
 
-                    <label cLabel for="lblDdate">Delivery Date</label>
+                <label cLabel for="lblcurrency">Currency</label>
 
-                    <input cFormControl id="Ddate" type="Date" />
+                <select aria-label="medium select example" cSelect class="mb-3">
 
-                </c-col>
+                  <option>Select Value</option>
+
+                  <option value="1">AS</option>
+
+                  <option value="2">DM</option>
+
+                  <option value="3">EUR</option>
+
+                  <option value="4">MSD</option>
+
+                  <option value="5">RMB</option>
+                  <option value="6">RMY</option>
+                  <option value="7">S$</option>
+                  <option value="8">SSS</option>
+                  <option value="9">U$</option>
+
+              </select>
+            </c-col>
 
             </form>
 
@@ -307,11 +326,78 @@
                     </tr>
 
                 </tbody>
-
+                <div>
+<button  cButton color="secondary" shape="rounded-0" variant="outline" routerLink="/newquote">New Quote</button></div>
             </table>
 
         </c-col>
+       
 
+         
+        <form cForm class="row g-3">
+              <c-col [md]="4" >
+
+                  <label cLabel for="lblquotationno">Rate:</label>
+
+                  <input cFormControl id="quotationno" type="text" />
+
+              </c-col>
+
+              <c-col [md]="4">
+
+                  <label cLabel for="lblqdate">GoodsTotal</label>
+
+                  <input cFormControl id="Qdate" type="Date" />
+
+              </c-col>
+
+              <c-col [xs]="4">
+
+                  <label cLabel for="lblclientref">Discount</label>
+
+                  <input cFormControl id="lblclientref" placeholder="" />
+
+              </c-col>
+
+              <c-col [xs]="4">
+
+                  <label cLabel for="lblsman">Sub Total</label>
+
+                  <input cFormControl id="sman" placeholder="" />
+
+              </c-col>
+
+              <c-col [xs]="4">
+
+                  <label cLabel for="lblagent">Total Amount</label>
+
+                  <input cFormControl id="agent" placeholder="" />
+
+              </c-col>
+
+              <c-col [xs]="4">
+
+                  <label cLabel for="lblpaymentterm">GST/B$:</label>
+
+                  <input cFormControl id="paymentterm" placeholder="" />
+
+              </c-col>
+
+              <c-col [xs]="4">
+
+                  <label cLabel for="lblsupplier">Supplier</label>
+
+                  <input cFormControl id="supplier" />
+
+              </c-col>
+
+             
+          </form>
+<div>
+          <button cButton color="secondary" variant="outline">Convert To Invoice</button>
+          <button cButton color="success" variant="outline" type="submit">Save</button>
+          <button  cButton color="dark" variant="outline">Cancel</button>
+        </div>
     </c-row>
 
 </c-container>
