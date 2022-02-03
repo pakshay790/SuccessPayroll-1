@@ -1,9 +1,12 @@
 package com.successpayroll.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.successpayroll.DAO.EmployeeDAO;
+import com.successpayroll.DAO.EmployeeLeaveTypeDAO;
 import com.successpayroll.model.EmployeeData;
+import com.successpayroll.model.EmployeeLeaveTypeData;
 import com.successpayroll.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -23,22 +26,21 @@ public class EmployeeController {
     @Autowired
     EmployeeDAO employeeDAO;
 
-    /*@Autowired
-    FetchCustomerDetailsUsingTraderCodeApiService fetchCustomerDetailsUsingTraderCodeApiService;*/
+    @Autowired
+    EmployeeLeaveTypeDAO employeeLeaveTypeDAO;
 
     @RequestMapping("/get")
     @ResponseBody
     public String getString() {
         System.out.println(" inside getAll method");
-        logger.info("-----------------inside get all method for customer controller ------------------");
+        logger.info("-----------------inside get all method for employee controller ------------------");
         return "Hello World!";
     }
     @RequestMapping("/getAllEmployees")
     @ResponseBody
     public List<EmployeeData> getAllEmployees() {
-        logger.info("-----------------inside get all method for customer controller ");
+        logger.info("-----------------inside get all method for employee controller ");
         List<EmployeeData> listOfEmployeeData = null;
-        /*return employeeDAO.findAll();*/
         try {
             HibernateUtil util = new HibernateUtil();
             SessionFactory sessionFactory =  util.getSessionFactory("hrTest");
@@ -46,7 +48,7 @@ public class EmployeeController {
             Session session = sessionFactory.openSession();
             System.out.println(" session acquired : " + session.toString());
             listOfEmployeeData = employeeDAO.getAllEmployees(session);
-            System.out.println(" list of cust : " + listOfEmployeeData.size());
+            System.out.println(" list of employee : " + listOfEmployeeData.size());
             session.close();
             sessionFactory.close();
         } catch (Exception ex) {
@@ -56,42 +58,18 @@ public class EmployeeController {
         return listOfEmployeeData;
     }
 
-    /*@RequestMapping(value = "/getTenCustomerList", method = RequestMethod.GET)
-    @ResponseBody
-    public List<CustomerData> getByCustomerListTen() {
-        List<CustomerData> cus = null;
-        try {
-            HibernateUtil util = new HibernateUtil();
-            SessionFactory sessionFactory =  util.getSessionFactory("MotorwayS");
-            Session session = sessionFactory.openSession();
-            cus = customerDAO.getTenCustomer(session);
-            session.close();
-            sessionFactory.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return cus;
-    }*/
-
     @RequestMapping(value ="/getEmployeeDetailsFromEmployeeCode/employeeCode={employeeCode}",
             method = RequestMethod.GET)
     @ResponseBody
-    public EmployeeData getEmployeeDetailsFromFromEmployeeCode(@PathVariable("employeeCode")
+    public EmployeeData getEmployeeDetailsFromEmployeeCode(@PathVariable("employeeCode")
                                                                            String employeeCode) {
-        logger.info("---> inside getEmployeeDetailsFromFromEmployeeCode controller method");
+        logger.info("---> inside getEmployeeDetailsFromEmployeeCode controller method");
         EmployeeData tblEmployeeData = new EmployeeData();
-        /*EmployeeOutput employeeOutput = new EmployeeOutput();*/
         try {
             HibernateUtil util = new HibernateUtil();
             SessionFactory sessionFactory = util.getSessionFactory("hrTest");
             Session session = sessionFactory.openSession();
             tblEmployeeData = employeeDAO.getEmployeeDataByEmployeeCode(session, employeeCode);
-           /* if (tblEmployeeData != null) {
-                tblEmployeeData =
-                        fetchEmployeeDetailsUsingEmployeeCodeApiService.fetchData(tblEmployeeData,
-                                employeeCode);
-            }*/
-
             session.close();
             sessionFactory.close();
         } catch (Exception ex) {
@@ -100,26 +78,49 @@ public class EmployeeController {
         return tblEmployeeData;
     }
 
-   /* @RequestMapping(value = "/getCustomerDetailsFromTraderCode/traderCode={traderCode}", method = RequestMethod.GET)
+    @RequestMapping("/getAllEmployeeLeaveType")
     @ResponseBody
-    public CustomerOutput getCustomerDetailsFromTraderCode(@PathVariable("traderCode") String traderCode) {
-        logger.info("---> inside getCustomerDetailsFromTraderCode controller method");
-        CustomerData tblCustomerDataData = null;
-        CustomerOutput customerOutput = new CustomerOutput();
+    public List<EmployeeLeaveTypeData> getAllEmployeeLeaveType() {
+        logger.info("-----------------inside get all method for all employee leave type controller ");
+        List<EmployeeLeaveTypeData> listOfEmployeeLeaveData = null;
         try {
             HibernateUtil util = new HibernateUtil();
-            SessionFactory sessionFactory = util.getSessionFactoryForInventory("platformDBWS");
+            SessionFactory sessionFactory =  util.getSessionFactory("hrTest");
+            System.out.println("session factory : " + sessionFactory.toString());
             Session session = sessionFactory.openSession();
-            tblCustomerDataData = customerDAO.getVehicleOwnerByTraderCode(session, traderCode);
-            if (tblCustomerDataData != null) {
-                //customerOutput = fetchCustomerDetailsUsingTraderCodeApiService.fetchData(tblCustomerDataData, traderCode, session);
-            }
+            System.out.println(" session acquired : " + session.toString());
+            listOfEmployeeLeaveData = employeeLeaveTypeDAO.getAllEmployeesLeaveType(session);
+            System.out.println(" list of cust : " + listOfEmployeeLeaveData.size());
+            session.close();
+            sessionFactory.close();
+        } catch (Exception ex) {
+            System.out.println("exception");
+            ex.printStackTrace();
+        }
+        return listOfEmployeeLeaveData;
+    }
+
+    @RequestMapping(value ="getEmployeeLeaveTypeFromEmployeeCode/employeeCode={employeeCode}",
+            method = RequestMethod.GET)
+    @ResponseBody
+    public List<EmployeeLeaveTypeData> getEmployeeLeaveTypeFromEmployeeCode(@PathVariable("employeeCode")
+                                                                       String employeeCode) {
+        logger.info("---> inside getEmployeeLeaveTypeFromEmployeeCode controller method");
+        List<EmployeeLeaveTypeData> tblEmployeeLeaveDataList = new ArrayList<EmployeeLeaveTypeData>();
+        try {
+            HibernateUtil util = new HibernateUtil();
+            SessionFactory sessionFactory = util.getSessionFactory("hrTest");
+            Session session = sessionFactory.openSession();
+            tblEmployeeLeaveDataList =
+                    (List<EmployeeLeaveTypeData>) employeeLeaveTypeDAO.getEmployeeLeaveDataByEmployeeCode(session, employeeCode);
             session.close();
             sessionFactory.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return customerOutput;
-    }*/
+        return tblEmployeeLeaveDataList;
+    }
+
+
 
 }

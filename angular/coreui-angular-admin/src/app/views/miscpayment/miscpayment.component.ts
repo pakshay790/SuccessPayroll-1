@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DefaultLayoutComponent} from 'src/app/containers';
+
 import { IconSetService } from '@coreui/icons-angular';
 import { cilListNumbered, cilPaperPlane, brandSet } from '@coreui/icons';
 

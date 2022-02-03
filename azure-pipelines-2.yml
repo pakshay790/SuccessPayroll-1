@@ -9,7 +9,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'ec7be79a-8b2b-485b-aec6-575f7713a518'
+  azureSubscription: '2be27e20-31ce-4486-a134-e2b528503a7e'
 
   # Web app name
   webAppName: 'success-payroll'
@@ -38,21 +38,21 @@ stages:
     - task: NodeTool@0
       inputs:
         versionSpec: '10.x'
-        displayName: 'Install Node.js'
+      displayName: 'Install Node.js'
 
     - task: AzureStaticWebApp@0
       inputs:
         app_location: "/SuccessPayroll/angular/coreui-angular-admin"
         api_location: "/SuccessPayroll/src/main/java/com.successpayroll"
         output_location: "/SuccessPayroll/output"
-        env:
-          azure_static_web_apps_api_token: ${deployment_token}
+      env:
+        azure_static_web_apps_api_token: ${deployment_token}
 
     - script:
         npm install -g @angular/cli
         npm install
         ng build --prod
-        displayName: 'npm install and build'
+      displayName: 'npm install and build'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'

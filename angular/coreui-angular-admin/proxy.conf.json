@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://localhost:3000",
+      "target": "https://lemon-grass-0d0ced510.1.azurestaticapps.net",
       "secure": false,
       "loglevel": "debug"
     }

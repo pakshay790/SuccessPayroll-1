@@ -30,4 +30,8 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  goToPage(PageName:string):void{
+    this.router.navigate([`${PageName}`])
+  }
 }

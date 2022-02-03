@@ -54,7 +54,7 @@ public class HibernateUtil {
             config.setProperty("hibernate.connection.username", prop.getProperty(DB_USER));
             config.setProperty("hibernate.connection.password", prop.getProperty(DB_PASSWORD));
             config.addAnnotatedClass(EmployeeData.class);
-
+            config.addAnnotatedClass(EmployeeLeaveTypeData.class);
         } else {
             return null;
         }

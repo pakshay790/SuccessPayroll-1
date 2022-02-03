@@ -10,6 +10,10 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { EmployeeComponent } from './payroll/employee/employee.component';
+import { VacationComponent } from './payroll/vacation/vacation.component';
+import { PendingComponent } from './payroll/pending/pending.component';
+import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -88,6 +92,11 @@ const routes: Routes = [
         path: 'pages',
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
+      },
+      {
+        path: 'payroll',
+        loadChildren: () =>
+          import('./payroll/payroll.module').then((m) => m.PayrollModule)
       },
     ]
   },
