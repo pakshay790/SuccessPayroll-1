@@ -1,3 +1,4 @@
+import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
 
 
 
@@ -47,6 +48,21 @@ const routes: Routes = [
         path: 'miscreceipt',
         loadChildren: () =>
           import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
+      },
+      {
+        path: 'journalvoucher',
+        loadChildren: () =>
+          import('./views/journalvoucher/journalvoucher.module').then((m) => m.JournalVoucherModule)
+      },
+      {
+        path: 'otherpayment',
+        loadChildren: () =>
+          import('./views/newotherpayment/newotherpayment.module').then((m) => m.NewOtherPaymentModule)
+      },
+      {
+        path: 'uploadbankstmt',
+        loadChildren: () =>
+          import('./views/uploadbankstmt/uploadbankstmt.module').then((m) => m.UploadBankStmtModule)
       },
       {
         path: 'theme',

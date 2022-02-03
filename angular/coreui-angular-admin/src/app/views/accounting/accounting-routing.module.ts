@@ -1,3 +1,4 @@
+import { NewotherpaymentComponent } from '../newotherpayment/newotherpayment.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,13 +13,9 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Accounting',
+      title: '',
     },
     children: [
-      {
-        path: '',
-        redirectTo: 'cards',
-      },
       {
         path: 'transactions',
         component: TransactionsComponent,
@@ -40,10 +37,9 @@ const routes: Routes = [
           title: 'Chart of Accounts',
         },
       },
-      
     ],
   },
-  
+
 ];
 
 @NgModule({

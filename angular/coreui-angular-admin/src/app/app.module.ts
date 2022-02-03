@@ -51,6 +51,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 import { CoaComponent } from './views/accounting/coa/coa.component';
 import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component';
+import { JournalvoucherComponent } from './views/journalvoucher/journalvoucher.component';
+import { UploadbankstmtComponent } from './views/uploadbankstmt/uploadbankstmt.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -63,7 +65,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
