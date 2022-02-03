@@ -75,5 +75,50 @@
       </form>
     </c-col>
     
+      <form cForm class="row g-3">
+        <c-col [md]="3">
+          <label cLabel for="lblattn">ATTN</label>
+          <input cFormControl id="attn" type="text" />
+        </c-col>
+        <c-col [md]="3">
+          <label cLabel for="lblDdate">Delivery Date</label>
+          <input cFormControl id="Ddate" type="Date" />
+        </c-col>
+        <c-col [md]="3">
+          <label cLabel for="lblDmode">Delivery Mode</label>
+          <select aria-label="medium select example" cSelect  class="mb-3">
+            <option>Select Value</option>
+            <option value="1">Cash On Delivered</option>
+            <option value="2">Delivered to factory</option>
+            <option value="3">Direct delivry to buyer</option>
+            <option value="3"> Delivry to shop</option>
+            <option value="3">hand Carry</option>
+          </select>
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblDadd">Delivry Add</label>
+          <input cFormControl id="Dadd" placeholder="enter addres here" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblheader">Header</label>
+          <input cFormControl id="header" placeholder="Dear sir/mdm" />
+        </c-col>
+        <c-col [xs]="12">
+          <label cLabel for="lblfooter">Footer</label>
+          <select aria-label="Multiple select example" cSelect multiple size="3" sizing="lg">
+            <option>Validity: 14 days from date of quote.</option>
+              <option>Delivery: Ex Stock subjected to prior sales.</option>
+             <option>Otherwise, approximately 4-6 weeks ARO subjected to manufacturers' final confirmation.</option> 
+             <option> Payment term: 30 days from date of invoice.</option>
+              <option>Price: Prices quoted NOT inclusive of GST. </option>
+              <option>Prices quoted are valid only for the above (or more) quantities.</option>
+            
+          </select>
+        </c-col>
+        
+        
+      
+      </form>
+    
   </c-row>
   </c-container>
