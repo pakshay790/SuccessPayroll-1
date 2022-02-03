@@ -7,7 +7,7 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-calculator' },
     children: [
       {
-        name: 'Payroll Dashboard',
+        name: 'Dashboard',
         url: '/payroll/payroll-dashboard',
         iconComponent: { name: 'cil-User' },
       },
@@ -28,7 +28,7 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  {
+ /* {
     name: 'Dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
@@ -51,14 +51,14 @@ export const navItems: INavData[] = [
     url: '/theme/typography',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-pencil' }
-  },
+  },*/
  /* {
     name: 'Employees',
     url: '/theme/Test',
     linkProps: { fragment: 'someAnchor' },
     iconComponent: { name: 'cil-pencil' }
   },*/
-  {
+ /* {
     name: 'Components',
     title: true
   },
@@ -246,7 +246,7 @@ export const navItems: INavData[] = [
   {
     title: true,
     name: 'Extras'
-  },
+  },*/
   {
     name: 'Pages',
     url: '/login',
@@ -260,14 +260,14 @@ export const navItems: INavData[] = [
         name: 'Register',
         url: '/register'
       },
-      {
+     /* {
         name: 'Error 404',
         url: '/404'
       },
       {
         name: 'Error 500',
         url: '/500'
-      }
+      }*/
     ]
   },
 ];

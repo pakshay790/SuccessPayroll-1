@@ -14,7 +14,10 @@ import {
   SharedModule,
   ToastModule,
   TooltipModule,
-  UtilitiesModule
+  UtilitiesModule,
+  ButtonGroupModule,
+  AvatarModule,
+  TableModule,
 } from '@coreui/angular';
 
 import { ComponentsModule } from '../../components/components.module';
@@ -29,6 +32,8 @@ import { PayrollDashboardComponent } from './payroll-dashboard/payroll-dashboard
 import { PendingComponent } from './pending/pending.component';
 import { VacationComponent } from './vacation/vacation.component';
 import { EmployeeComponent } from './employee/employee.component';
+
+import { ChartjsModule } from '@coreui/angular-chartjs';
 
 @NgModule({
   declarations: [ PayrollDashboardComponent, PendingComponent, VacationComponent, EmployeeComponent
@@ -57,6 +62,10 @@ import { EmployeeComponent } from './employee/employee.component';
     TabsModule,
     UtilitiesModule,
     CalloutModule,
+    ButtonGroupModule,
+    ChartjsModule,
+    AvatarModule,
+    TableModule,
   ],
 })
 export class PayrollModule {
