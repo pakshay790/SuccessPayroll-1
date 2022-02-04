@@ -19,7 +19,7 @@ import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-d
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'Landing',
     pathMatch: 'full'
   },
   {
@@ -33,6 +33,11 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'Landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
       },
       {
         path: 'accounting',
@@ -155,7 +160,7 @@ const routes: Routes = [
     }
   },
   
-  {path: '**', redirectTo: 'dashboard'}
+  {path: '**', redirectTo: 'Landing'}
 ];
 
 @NgModule({
