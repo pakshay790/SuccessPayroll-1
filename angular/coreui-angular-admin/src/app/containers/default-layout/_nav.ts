@@ -1,29 +1,28 @@
 import { INavData } from '@coreui/angular';
+import { IconComponent } from '@coreui/icons-angular';
 
 export const navItems: INavData[] = [
   {
-    title: true,
+    
     name: 'Accounting',
+    url: '/accounting',
+    iconComponent: { name: 'cil-notes' },
+    children: [
+      {
+        name: 'Transactions',
+        url: '/accounting/transactions',
+        
+      },
+      {
+        name: 'Reconciliation',
+        url: '/accounting/recon',
+      },
+      {
+        name: 'Chart of Accounts',
+        url: '/accounting/coa',
+      },
+    ]
   },
-  {
-    name: 'Transactions',
-    url: '/accounting/transactions',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-credit-card' }
-  },
-  {
-    name: 'Reconciliation',
-    url: '/accounting/recon',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-notes' }
-  },
-  {
-    name: 'Chart of Accounts',
-    url: '/accounting/coa',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-chart-pie' }
-  },
-
   {
     name: 'Payroll',
     url: '/payroll',
