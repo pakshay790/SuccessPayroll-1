@@ -1,3 +1,8 @@
+import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
+
+
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,7 +19,7 @@ import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-d
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'Landing',
     pathMatch: 'full'
   },
   {
@@ -30,6 +35,11 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
+        path: 'Landing',
+        loadChildren: () =>
+          import('./views/landing/landing.module').then((m) => m.LandingModule)
+      },
+      {
         path: 'accounting',
         loadChildren: () =>
           import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
@@ -43,6 +53,21 @@ const routes: Routes = [
         path: 'miscreceipt',
         loadChildren: () =>
           import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
+      },
+      {
+        path: 'journalvoucher',
+        loadChildren: () =>
+          import('./views/journalvoucher/journalvoucher.module').then((m) => m.JournalVoucherModule)
+      },
+      {
+        path: 'otherpayment',
+        loadChildren: () =>
+          import('./views/newotherpayment/newotherpayment.module').then((m) => m.NewOtherPaymentModule)
+      },
+      {
+        path: 'uploadbankstmt',
+        loadChildren: () =>
+          import('./views/uploadbankstmt/uploadbankstmt.module').then((m) => m.UploadBankStmtModule)
       },
       {
         path: 'theme',
@@ -135,7 +160,7 @@ const routes: Routes = [
     }
   },
   
-  {path: '**', redirectTo: 'dashboard'}
+  {path: '**', redirectTo: 'Landing'}
 ];
 
 @NgModule({

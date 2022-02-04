@@ -9,7 +9,7 @@ describe('PayrollDashboardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ PayrollDashboardComponent ]
-    })
+   })
     .compileComponents();
   });
 

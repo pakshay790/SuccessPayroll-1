@@ -1,0 +1,82 @@
+
+<div class="fade-in">
+    <c-row>
+      <c-col xs="12">
+        <c-card class="mb-4" >
+          <c-card-body>
+
+            <h3>Upload a Bank Statement</h3>
+            <br>
+            <h5>1. Download your electronic statement</h5>
+            <c-card>
+                <c-card-body>
+                   <p>Visit your online banking website and download an electronic statement for your bank or credit card account in any of these file types:</p>
+                   <c-row class="g-3">
+                    <c-col [sm]="2">
+                        <h6><c-badge color="info">.Csv</c-badge> Csv file</h6>
+                    </c-col>
+                    <c-col [sm]="2">
+                        <h6><c-badge color="info">.Pdf</c-badge> Pdf file</h6>
+                    </c-col>
+                    <c-col [sm]="2">
+                        <h6><c-badge color="info">.xlsx</c-badge> Excel file</h6>
+                    </c-col>
+                    <c-col [sm]="2">
+                        <h6><c-badge color="info">.docx</c-badge> Word file</h6>
+                    </c-col>
+                  </c-row>
+                   
+                </c-card-body>
+            </c-card>
+            <br>
+            <h5>2. Upload your statement to Success</h5>
+            <c-card>
+                <c-card-body>
+                    Once you have your electronic statement downloaded to your computer, upload it to Success using the form below.
+                    <br><br>
+                    <c-col [sm]="4">
+                    Statement*
+                    <c-input-group>
+                        <input aria-describedby="inputGroupFileAddon04"
+                               aria-label="Upload"
+                               cFormControl
+                               id="inputGroupFile04"
+                               type="file">
+                        
+                    </c-input-group>
+                    </c-col>
+                    
+                    <br>
+                    <br>
+                    Payment Account*
+                    <c-col [sm]="4">
+                        <select aria-label="Small select example" cSelect sizing="sm">
+                            <option>Select Account</option>
+                            <option value="1">4-1000</option>
+                            <option value="2">4-2000</option>
+                            <option value="3">4-3000</option>
+                          </select>
+                            
+                    </c-col>
+                    <p cCardText>
+                        <small class="text-medium-emphasis">Select the account for which you're uploading a statement, or add a new account.</small>
+                      </p>
+
+                      <button cButton color="info" variant="outline">Upload</button>
+                    
+                </c-card-body>
+            </c-card>
+            <br>
+            <h5>3.Manage your transactions</h5>
+            <c-card>
+                <c-card-body>
+                    <h6>After you upload the file, Success will add the transactions in the file to the Imported Transactions page. </h6> 
+                </c-card-body>
+            </c-card>
+
+          </c-card-body>
+         
+        </c-card>
+      </c-col>
+    </c-row>
+  </div>

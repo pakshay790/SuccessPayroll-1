@@ -27,7 +27,7 @@ import { WidgetsEComponent } from './widgets-e/widgets-e.component';
     WidgetsBrandComponent,
     WidgetsDropdownComponent,
     ChartSample,
-    WidgetsEComponent
+    WidgetsEComponent,
   ],
   imports: [
     CommonModule,
@@ -45,7 +45,8 @@ import { WidgetsEComponent } from './widgets-e/widgets-e.component';
   ],
   exports: [
     WidgetsBrandComponent,
-    WidgetsDropdownComponent
+    WidgetsDropdownComponent,
+    WidgetModule,
   ]
 })
 export class WidgetsModule {

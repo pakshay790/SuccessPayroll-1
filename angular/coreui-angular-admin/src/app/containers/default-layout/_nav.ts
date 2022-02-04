@@ -1,35 +1,7 @@
 import { INavData } from '@coreui/angular';
+import { IconComponent } from '@coreui/icons-angular';
 
 export const navItems: INavData[] = [
-  {
-    
-    name: 'Dashboard',
-    url: '/dashboard',
-    iconComponent: { name: 'cil-speedometer' },
-    
-  },
-  {
-    title: true,
-    name: 'Accounting',
-  },
-  {
-    name: 'Transactions',
-    url: '/accounting/transactions',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-credit-card' }
-  },
-  {
-    name: 'Reconciliation',
-    url: '/accounting/recon',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-notes' }
-  },
-  {
-    name: 'Chart of Accounts',
-    url: '/accounting/coa',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-chart-pie' }
-  },
   {
     name: 'Sales',
     url: '/sales',
@@ -73,8 +45,27 @@ export const navItems: INavData[] = [
         ]
       }
     ]
-  }, 
-
+  },
+  {  
+    name: 'Accounting',
+    url: '/accounting',
+    iconComponent: { name: 'cil-notes' },
+    children: [
+      {
+        name: 'Transactions',
+        url: '/accounting/transactions',
+        
+      },
+      {
+        name: 'Reconciliation',
+        url: '/accounting/recon',
+      },
+      {
+        name: 'Chart of Accounts',
+        url: '/accounting/coa',
+      },
+    ]
+  },
   {
     name: 'Payroll',
     url: '/payroll',
@@ -83,26 +74,26 @@ export const navItems: INavData[] = [
       {
         name: 'Dashboard',
         url: '/payroll/payroll-dashboard',
-        iconComponent: { name: 'cil-User' },
       },
       {
         name: 'Employees',
         url: '/payroll/employee',
-        iconComponent: { name: 'cil-User' },
       },
       {
         name: 'Apply Vacation',
         url: '/payroll/vacation',
-        iconComponent: { name: 'cil-Calendar' },
       },
       {
         name: 'Pending Approval',
         url: '/payroll/pending',
-        iconComponent: { name: 'cil-bell' },
-      }
+      },
+      {
+        name: 'Team Management',
+        url: '/payroll/myteam-management',
+      },
     ]
   },
-
+  
 ];
   
   // {
