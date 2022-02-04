@@ -74,22 +74,18 @@ export const navItems: INavData[] = [
       {
         name: 'Dashboard',
         url: '/payroll/payroll-dashboard',
-        iconComponent: { name: 'cil-User' },
       },
       {
         name: 'Employees',
         url: '/payroll/employee',
-        iconComponent: { name: 'cil-User' },
       },
       {
         name: 'Apply Vacation',
         url: '/payroll/vacation',
-        iconComponent: { name: 'cil-Calendar' },
       },
       {
         name: 'Pending Approval',
         url: '/payroll/pending',
-        iconComponent: { name: 'cil-bell' },
       }
     ]
   },
