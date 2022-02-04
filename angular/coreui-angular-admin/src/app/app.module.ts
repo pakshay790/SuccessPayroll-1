@@ -43,6 +43,7 @@ import {
   SidebarModule,
   TabsModule,
   UtilitiesModule,
+  WidgetModule,
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
@@ -95,6 +96,7 @@ const APP_CONTAINERS = [
     ListGroupModule,
     CardModule,
     HttpClientModule,
+    WidgetModule,
   ],
   providers: [
     {

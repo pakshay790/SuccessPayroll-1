@@ -86,7 +86,11 @@ export const navItems: INavData[] = [
       {
         name: 'Pending Approval',
         url: '/payroll/pending',
-      }
+      },
+      {
+        name: 'Team Management',
+        url: '/payroll/myteam-management',
+      },
     ]
   },
   {

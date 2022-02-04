@@ -5,6 +5,7 @@ import { EmployeeComponent } from '../payroll/employee/employee.component';
 import { VacationComponent } from '../payroll/vacation/vacation.component';
 import { PendingComponent } from '../payroll/pending/pending.component';
 import { PayrollDashboardComponent } from '../payroll/payroll-dashboard/payroll-dashboard.component';
+import { MyTeamManagementComponent } from '../payroll/myteam-management/myteam-management.component';
 
 const routes: Routes = [
   {
@@ -44,16 +45,16 @@ const routes: Routes = [
         data: {
           title: 'Pending Approval'
         }
+      },
+      {
+        path: 'myteam-management',
+        component: MyTeamManagementComponent,
+        data: {
+          title: 'My Team Management'
+        }
       }
     ]
   },
-  {
-    path: 'payroll-dashboard',
-    component: PayrollDashboardComponent,
-    data: {
-      title: 'Payroll Dashboard'
-    }
-  }
 ];
 
 @NgModule({

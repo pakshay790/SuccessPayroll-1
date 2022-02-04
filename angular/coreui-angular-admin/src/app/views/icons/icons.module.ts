@@ -15,7 +15,7 @@ import { ComponentsModule } from '../../../components/components.module';
     GridModule,
     IconModule,
     CommonModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   declarations: [
     CoreUIIconsComponent
