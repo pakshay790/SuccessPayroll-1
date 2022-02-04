@@ -56,6 +56,9 @@ import { UploadbankstmtComponent } from './views/uploadbankstmt/uploadbankstmt.c
 import { LandingComponent } from './views/landing/landing.component';
 import { AdvancesearchComponent } from './views/advancesearch/advancesearch.component';
 
+import { ReportsComponent } from './views/reports/reports.component';
+
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
@@ -68,6 +71,7 @@ const APP_CONTAINERS = [
 
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
+ 
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
