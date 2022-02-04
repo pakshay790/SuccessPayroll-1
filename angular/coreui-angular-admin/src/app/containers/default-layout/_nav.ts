@@ -3,7 +3,50 @@ import { IconComponent } from '@coreui/icons-angular';
 
 export const navItems: INavData[] = [
   {
-    
+    name: 'Sales',
+    url: '/sales',
+    iconComponent: { name: 'cil-Basket' },
+    children: [
+      {
+        name: 'Quotations',
+       
+        url: '/sales/quotation'
+      },
+      {
+        name: 'Invoices',
+        url: '/sales/invoice'
+      },
+      {
+        name: 'Reccuring Invoices',
+        url: '/sales/reccuring'
+      },
+      {
+        name: 'Customer Statements',
+        url: '/sales/customerstatements '
+      },
+      {
+        name: 'Customers',
+        url: '/sales/customer'
+      },
+      {
+        name: 'Products & Services',
+        url: '/sales/product'
+      },
+      {
+        name: 'Purchases',
+        url: '/purchases',
+        iconComponent: { name: 'cil-Tags' },
+        children: [
+          {
+            name: '',
+           
+            url: '/sales/quotation'
+          },
+        ]
+      }
+    ]
+  },
+  {
     name: 'Accounting',
     url: '/accounting',
     iconComponent: { name: 'cil-notes' },
@@ -50,7 +93,7 @@ export const navItems: INavData[] = [
       }
     ]
   },
-
+  
 ];
   
   // {
