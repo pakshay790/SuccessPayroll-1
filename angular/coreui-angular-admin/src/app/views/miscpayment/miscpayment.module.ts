@@ -1,8 +1,5 @@
-import { NewquoteRoutingModule } from './newquote-routing.module';
-import { NewquoteComponent } from './newquote.component';
-
-
-
+import { MiscpaymentRoutingModule } from './miscpayment-routing.module';
+import { MiscpaymentComponent } from './miscpayment.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -15,6 +12,7 @@ import {
   FormModule,
   GridModule,
   NavModule,
+  OffcanvasModule,
   ProgressModule,
   TableModule,
   TabsModule
@@ -22,13 +20,11 @@ import {
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
-
-
 import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
   imports: [
-    NewquoteRoutingModule,
+    MiscpaymentRoutingModule,
     CardModule,
     NavModule,
     IconModule,
@@ -43,12 +39,10 @@ import { WidgetsModule } from '../widgets/widgets.module';
     ButtonGroupModule,
     ChartjsModule,
     AvatarModule,
-    TableModule,
-    WidgetsModule,
+    TableModule,OffcanvasModule,
+    WidgetsModule
   ],
-  declarations: [NewquoteComponent],
- 
-
+  declarations: [MiscpaymentComponent]
 })
-export class NewquoteModule {
+export class MiscPaymentModule {
 }

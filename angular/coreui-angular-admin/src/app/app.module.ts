@@ -1,12 +1,9 @@
-
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -51,6 +48,11 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 
+import { CoaComponent } from './views/accounting/coa/coa.component';
+import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component';
+import { NewquoteComponent } from './views/newquote/newquote.component';
+import { QuotationComponent } from './views/sales/quotation/quotation.component';
+import { InvoiceComponent } from './views/sales/invoice/invoice.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -63,7 +65,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -106,7 +108,6 @@ const APP_CONTAINERS = [
     Title
   ],
   bootstrap: [AppComponent],
-  
 })
 export class AppModule {
 }

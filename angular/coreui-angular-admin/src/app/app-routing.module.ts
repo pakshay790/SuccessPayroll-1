@@ -6,6 +6,10 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
+import { EmployeeComponent } from './payroll/employee/employee.component';
+import { VacationComponent } from './payroll/vacation/vacation.component';
+import { PendingComponent } from './payroll/pending/pending.component';
+import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -24,6 +28,21 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'accounting',
+        loadChildren: () =>
+          import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
+      },
+      {
+        path: 'miscpayment',
+        loadChildren: () =>
+          import('./views/miscpayment/miscpayment.module').then((m) => m.MiscPaymentModule)
+      },
+      {
+        path: 'miscreceipt',
+        loadChildren: () =>
+          import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
       },
       {
         path: 'theme',
@@ -71,6 +90,11 @@ const routes: Routes = [
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
       {
+        path: 'payroll',
+        loadChildren: () =>
+          import('./payroll/payroll.module').then((m) => m.PayrollModule)
+      },
+      {
         path: 'sales',
         loadChildren: () =>
           import('./views/sales/sales.module').then((m) => m.SalesModule)
@@ -110,6 +134,7 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
+  
   {path: '**', redirectTo: 'dashboard'}
 ];
 

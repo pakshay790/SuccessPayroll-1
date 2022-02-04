@@ -67,13 +67,13 @@ import { ComponentsModule } from '../../../components/components.module';
     PopoverModule,
     TableModule,
     ComponentsModule,
-    
+   
   ],
   declarations: [
     QuotationComponent,
     InvoiceComponent,
-    
-    
+   
+   
   ],
 })
 export class SalesModule {}
