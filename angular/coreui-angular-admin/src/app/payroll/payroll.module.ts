@@ -34,9 +34,11 @@ import { VacationComponent } from './vacation/vacation.component';
 import { EmployeeComponent } from './employee/employee.component';
 
 import { ChartjsModule } from '@coreui/angular-chartjs';
+import { MyTeamManagementComponent } from './myteam-management/myteam-management.component';
 
 @NgModule({
-  declarations: [ PayrollDashboardComponent, PendingComponent, VacationComponent, EmployeeComponent
+  declarations: [ PayrollDashboardComponent, PendingComponent, VacationComponent, EmployeeComponent,
+    MyTeamManagementComponent
   ],
   imports: [
     CommonModule,

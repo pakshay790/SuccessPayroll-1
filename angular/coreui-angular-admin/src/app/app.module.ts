@@ -43,6 +43,7 @@ import {
   SidebarModule,
   TabsModule,
   UtilitiesModule,
+  WidgetModule,
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
@@ -52,6 +53,7 @@ import { CoaComponent } from './views/accounting/coa/coa.component';
 import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component';
 import { JournalvoucherComponent } from './views/journalvoucher/journalvoucher.component';
 import { UploadbankstmtComponent } from './views/uploadbankstmt/uploadbankstmt.component';
+import { LandingComponent } from './views/landing/landing.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -64,7 +66,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -93,6 +95,7 @@ const APP_CONTAINERS = [
     ListGroupModule,
     CardModule,
     HttpClientModule,
+    WidgetModule,
   ],
   providers: [
     {
