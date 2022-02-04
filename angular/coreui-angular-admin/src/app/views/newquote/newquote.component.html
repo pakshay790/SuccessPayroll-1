@@ -1,342 +1,409 @@
-<c-container fluid>
+<c-card>
+    <c-card-body>
+        <!-- <h5 cCardTitle>Special title treatment</h5>
+      <p cCardText>With supporting text below as a natural lead-in to additional content.</p>
+      <button cButton>Go somewhere</button> -->
+        <c-row>
+            <c-col [sm]="6">
+                <c-card class="mb-4">
+                    <c-card-body>
+                        <h5 cCardTitle>Card title</h5>
+                        <p cCardText>
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button cButton color="primary">Go somewhere</button>
+                    </c-card-body>
+                    <c-card-footer>
+                        <small class="text-medium-emphasis">Enter buttons here</small>
+                      </c-card-footer>
+                </c-card>
+            </c-col>
+            <c-col [sm]="6">
+                <c-card class="mb-4">
+                    <c-card-body>
+                        <h5 cCardTitle>Card title</h5>
+                        <p cCardText>
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button cButton color="primary">Go somewhere</button>
+                    </c-card-body>
+                </c-card>
+            </c-col>
+        </c-row>
 
-  <c-row>
-      <c-col>
-        
-          <form cForm class="row g-3">
-            
-              <c-col [md]="6">
-                  <label cLabel for="lablecode">code</label>
-                  <input cFormControl id="code" type="text" />
-              </c-col>
-              <c-col [md]="6">
-                  <label cLabel for="lblname">Name</label>
-                  <input cFormControl id="name" type="text" />
-              </c-col>
-              <c-col [md]="6">
-                  <label cLabel for="labletel">Tel</label>
-                  <input cFormControl id="tel" type="text" />
-              </c-col>
-              <c-col [md]="6">
+        <c-card>
+            <c-card-body>
+                <h5 cCardTitle>Card title</h5>
+                <p cCardText>
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <c-card>
+                    <c-card-body>
+                        <h5 cCardTitle>Card title</h5>
+                        <p cCardText>
+                            Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <button cButton color="primary">Go somewhere</button>
+                    </c-card-body>
 
-                  <label cLabel for="lblemail">Email</label>
+                </c-card>
+            </c-card-body>
 
-                  <input cFormControl id="Email" type="Email" />
+        </c-card>
+        Enter details here..
+    </c-card-body>
 
-              </c-col>
+    <c-card-footer>
+        <small class="text-medium-emphasis">Enter button here</small>
+      </c-card-footer>
+</c-card>
 
-              <c-col [xs]="12">
 
-                  <label cLabel for="lbladress1">Address 1</label>
 
-                  <input cFormControl id="Address1" placeholder="1234 Main St" />
+<!-- <c-container fluid>
 
-              </c-col>
+    <c-row>
+        <c-col>
 
-              <c-col [xs]="12">
+            <form cForm class="row g-3">
 
-                  <label cLabel for="lblAddress2">Address 2</label>
+                <c-col [md]="6">
+                    <label cLabel for="lablecode">code</label>
+                    <input cFormControl id="code" type="text" />
+                </c-col>
+                <c-col [md]="6">
+                    <label cLabel for="lblname">Name</label>
+                    <input cFormControl id="name" type="text" />
+                </c-col>
+                <c-col [md]="6">
+                    <label cLabel for="labletel">Tel</label>
+                    <input cFormControl id="tel" type="text" />
+                </c-col>
+                <c-col [md]="6">
 
-                  <input cFormControl id="Address2" placeholder="Apartment, studio, or floor" />
+                    <label cLabel for="lblemail">Email</label>
 
-              </c-col>
+                    <input cFormControl id="Email" type="Email" />
 
-              <c-col [xs]="12">
+                </c-col>
 
-                  <label cLabel for="lblAddress">Address 3</label>
+                <c-col [xs]="12">
 
-                  <input cFormControl id="Address3" placeholder="1234 Main St" />
+                    <label cLabel for="lbladress1">Address 1</label>
 
-              </c-col>
+                    <input cFormControl id="Address1" placeholder="1234 Main St" />
 
-              <c-col [md]="12">
+                </c-col>
 
-                  <button cButton type="submit" cButton color="secondary" size="sm">New Customer</button>
+                <c-col [xs]="12">
 
-                  <button cButton type="submit" cButton color="secondary" size="sm" disabled>edit Customer</button>
+                    <label cLabel for="lblAddress2">Address 2</label>
 
-              </c-col>
+                    <input cFormControl id="Address2" placeholder="Apartment, studio, or floor" />
 
+                </c-col>
 
-          
-          </form>
+                <c-col [xs]="12">
 
+                    <label cLabel for="lblAddress">Address 3</label>
 
+                    <input cFormControl id="Address3" placeholder="1234 Main St" />
 
+                </c-col>
 
-      </c-col>
+                <c-col [md]="12">
 
+                    <button cButton type="submit" cButton color="secondary" size="sm">New Customer</button>
 
+                    <button cButton type="submit" cButton color="secondary" size="sm" disabled>edit Customer</button>
 
-      <!-- second form -->
+                </c-col>
 
-      <c-col>
 
-          <form cForm class="row g-3">
 
-              <c-col [md]="6">
+            </form>
 
-                  <label cLabel for="lblquotationno">Quotation No</label>
 
-                  <input cFormControl id="quotationno" type="text" />
 
-              </c-col>
 
-              <c-col [md]="6">
+        </c-col>
 
-                  <label cLabel for="lblqdate">Quotation Date</label>
 
-                  <input cFormControl id="Qdate" type="Date" />
 
-              </c-col>
+        <!-- second form 
 
-              <c-col [xs]="12">
+        <c-col>
 
-                  <label cLabel for="lblclientref">Client Ref</label>
+            <form cForm class="row g-3">
 
-                  <input cFormControl id="lblclientref" placeholder="" />
+                <c-col [md]="6">
 
-              </c-col>
+                    <label cLabel for="lblquotationno">Quotation No</label>
 
-              <c-col [xs]="12">
+                    <input cFormControl id="quotationno" type="text" />
 
-                  <label cLabel for="lblsman">S'man</label>
+                </c-col>
 
-                  <input cFormControl id="sman" placeholder="" />
+                <c-col [md]="6">
 
-              </c-col>
+                    <label cLabel for="lblqdate">Quotation Date</label>
 
-              <c-col [xs]="12">
+                    <input cFormControl id="Qdate" type="Date" />
 
-                  <label cLabel for="lblagent">Agent</label>
+                </c-col>
 
-                  <input cFormControl id="agent" placeholder="" />
+                <c-col [xs]="12">
 
-              </c-col>
+                    <label cLabel for="lblclientref">Client Ref</label>
 
-              <c-col [xs]="12">
+                    <input cFormControl id="lblclientref" placeholder="" />
 
-                  <label cLabel for="lblpaymentterm">Payment Term</label>
+                </c-col>
 
-                  <input cFormControl id="paymentterm" placeholder="" />
+                <c-col [xs]="12">
 
-              </c-col>
+                    <label cLabel for="lblsman">S'man</label>
 
-              <c-col [xs]="12">
+                    <input cFormControl id="sman" placeholder="" />
 
-                  <label cLabel for="lblsupplier">Supplier</label>
+                </c-col>
 
-                  <input cFormControl id="supplier" />
+                <c-col [xs]="12">
 
-              </c-col>
+                    <label cLabel for="lblagent">Agent</label>
 
+                    <input cFormControl id="agent" placeholder="" />
 
+                </c-col>
 
-          </form>
+                <c-col [xs]="12">
 
-      </c-col>
+                    <label cLabel for="lblpaymentterm">Payment Term</label>
 
+                    <input cFormControl id="paymentterm" placeholder="" />
 
+                </c-col>
 
-      <form cForm class="row g-3">
+                <c-col [xs]="12">
 
-          <c-col [md]="3">
+                    <label cLabel for="lblsupplier">Supplier</label>
 
-              <label cLabel for="lblattn">ATTN</label>
+                    <input cFormControl id="supplier" />
 
-              <input cFormControl id="attn" type="text" />
+                </c-col>
 
-          </c-col>
 
-          <c-col [md]="3">
 
-              <label cLabel for="lblDdate">Delivery Date</label>
+            </form>
 
-              <input cFormControl id="Ddate" type="Date" />
+        </c-col>
 
-          </c-col>
 
-          <c-col [md]="3">
 
-              <label cLabel for="lblDmode">Delivery Mode</label>
-
-              <select aria-label="medium select example" cSelect class="mb-3">
-
-                  <option>Select Value</option>
-
-                  <option value="1">Cash On Delivered</option>
-
-                  <option value="2">Delivered to factory</option>
-
-                  <option value="3">Direct delivry to buyer</option>
-
-                  <option value="3"> Delivry to shop</option>
-
-                  <option value="3">hand Carry</option>
-
-              </select>
-
-          </c-col>
-
-          <c-col [xs]="12">
-
-              <label cLabel for="lblDadd">Delivry Add</label>
-
-              <input cFormControl id="Dadd" placeholder="enter addres here" />
-
-          </c-col>
-
-          <c-col [xs]="12">
-
-              <label cLabel for="lblheader">Header</label>
-
-              <textarea cFormControl id="header" rows="3" placeholder="Dear sir/mdm"></textarea>
-
-          </c-col>
-
-          <c-col [xs]="12">
-
-              <label cLabel for="lblfooter">Footer</label>
-
-              <select aria-label="Multiple select example" cSelect multiple size="3" sizing="lg">
-
-                  <option>Validity: 14 days from date of quote.</option>
-
-                  <option>Delivery: Ex Stock subjected to prior sales.</option>
-
-                  <option>Otherwise, approximately 4-6 weeks ARO subjected to manufacturers' final confirmation.
-                  </option>
-
-                  <option> Payment term: 30 days from date of invoice.</option>
-
-                  <option>Price: Prices quoted NOT inclusive of GST. </option>
-
-                  <option>Prices quoted are valid only for the above (or more) quantities.</option>
-
-
-
-              </select>
-
-          </c-col>
-
-
-
-
-
-
-
-      </form>
-
-      <c-col>
-
-          <form cForm class="row g-3">
+        <form cForm class="row g-3">
 
             <c-col [md]="3">
 
-              <label cLabel for="lbldefault">Default Dsc to Item%</label>
+                <label cLabel for="lblattn">ATTN</label>
 
-              <input cFormControl id="default" type="text" />
+                <input cFormControl id="attn" type="text" />
 
-          </c-col>
+            </c-col>
 
-          <c-col [md]="3">
+            <c-col [md]="3">
 
-              <label cLabel for="lblcurrency">Currency</label>
+                <label cLabel for="lblDdate">Delivery Date</label>
 
-              <select aria-label="medium select example" cSelect class="mb-3">
+                <input cFormControl id="Ddate" type="Date" />
 
-                <option>Select Value</option>
+            </c-col>
 
-                <option value="1">AS</option>
+            <c-col [md]="3">
 
-                <option value="2">DM</option>
+                <label cLabel for="lblDmode">Delivery Mode</label>
 
-                <option value="3">EUR</option>
+                <select aria-label="medium select example" cSelect class="mb-3">
 
-                <option value="4">MSD</option>
+                    <option>Select Value</option>
 
-                <option value="5">RMB</option>
-                <option value="6">RMY</option>
-                <option value="7">S$</option>
-                <option value="8">SSS</option>
-                <option value="9">U$</option>
+                    <option value="1">Cash On Delivered</option>
 
-            </select>
-          </c-col>
+                    <option value="2">Delivered to factory</option>
 
-          </form>
+                    <option value="3">Direct delivry to buyer</option>
 
-          <table borderless cTable>
+                    <option value="3"> Delivry to shop</option>
 
-              <thead>
+                    <option value="3">hand Carry</option>
 
-                  <tr>
+                </select>
 
-                      <th>Part No</th>
+            </c-col>
 
-                      <th>Product Discription</th>
+            <c-col [xs]="12">
 
-                      <th>origin Quantity</th>
+                <label cLabel for="lblDadd">Delivry Add</label>
 
-                      <th>Quantity</th>
+                <input cFormControl id="Dadd" placeholder="enter addres here" />
 
-                      <th>Unit Price</th>
+            </c-col>
 
-                      <th>Disc % </th>
+            <c-col [xs]="12">
 
-                      <th>Amount</th>
+                <label cLabel for="lblheader">Header</label>
 
-                  </tr>
+                <textarea cFormControl id="header" rows="3" placeholder="Dear sir/mdm"></textarea>
 
-              </thead>
+            </c-col>
 
-              <tbody>
+            <c-col [xs]="12">
 
-                  <tr>
+                <label cLabel for="lblfooter">Footer</label>
 
-                      <th></th>
+                <select aria-label="Multiple select example" cSelect multiple size="3" sizing="lg">
 
-                      <td></td>
+                    <option>Validity: 14 days from date of quote.</option>
 
-                      <td></td>
+                    <option>Delivery: Ex Stock subjected to prior sales.</option>
 
-                      <td></td>
+                    <option>Otherwise, approximately 4-6 weeks ARO subjected to manufacturers' final confirmation.
+                    </option>
 
-                  </tr>
+                    <option> Payment term: 30 days from date of invoice.</option>
 
-                  <tr>
+                    <option>Price: Prices quoted NOT inclusive of GST. </option>
 
-                      <th></th>
+                    <option>Prices quoted are valid only for the above (or more) quantities.</option>
 
-                      <td></td>
 
-                      <td></td>
 
-                      <td></td>
+                </select>
 
-                  </tr>
+            </c-col>
 
-                  <tr>
 
-                      <th></th>
 
-                      <td></td>
 
-                      <td></td>
 
-                  </tr>
 
-              </tbody>
-              <div>
-<button  cButton color="secondary" shape="rounded-0" variant="outline" routerLink="/newquote">New Quote</button></div>
-          </table>
 
-      </c-col>
-     
+        </form>
 
-       
-      <form cForm class="row g-3">
-            <c-col [md]="4" >
+        <c-col>
+
+            <form cForm class="row g-3">
+
+                <c-col [md]="3">
+
+                    <label cLabel for="lbldefault">Default Dsc to Item%</label>
+
+                    <input cFormControl id="default" type="text" />
+
+                </c-col>
+
+                <c-col [md]="3">
+
+                    <label cLabel for="lblcurrency">Currency</label>
+
+                    <select aria-label="medium select example" cSelect class="mb-3">
+
+                        <option>Select Value</option>
+
+                        <option value="1">AS</option>
+
+                        <option value="2">DM</option>
+
+                        <option value="3">EUR</option>
+
+                        <option value="4">MSD</option>
+
+                        <option value="5">RMB</option>
+                        <option value="6">RMY</option>
+                        <option value="7">S$</option>
+                        <option value="8">SSS</option>
+                        <option value="9">U$</option>
+
+                    </select>
+                </c-col>
+
+            </form>
+
+            <table borderless cTable>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Part No</th>
+
+                        <th>Product Discription</th>
+
+                        <th>origin Quantity</th>
+
+                        <th>Quantity</th>
+
+                        <th>Unit Price</th>
+
+                        <th>Disc % </th>
+
+                        <th>Amount</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <th></th>
+
+                        <td></td>
+
+                        <td></td>
+
+                        <td></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th></th>
+
+                        <td></td>
+
+                        <td></td>
+
+                        <td></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th></th>
+
+                        <td></td>
+
+                        <td></td>
+
+                    </tr>
+
+                </tbody>
+                <div>
+                    <button cButton color="secondary" shape="rounded-0" variant="outline" routerLink="/newquote">New
+                        Quote</button>
+                </div>
+            </table>
+
+        </c-col>
+
+
+
+        <form cForm class="row g-3">
+            <c-col [md]="4">
 
                 <label cLabel for="lblquotationno">Rate:</label>
 
@@ -392,15 +459,13 @@
 
             </c-col>
 
-           
+
         </form>
-<div>
-        <button cButton color="secondary" variant="outline">Convert To Invoice</button>
-        <button cButton color="success" variant="outline" type="submit">Save</button>
-        <button  cButton color="dark" variant="outline">Cancel</button>
-      </div>
-  </c-row>
+        <div>
+            <button cButton color="secondary" variant="outline">Convert To Invoice</button>
+            <button cButton color="success" variant="outline" type="submit">Save</button>
+            <button cButton color="dark" variant="outline">Cancel</button>
+        </div>
+    </c-row>
 
-</c-container>
-
-   
+</c-container> -->
