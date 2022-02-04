@@ -1,3 +1,4 @@
+import { ReportModule } from './views/reports/report.module';
 import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
 
 
@@ -68,6 +69,11 @@ const routes: Routes = [
         path: 'uploadbankstmt',
         loadChildren: () =>
           import('./views/uploadbankstmt/uploadbankstmt.module').then((m) => m.UploadBankStmtModule)
+      },
+      {
+        path: 'reports',
+        loadChildren: () =>
+          import('./views/reports/report.module').then((m) => m.ReportModule)
       },
       {
         path: 'theme',

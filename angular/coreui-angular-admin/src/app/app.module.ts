@@ -53,6 +53,7 @@ import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component'
 import { JournalvoucherComponent } from './views/journalvoucher/journalvoucher.component';
 import { UploadbankstmtComponent } from './views/uploadbankstmt/uploadbankstmt.component';
 import { LandingComponent } from './views/landing/landing.component';
+import { ReportsComponent } from './views/reports/reports.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -65,7 +66,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent, ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

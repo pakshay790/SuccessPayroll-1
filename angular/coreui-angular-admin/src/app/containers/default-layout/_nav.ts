@@ -89,7 +89,11 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  
+  {
+    name: 'Reports',
+    url: '/reports',
+    iconComponent: { name: 'cil-spreadsheet' },
+  },
 ];
   
   // {
