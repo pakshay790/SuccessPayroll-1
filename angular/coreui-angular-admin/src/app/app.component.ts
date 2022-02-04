@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'Success Books';
+  title = 'Success Book';
 
   constructor(
     private router: Router,
@@ -30,8 +30,7 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
   goToPage(PageName:string):void{
-    this.router.navigate([`${PageName}`])
+    this.router.navigate([`${'/newquote'}`])
   }
 }

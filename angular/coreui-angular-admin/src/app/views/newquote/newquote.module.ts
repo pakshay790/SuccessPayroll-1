@@ -1,4 +1,7 @@
-import { MiscreceiptComponent } from './miscreceipt.component';
+import { NewquoteRoutingModule } from './newquote-routing.module';
+import { NewquoteComponent } from './newquote.component';
+
+
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +15,6 @@ import {
   FormModule,
   GridModule,
   NavModule,
-  OffcanvasModule,
   ProgressModule,
   TableModule,
   TabsModule
@@ -20,12 +22,13 @@ import {
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
+
+
 import { WidgetsModule } from '../widgets/widgets.module';
-import { MiscReceiptRoutingModule } from './miscreceipt-routing.module';
 
 @NgModule({
   imports: [
-    MiscReceiptRoutingModule,
+    NewquoteRoutingModule,
     CardModule,
     NavModule,
     IconModule,
@@ -40,10 +43,12 @@ import { MiscReceiptRoutingModule } from './miscreceipt-routing.module';
     ButtonGroupModule,
     ChartjsModule,
     AvatarModule,
-    TableModule,OffcanvasModule,
-    WidgetsModule
+    TableModule,
+    WidgetsModule,
   ],
-  declarations: [MiscreceiptComponent]
+  declarations: [NewquoteComponent],
+ 
+
 })
-export class MiscReceiptModule {
+export class NewquoteModule {
 }

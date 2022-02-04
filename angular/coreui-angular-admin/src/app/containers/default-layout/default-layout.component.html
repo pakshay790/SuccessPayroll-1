@@ -1,4 +1,3 @@
-
 <!--sidebar-->
 <c-sidebar
   #sidebar="cSidebar"
@@ -6,13 +5,12 @@
   id="sidebar"
   visible
 >
-   <c-sidebar-brand
+  <c-sidebar-brand
     [brandFull]="{
       src: 'assets/img/brand/Success-ITHR.png',
       width: 250,
       height: 50,
       alt: 'Success Books Logo'
-      
     }"
     routerLink="./"
   >
@@ -24,11 +22,11 @@
   >
   </c-sidebar-nav>
     </perfect-scrollbar>
-  <!-- <c-sidebar-toggler
+  <c-sidebar-toggler
     *ngIf="!sidebar.narrow"
     toggle="unfoldable"
     cSidebarToggle="sidebar"
-  ></c-sidebar-toggler> -->
+  ></c-sidebar-toggler>
 </c-sidebar>
 
 <!--main-->
@@ -44,4 +42,4 @@
   </div>
   <!--app footer-->
   <app-default-footer></app-default-footer>
-</div>-->
+</div>
