@@ -15,5 +15,6 @@ export class NewquoteComponent implements OnInit {
   goToPage(PageName:string):void{
     this.router.navigate([`${'/newquote'}`])
   }
+  
  
 }

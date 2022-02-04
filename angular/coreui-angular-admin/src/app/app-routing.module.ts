@@ -129,6 +129,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
       },
+      {
+        path: 'advancesearch',
+        loadChildren: () =>
+          import('./views/advancesearch/advancesearch.module').then((m) => m.AdvancesearchModule)
+      },
     ]
   },
   {
