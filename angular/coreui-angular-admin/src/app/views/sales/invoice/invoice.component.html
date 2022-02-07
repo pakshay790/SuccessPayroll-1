@@ -1,11 +1,56 @@
+<c-nav variant="tabs">
+  <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink
+    (click)="toggleCollapse()">Quotation Information</a>
+  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink (click)="toggleCollapse()">Customer Details</a>
+
+</c-nav>
+<c-tab-content #tabContent="cTabContent">
+  <c-tab-pane class="p-3">
+    <c-card class="mt-3" [visible]="visible" cCollapse>
+      <c-card-body>
+        <form cForm class="row g-3">
+          <c-col [md]="3">
+            <label cLabel for="lblQno">Quotation No</label>
+            <input cFormControl id="Qno" type="text" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblQdrange">Quotation Date Range</label>
+            <input cFormControl id="QDrange" type="text" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblCref">Client Ref </label>
+            <input cFormControl id="Cref" placeholder="" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblAcode">Agent Code</label>
+            <input cFormControl id="Acode" placeholder="" />
+          </c-col>
+
+          <c-col [xs]="12">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button cButton type="submit" cButton color="dark" shape="rounded-0">Clear</button>
+              <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
+            </div>
+          </c-col>
+
+        </form>
+      </c-card-body>
+    </c-card>
+
+  </c-tab-pane>
+  <c-tab-pane class="p-3">
+
+  </c-tab-pane>
+
+</c-tab-content>
 <c-container>
   <c-row>
     <c-col>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button cButton color="info" shape="rounded-pill" variant="outline" class="me-md-2"  >Advance Search</button>
-             <button cButton color="info" shape="rounded-pill" variant="outline" routeLink="/newquote">New Invoice</button>
-  <button cButton color="info" shape="rounded-pill" variant="outline">Colunm Setting</button>
-        <button cButton color="info" shape="rounded-pill" variant="outline">Export To Excel</button>
+        <!-- <button cButton color="info" shape="rounded-0"  class="me-md-2"  >Advance Search</button> -->
+             <button cButton color="dark"  shape="rounded-0"  routeLink="/newquote">New Invoice</button>
+  <button cButton color="dark"  shape="rounded-0" >Colunm Setting</button>
+        <button cButton color="dark"  shape="rounded-0" >Export To Excel</button>
 
        
       </div>
@@ -14,6 +59,9 @@
   </c-row>
 </c-container>
 <br>
+<div class="fade-in">
+  <c-card class="mb-4">
+    <c-card-body>
 <table cTable>
   <thead cTableColor="light">
     <tr>
@@ -176,3 +224,5 @@
 
   </tbody>
 </table>
+    </c-card-body>
+  </c-card>
