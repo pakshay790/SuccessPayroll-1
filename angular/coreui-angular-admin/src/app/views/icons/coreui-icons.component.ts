@@ -43,4 +43,5 @@ export class CoreUIIconsComponent implements OnInit {
       return icon[0].startsWith(prefix);
     });
   }
+
 }

@@ -11,13 +11,9 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Payroll'
+      title: ''
     },
     children: [
-      {
-        path: '',
-        redirectTo: 'payroll-dashboard'
-      },
       {
         path: 'payroll-dashboard',
         component: PayrollDashboardComponent,

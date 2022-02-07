@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: NewquoteComponent,
     data: {
-      title: 'new quote'
+      title: 'New Quote'
     }
   }
 ];
