@@ -7,13 +7,9 @@ import { QuotationComponent } from './quotation/quotation.component';
 const routes: Routes = [{
   path: '',
   data: {
-    title: 'Sales',
+    title: '',
   },
   children: [
-    {
-      path: '',
-      redirectTo: 'cards',
-    },
     {
       path: 'quotation',
       component: QuotationComponent,
