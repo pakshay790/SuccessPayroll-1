@@ -106,6 +106,7 @@ const APP_CONTAINERS = [
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
+        
     },
     {
       provide: PERFECT_SCROLLBAR_CONFIG,

@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     // iconSet singleton
     iconSetService.icons = { ...iconSubset };
   }
+  
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
