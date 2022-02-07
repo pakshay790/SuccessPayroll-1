@@ -1,3 +1,4 @@
+import { ProfileModule } from './views/profile/profile.module';
 import { ReportModule } from './views/reports/report.module';
 import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
 
@@ -74,6 +75,11 @@ const routes: Routes = [
         path: 'reports',
         loadChildren: () =>
           import('./views/reports/report.module').then((m) => m.ReportModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./views/profile/profile.module').then((m) => m.ProfileModule)
       },
       {
         path: 'theme',
