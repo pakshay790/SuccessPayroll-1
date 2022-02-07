@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',
     component: ReportsComponent,
     data: {
-      title: 'New Other Payment'
+      title: 'Reports'
     }
   }
 ];
