@@ -1,22 +1,62 @@
+<h2>Quotation List</h2>
+<c-nav variant="tabs">
+  <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink
+    (click)="toggleCollapse()">Quotation Information</a>
+  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink (click)="toggleCollapse()">Customer Details</a>
 
-<h2>Quotation List</h2><c-container>
+</c-nav>
+<c-tab-content #tabContent="cTabContent">
+  <c-tab-pane class="p-3">
+    <c-card class="mt-3" [visible]="visible" cCollapse>
+      <c-card-body>
+        <form cForm class="row g-3">
+          <c-col [md]="3">
+            <label cLabel for="lblQno">Quotation No</label>
+            <input cFormControl id="Qno" type="email" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblQdrange">Quotation Date Range</label>
+            <input cFormControl id="QDrange" type="password" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblCref">Client Ref </label>
+            <input cFormControl id="Cref" placeholder="" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblAcode">Agent Code</label>
+            <input cFormControl id="Acode" placeholder="" />
+          </c-col>
+
+          <c-col [xs]="12">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button cButton type="submit" cButton color="dark" shape="rounded-0">Clear</button>
+              <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
+            </div>
+          </c-col>
+
+        </form>
+      </c-card-body>
+    </c-card>
+
+  </c-tab-pane>
+  <c-tab-pane class="p-3">
+
+  </c-tab-pane>
+
+</c-tab-content>
+
+
+<c-container>
   <c-row>
     <c-col>
+
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <!-- <button (click)="toggleCollapse()" cButton class="me-md-2" color="dark" >Advance Search</button>
-        <c-col [xs]="6">
-          <c-card class="mt-3" [visible]="visible" cCollapse>
-            <c-card-body>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-              richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
-              anderson cred nesciunt sapiente ea proident.
-            </c-card-body>
-          </c-card>
-        </c-col> -->
-         <button cButton color="dark" shape="rounded-0"  class="me-md-2" routerLink="/advancesearch">Advance Search</button>
-        <button cButton color="dark" shape="rounded-0"  routerLink="/newquote">New Quote</button>
-   <button cButton color="dark" shape="rounded-0" >Colunm Setting</button>
-        <button cButton color="dark" shape="rounded-0" >Export To Excel</button>
+
+        <!-- <button cButton color="dark" shape="rounded-0" class="me-md-2" routerLink="/advancesearch">Advance -->
+        <!-- Search</button> -->
+        <button cButton color="dark" shape="rounded-0" routerLink="/newquote">New Quote</button>
+        <button cButton color="dark" shape="rounded-0">Colunm Setting</button>
+        <button cButton color="dark" shape="rounded-0">Export To Excel</button>
 
 
       </div>
@@ -50,9 +90,11 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
 
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -64,8 +106,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -77,8 +121,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -90,8 +136,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -103,8 +151,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -116,8 +166,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -129,8 +181,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -142,8 +196,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -155,8 +211,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -168,8 +226,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -181,8 +241,10 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
             </td>
           </tr>
 
@@ -194,13 +256,38 @@
             <td> ALAN NG-96884338</td>
             <td>Jan 27, 2022</td>
             <td>
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <div class="d-grid gap-2 d-md-flex ">
+                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              </div>
+
+
             </td>
           </tr>
-
-
-
+         
+          <c-pagination aria-label="Page navigation example">
+            <li cPageItem>
+              <a cPageLink [routerLink]>Previous</a>
+            </li>
+            <li cPageItem>
+              <a cPageLink [routerLink]>1</a>
+            </li>
+            <li cPageItem>
+              <a cPageLink [routerLink]>2</a>
+            </li>
+            <li cPageItem>
+              <a cPageLink [routerLink]>3</a>
+            </li>
+            <li cPageItem>
+              <a cPageLink [routerLink]>Next</a>
+            </li>
+            
+            <div >
+              <label cLabel for="lblAcode" >Total Record: 75</label>
+              </div>
+          </c-pagination>
+          <label cLabel for="lblAcode" >Record per page: 10</label>
+          
         </tbody>
       </table>
     </c-card-body>
