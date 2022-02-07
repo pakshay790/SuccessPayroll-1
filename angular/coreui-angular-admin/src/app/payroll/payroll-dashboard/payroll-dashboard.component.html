@@ -2,6 +2,174 @@
 <router-outlet></router-outlet>
 <div class="body flex-grow-1 px-3">
     <c-container breakpoint="lg" class="h-auto container-lg">
-        
+        <div class="fade-in">
+            <c-row>
+                <c-col xs="12">
+                    <c-card class="mb-4" style="border-radius:10px;">
+                        <c-card-body class="display-6">
+                            <div>
+                                <c-row>
+                                    <c-col xs="12">
+                                        <span style="font-family:Verdana;">
+                                            <h3>Hello, EMPLOYEE ANW</h3>
+                                        </span>
+
+                                        
+                                        <small class="text-muted">
+                                            <span style="    color: #898d97;
+                                        font-size: 18px;
+                                        font-weight: 300;
+                                        line-height: 18px; font-family:Verdana;
+                                        margin-bottom: 70px; margin-left: 5px;">
+                                            Welcome to Payroll Dashboard. </span>
+                                            </small>
+                                       
+                                    </c-col>
+                                </c-row>
+                            </div>
+                        </c-card-body>
+                    </c-card>
+                </c-col>
+
+                <c-col xs="4">
+                    <c-card class="mb-4" style="border-radius:10px;">
+
+                        <c-card-body class="display-6">
+                            <div>
+                                <c-row>
+                                    <c-col xs="12">
+                                        <table cTable>
+                                            <tr>
+                                                <td>
+                                                    <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;">
+                                                        <svg [cIcon]="icons.cilBellExclamation" size="xl"
+                                                        title="List Icon"></svg></span>
+                                                    <span>&nbsp;</span>
+                                                    <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;">
+                                                        Announcements</span> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </c-col>
+                                </c-row>
+                            </div>
+                        </c-card-body>
+                    </c-card>
+                    <c-row>
+                        <c-col xs="12">
+                            <c-card class="mb-4" style="border-radius:10px;">
+
+                                <c-card-body class="display-6">
+                                    <div>
+                                        <c-row>
+                                            <c-col xs="12">
+                                                <div>
+                                                    <table cTable>
+                                                        <tr>
+                                                            <td>
+                                                                <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;"><svg [cIcon]="icons.cilEnvelopeClosed" size="xl"
+                                                                    title="Inbox"></svg></span>
+                                                                <span>&nbsp;</span>
+                                                                <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;">Inbox</span> 
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </c-col>
+                                        </c-row>
+                                    </div>
+                                </c-card-body>
+                            </c-card>
+
+                        </c-col>
+                    </c-row>
+
+                </c-col>
+                <c-col xs="8">
+                    <c-card class="mb-4" style="border-radius:10px;">
+
+                        <c-card-body class="display-6">
+                            <div>
+                                <c-row>
+                                    <c-col xs="12">
+                                        <table cTable>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;">
+                                                            <svg [cIcon]="icons.cilApplications" size="xl"
+                                                            title="List Icon"></svg></span>
+                                                        <span>&nbsp;&nbsp;</span>
+                                                        <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 18px;float:left;">
+                                                            &nbsp;Apps</span> 
+                                                </div>
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="text-align: center;">
+                                                        <svg [cIcon]="icons.cilBraille" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Personal Information</h6></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    
+                                                    <div style="text-align: center;">
+                                                        <a cButton color="default" routerLink="/payroll/vacation" role="button">
+                                                        <svg [cIcon]="icons.cilCalendar" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Leave</h6></span></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="text-align: center;">
+                                                        <svg [cIcon]="icons.cilSpreadsheet" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Pay</h6></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="text-align: center;">
+                                                        <a cButton color="default" routerLink="/payroll/myteam-management" role="button">
+                                                        <svg [cIcon]="icons.cilPeople" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Team Management</h6></span></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="text-align: center;">
+                                                        <a cButton color="default" routerLink="/reports" role="button">
+                                                        <svg [cIcon]="icons.cilFile" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Reports</h6></span></a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="text-align: center;">
+                                                        <svg [cIcon]="icons.cilExposure" size="3xl"
+                                                            title="List Icon" style="align-items: center;"></svg><br/>
+                                                        <span class=""><h6>Expense Claims</h6></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </c-col>
+                                </c-row>
+                            </div>
+                        </c-card-body>
+                    </c-card>
+                </c-col>
+            </c-row>
+        </div>
     </c-container>
 </div>
