@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { PayrollDashboardChartsData, IChartProps } from './payroll-dashboard-charts-data';
+import { IconModule } from '@coreui/icons-angular';
+import { freeSet } from '@coreui/icons/js/free';
 
 interface IUser {
   name: string;
@@ -23,7 +25,7 @@ interface IUser {
   styleUrls: ['./payroll-dashboard.component.scss']
 })
 export class PayrollDashboardComponent implements OnInit {
-
+  icons = freeSet ;
   constructor(private chartsData: PayrollDashboardChartsData) {
   }
   

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./invoice.component.scss']
 })
 export class InvoiceComponent implements OnInit {
-
+visible = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleCollapse(): void {
+    this.visible = !this.visible;
+  }
 }

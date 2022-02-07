@@ -68,6 +68,7 @@ import { MyTeamManagementComponent } from './myteam-management/myteam-management
     ChartjsModule,
     AvatarModule,
     TableModule,
+    IconModule,
   ],
 })
 export class PayrollModule {
