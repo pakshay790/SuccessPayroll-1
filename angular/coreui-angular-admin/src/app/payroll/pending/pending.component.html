@@ -1,86 +1,186 @@
 <!--<p>pending works!</p>-->
 <router-outlet></router-outlet>
-<c-container>
-  <div class="fade-in">
-    <c-row>
-      <c-col xs="12">
-        <c-card class="mb-4">
-          <c-card-header>
-            <strong>Vacation Management</strong> <small></small>
-          </c-card-header>
-          <c-card-body>
-            <div class="fade-in">
-              <table class="table table-striped" cTable>
-                <thead>
-                  <tr>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">End Date</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>31/01/2022</td>
-                    <td>31/01/2022</td>
-                    <td>Medical Leave (Sick Leave)</td>
-                    <td>EMPLOYEE ANW</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>01/02/2022</td>
-                    <td>01/02/2022</td>
-                    <td>Company Holidays</td>
-                    <td>EMPLOYEE ANW</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>01/02/2022</td>
-                    <td>01/02/2022</td>
-                    <td>Company Holidays</td>
-                    <td>EMPLOYEE KU</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>02/02/2022</td>
-                    <td>02/02/2022</td>
-                    <td>Company Holidays</td>
-                    <td>EMPLOYEE ANW</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>02/02/2022</td>
-                    <td>02/02/2022</td>
-                    <td>Company Holidays</td>
-                    <td>EMPLOYEE NG</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>01/02/2022</td>
-                    <td>01/02/2022</td>
-                    <td>Compensate Leave</td>
-                    <td>EMPLOYEE TA1</td>
-                    <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
-                      <button type="button" class="btn btn-danger">Reject</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+<div class="fade-in">
+  <c-row>
+    <c-col lg=12>
+      <c-card>
+        <c-card-body>
+          <c-nav variant="tabs">
+            <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Leave</a>
+            <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Expense</a>
+            <!--<a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Apply Leave</a>-->
+            <div>
+              <form class="form-inline my-2 my-lg-0">
+                <div>
+                  <c-row>
+                    <c-col class="col-md-6"><span><input class="form-control mr-sm-2" type="search" placeholder="Search"
+                          aria-label="Search"></span></c-col>
+                    <c-col><span><button class="btn btn-outline-success my-2 my-sm-0"
+                          type="submit">Search</button></span></c-col>
+                  </c-row>
+                </div>
+              </form>
             </div>
-          </c-card-body>
-        </c-card>
-      </c-col>
-    </c-row>
-  </div>
-</c-container>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+      <c-row>
+        <c-col>
+          &nbsp;
+        </c-col>
+      </c-row>
+      <c-tab-content #tabContent="cTabContent">
+        <c-tab-pane class="">
+          <div class="fade-in">
+            <c-card class="mb-4">
+              <c-card-body>
+                <c-row>
+                  <c-col class="col-md-6">
+                    <div>
+                      <h3>Leave Taken Summary</h3>
+                    </div>
+                  </c-col>
+                </c-row>
+                <table [hover]="true" [responsive]="true" [striped]="true" style="justify-content: center;" cTable
+                  class="mb-0 border">
+                  <thead cTableColor="light">
+                    <tr>
+                      <th>Fiscal Year</th>
+                      <th class="text-Left">Days</th>
+                      <th>Times</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-left">
+                        Entitled Days
+                      </td>
+                      <td class="text-left">
+                        123
+                      </td>
+                      <td class="text-left">
+                        12
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">
+                        Yearly
+                      </td>
+                      <td class="text-left">
+                        123
+                      </td>
+                      <td class="text-left">
+                        12
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">
+                        Current Month
+                      </td>
+                      <td class="text-left">
+                        123
+                      </td>
+                      <td class="text-left">
+                        12
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <c-row>
+                  <c-col xs="12">&nbsp;</c-col>
+                </c-row>
+                <c-row>
+                  <c-col xs="12">
+                    <c-card class="mb-4">
+                      <c-card-header>
+                        <strong>Vacation Management</strong> <small></small>
+                      </c-card-header>
+                      <c-card-body>
+                        <div class="fade-in">
+                          <table class="table table-striped" cTable>
+                            <thead>
+                              <tr>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">End Date</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>31/01/2022</td>
+                                <td>31/01/2022</td>
+                                <td>Medical Leave (Sick Leave)</td>
+                                <td>EMPLOYEE ANW</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>01/02/2022</td>
+                                <td>01/02/2022</td>
+                                <td>Company Holidays</td>
+                                <td>EMPLOYEE ANW</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>01/02/2022</td>
+                                <td>01/02/2022</td>
+                                <td>Company Holidays</td>
+                                <td>EMPLOYEE KU</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>02/02/2022</td>
+                                <td>02/02/2022</td>
+                                <td>Company Holidays</td>
+                                <td>EMPLOYEE ANW</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>02/02/2022</td>
+                                <td>02/02/2022</td>
+                                <td>Company Holidays</td>
+                                <td>EMPLOYEE NG</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>01/02/2022</td>
+                                <td>01/02/2022</td>
+                                <td>Compensate Leave</td>
+                                <td>EMPLOYEE TA1</td>
+                                <td><button type="button" class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                  <button type="button" class="btn btn-danger">Reject</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </c-card-body>
+                    </c-card>
+                  </c-col>
+                </c-row>
+
+              </c-card-body>
+            </c-card>
+          </div>
+        </c-tab-pane>
+        <c-tab-pane class="p-3">
+          
+        </c-tab-pane>
+        <c-tab-pane class="p-3">
+
+        </c-tab-pane>
+      </c-tab-content>
+    </c-col>
+  </c-row>
+</div>
