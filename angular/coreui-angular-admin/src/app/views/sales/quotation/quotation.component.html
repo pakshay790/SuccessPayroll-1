@@ -4,7 +4,7 @@
   <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Customer Details</a>
   
 </c-nav>
-<c-card >
+<c-card class="mb" >
   <c-card-body>
 <c-tab-content #tabContent="cTabContent">
   <c-tab-pane class="p-3">
@@ -47,7 +47,7 @@
 </c-card>
 
 <c-container>
-  <c-card class="mt-2" >
+  <c-card class="mt-4" >
     <c-card-body>
   <c-row>
 
@@ -71,8 +71,8 @@
 </c-container>
 <br>
 
-<div class="fade-in">
-  <c-card class="mb-4">
+
+  <c-card class="mt-12">
     <c-card-body>
       <table cTable>
         <thead cTableColor="light">
@@ -320,4 +320,4 @@
       <label cLabel for="lblAcode" >Record per page: 10</label>
     </c-card-body>
   </c-card>
-</div>
+
