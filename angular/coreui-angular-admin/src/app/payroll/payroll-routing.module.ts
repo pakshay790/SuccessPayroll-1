@@ -18,7 +18,7 @@ const routes: Routes = [
         path: 'payroll-dashboard',
         component: PayrollDashboardComponent,
         data: {
-          title: 'Payroll Dashboard'
+          title: 'My HR'
         }
       },
       {
@@ -46,7 +46,7 @@ const routes: Routes = [
         path: 'myteam-management',
         component: MyTeamManagementComponent,
         data: {
-          title: 'My Team Management'
+          title: 'Team Management'
         }
       }
     ]
