@@ -12,14 +12,8 @@ import { cilCheckAlt,cilListNumbered, cilPaperPlane, brandSet } from '@coreui/ic
 })
 export class TransactionsComponent  {
 
-  visible = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  toggleCollapse(): void {
-    this.visible = !this.visible;
-  }
-
 }
