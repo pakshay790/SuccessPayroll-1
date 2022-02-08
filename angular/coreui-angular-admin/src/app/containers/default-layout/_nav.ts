@@ -72,7 +72,7 @@ export const navItems: INavData[] = [
     iconComponent: { name: 'cil-calculator' },
     children: [
       {
-        name: 'Dashboard',
+        name: 'My HR',
         url: '/payroll/payroll-dashboard',
       },
       {

@@ -1,0 +1,263 @@
+<c-card>
+    <c-card-body>
+        <c-card class="mb-2">
+            <c-card-body>
+
+                <c-row>
+                    <c-col [md]="1">
+                        <c-avatar class="avatar" src="./assets/img/avatars/1.jpg"></c-avatar>
+                    </c-col>
+                    <c-col [xs]>
+                        <div><strong>
+                                <h4>John Doe</h4>
+                            </strong></div>
+                        <div class="small text-medium-empha>sis">
+                            <span>Software Engineer, Registered : S1739313H </span>
+                        </div>
+                    </c-col>
+                </c-row>
+            </c-card-body>
+        </c-card>
+        <hr>
+        <c-row class="g-3">
+            <c-col [xs]>
+                <label cLabel for="inputEmail4">First Name</label>
+                <input aria-label="First name" cFormControl placeholder="John" />
+            </c-col>
+            <c-col [xs]>
+                <label cLabel for="inputEmail4">Last Name</label>
+                <input aria-label="Last name" cFormControl placeholder="Doe" />
+            </c-col>
+            <hr>
+            <h5>Address</h5>
+
+            <c-col [md]="6">
+                <label cLabel for="inputCity">Blk/Hs No</label>
+                <input cFormControl id="inputCity" placeholder="34" />
+            </c-col>
+
+            <c-col [md]="6">
+                <label cLabel for="inputZip">Address Type</label>
+                <input cFormControl id="inputZip" placeholder="HDB" />
+            </c-col>
+
+            <c-col [xs]="12">
+                <label cLabel for="inputAddress2">Street</label>
+                <input cFormControl id="inputAddress2" placeholder="Apartment, studio, or floor" />
+            </c-col>
+
+            <c-col [md]="4">
+                <label cLabel for="inputCity">Level</label>
+                <input cFormControl id="inputCity" placeholder="08" />
+            </c-col>
+
+            <c-col [md]="4">
+                <label cLabel for="inputZip">Unit</label>
+                <input cFormControl id="inputZip" placeholder="25" />
+            </c-col>
+            <c-col [md]="4">
+                <label cLabel for="inputZip">Postal Code</label>
+                <input cFormControl id="inputZip" placeholder="550520" />
+            </c-col>
+            <hr>
+
+            <h5>Identification</h5>
+            <c-nav variant="tabs">
+                <a class="text-dark" [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>SG PR</a>
+                <a class="text-dark" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink >Foreigner</a>
+            </c-nav>
+            <c-tab-content #tabContent="cTabContent">
+                <c-tab-pane class="p-3">
+                    <c-row class="g-3">
+                        <c-col [md]="4">
+                            <label cLabel for="inputCity">IC No.</label>
+                            <input cFormControl id="inputCity" placeholder="S87005113A" />
+                        </c-col>
+            
+                        <c-col [md]="4">
+                            <label cLabel for="inputZip">IC Colour</label>
+                            <input cFormControl id="inputZip" placeholder="Pink" />
+                        </c-col>
+                        <c-col [md]="4">
+                            <label cLabel for="inputZip">IC Type</label>
+                            <select cSelect id="ictype">
+                                <option>4-1000</option>
+                              </select>
+                        </c-col>
+                    </c-row>
+
+                    
+                </c-tab-pane>
+                <c-tab-pane class="p-3">
+                    <c-row class="g-3">
+                        <!-- First Row -->
+                        <c-col [md]="4">
+                            <label cLabel for="inputCity">IC No.</label>
+                            <input cFormControl id="inputCity" placeholder="S87005113A" />
+                        </c-col>
+            
+                        <c-col [md]="4">
+                            <label cLabel for="inputZip">IC Colour</label>
+                            <input cFormControl id="inputZip" placeholder="Pink" />
+                        </c-col>
+                        <c-col [md]="4">
+                            <label cLabel for="inputZip">IC Type</label>
+                            <select cSelect id="ictype">
+                                <option>4-1000</option>
+                              </select>
+                        </c-col>
+                        <!-- Second Row -->
+
+                        <!-- Third Row -->
+                        <!-- Fourth Row -->
+                        <!-- Fifth Row -->
+                        <!-- Sixth Row -->
+                        <!-- Seventh Row -->
+                        <!-- Eight Row -->
+
+                    </c-row>
+                </c-tab-pane>
+            </c-tab-content>
+            <hr>
+            <h5>Other Details</h5>
+            <c-row class="g-3">
+                <!-- First Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">IC No.</label>
+                    <input cFormControl id="inputCity" placeholder="S87005113A" />
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">IC Colour</label>
+                    <input cFormControl id="inputZip" placeholder="Pink" />
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">IC Type</label>
+                    <select cSelect id="ictype">
+                        <option>4-1000</option>
+                      </select>
+                </c-col>
+                <!-- Second Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">Religios</label>
+                    <select cSelect id="ictype">
+                        <option>Christian</option>
+                      </select>
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Passport No</label>
+                    <input cFormControl id="inputZip" placeholder="AB123552AS" />
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Date of Birth</label>
+                    <input cFormControl id="inputZip" placeholder="" />
+                </c-col>
+
+                <!-- Third Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">NS Status</label>
+                    <select cSelect id="ictype">
+                        <option>Sample</option>
+                      </select>
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Place of Issue</label>
+                    <select cSelect id="ictype">
+                        <option>Place</option>
+                      </select>
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Youngest Child D.O.B.</label>
+                    <input cFormControl id="inputZip" placeholder="" />
+                </c-col>
+
+                <!-- Fourth Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">MBF's</label>
+                    <input cFormControl id="inputCity" placeholder="" />
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">NS Completed</label>
+                    <input cFormControl id="inputZip" placeholder="" />
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Handphone No.</label>
+                    <input cFormControl id="inputCity" placeholder="" />
+                </c-col>
+
+                <!-- Fifth Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Date of Issue</label>
+                    <input cFormControl id="dateofIssue" placeholder="" />
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Nationality</label>
+                    <select cSelect id="nationality">
+                        <option>Place</option>
+                      </select>
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Place</label>
+                    <select cSelect id="place">
+                        <option>Place</option>
+                      </select>
+                </c-col>
+                <!-- Sixth Row -->
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">Race</label>
+                    <select cSelect id="race">
+                        <option>Race</option>
+                      </select>
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Home Tel No.</label>
+                    <input cFormControl id="hometelno" placeholder="" />
+                </c-col>
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Expiry Date</label>
+                    <input cFormControl id="expirydate" placeholder="" />
+                </c-col>
+                <!-- Seventh Row -->
+
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Marital Status</label>
+                    <select cSelect id="ictype">
+                        <option>Married</option>
+                      </select>
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Gender</label>
+                    <select cSelect id="ictype">
+                        <option>Male</option>
+                        <option>Female</option>
+                        
+                      </select>
+                </c-col>
+
+                <c-col [md]="4">
+                    <label cLabel for="inputCity">Email</label>
+                    <input cFormControl id="inputCity" placeholder="" />
+                </c-col>
+                 <!-- Eight Row -->
+
+                 <c-col [md]="4">
+                    <label cLabel for="inputZip">PR Date Issue</label>
+                    <input cFormControl id="inputCity" placeholder="" />
+                </c-col>
+    
+                <c-col [md]="4">
+                    <label cLabel for="inputZip">Place of Issue</label>
+                    <input cFormControl id="inputCity" placeholder="" />
+                </c-col>
+
+            </c-row>
+
+        </c-row>
+    </c-card-body>
+</c-card>

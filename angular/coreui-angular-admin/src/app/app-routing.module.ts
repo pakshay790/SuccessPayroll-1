@@ -1,3 +1,4 @@
+import { ProfileModule } from './views/profile/profile.module';
 import { ReportModule } from './views/reports/report.module';
 import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
 
@@ -20,8 +21,9 @@ import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-d
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'Landing',
-    pathMatch: 'full'
+    redirectTo: 'login',
+    pathMatch: 'full',
+    
   },
   {
     path: '',
@@ -36,7 +38,7 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
-        path: 'Landing',
+        path: 'landing',
         loadChildren: () =>
           import('./views/landing/landing.module').then((m) => m.LandingModule)
       },
@@ -74,6 +76,11 @@ const routes: Routes = [
         path: 'reports',
         loadChildren: () =>
           import('./views/reports/report.module').then((m) => m.ReportModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./views/profile/profile.module').then((m) => m.ProfileModule)
       },
       {
         path: 'theme',
@@ -171,7 +178,7 @@ const routes: Routes = [
     }
   },
   
-  {path: '**', redirectTo: 'Landing'}
+  {path: '**', redirectTo: 'landing'}
 ];
 
 @NgModule({

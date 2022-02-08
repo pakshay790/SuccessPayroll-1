@@ -57,6 +57,7 @@ import { LandingComponent } from './views/landing/landing.component';
 import { AdvancesearchComponent } from './views/advancesearch/advancesearch.component';
 
 import { ReportsComponent } from './views/reports/reports.component';
+import { ProfileComponent } from './views/profile/profile.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -70,7 +71,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
  
   imports: [
     BrowserModule,
