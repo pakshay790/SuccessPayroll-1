@@ -1,14 +1,16 @@
 <!--  -->
 
+<c-nav variant="tabs" >
+  <c-nav-item>
+    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
+      Search Transactions
+    </a>
+  </c-nav-item>
+</c-nav>
+
 <c-card class="mb">
   <c-card-body>
-    <c-nav variant="tabs" >
-      <c-nav-item>
-        <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
-          Search Transactions
-        </a>
-      </c-nav-item>
-    </c-nav>
+    
     <c-tab-content #tabContent="cTabContent" [activeTabPaneIdx]="1">
       <c-tab-pane class="p-3">
         <form cForm class="row g-3">
