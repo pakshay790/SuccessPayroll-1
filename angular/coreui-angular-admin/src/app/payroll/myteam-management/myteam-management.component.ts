@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 import { MyTeamManagementChartsData, IChartProps } from './myteam-management-charts-data';
-
+import { freeSet } from '@coreui/icons/js/free';
 interface IUser {
   name: string;
   address: string;
@@ -23,7 +23,7 @@ interface IUser {
   styleUrls: ['./myteam-management.component.scss']
 })
 export class MyTeamManagementComponent implements OnInit {
-
+  icons = freeSet ;
   constructor(private chartsData: MyTeamManagementChartsData) {
   }
   

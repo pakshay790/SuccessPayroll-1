@@ -6,7 +6,7 @@ export const navItems: INavData[] = [
     name: 'Sales',
     url: '/sales',
     iconComponent: { name: 'cil-Basket' },
-    children: [
+  },
       {
         name: 'Quotations',
        
@@ -36,16 +36,11 @@ export const navItems: INavData[] = [
         name: 'Purchases',
         url: '/purchases',
         iconComponent: { name: 'cil-Tags' },
-        children: [
-          {
-            name: '',
-           
-            url: '/sales/quotation'
-          },
-        ]
-      }
-    ]
-  },
+        
+        
+      },
+    
+  
   {  
     name: 'Accounting',
     url: '/accounting',
@@ -75,7 +70,7 @@ export const navItems: INavData[] = [
         name: 'My HR',
         url: '/payroll/payroll-dashboard',
       },
-      {
+      /*{
         name: 'Employees',
         url: '/payroll/employee',
       },
@@ -86,10 +81,14 @@ export const navItems: INavData[] = [
       {
         name: 'Pending Approval',
         url: '/payroll/pending',
-      },
+      },*/
       {
         name: 'Team Management',
         url: '/payroll/myteam-management',
+      },
+      {
+        name: 'Run Payroll',
+        url: '/payroll/run-payroll',
       },
     ]
   },

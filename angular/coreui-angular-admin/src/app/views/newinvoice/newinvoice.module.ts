@@ -1,5 +1,5 @@
-import { ProfileRoutingModule } from './profile-routing.module';
-import { ProfileComponent } from './profile.component';
+import { NewinvoiceRoutingModule } from './newinvoice-routing.module';
+import { NewinvoiceComponent } from './newinvoice.component';
 
 
 
@@ -15,7 +15,6 @@ import {
   FormModule,
   GridModule,
   NavModule,
-  OffcanvasModule,
   ProgressModule,
   TableModule,
   TabsModule
@@ -23,11 +22,13 @@ import {
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
+
+
 import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
   imports: [
-    ProfileRoutingModule,
+    NewinvoiceRoutingModule,
     CardModule,
     NavModule,
     IconModule,
@@ -42,11 +43,12 @@ import { WidgetsModule } from '../widgets/widgets.module';
     ButtonGroupModule,
     ChartjsModule,
     AvatarModule,
-    TableModule,OffcanvasModule,
-    WidgetsModule
+    TableModule,
+    WidgetsModule,
   ],
-  declarations: [ProfileComponent],
-  exports: [],
+  declarations: [NewinvoiceComponent],
+ 
+
 })
-export class ProfileModule {
+export class NewinvoiceModule {
 }

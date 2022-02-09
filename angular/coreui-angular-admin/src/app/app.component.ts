@@ -4,6 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from './icons/icon-subset';
 import { Title } from '@angular/platform-browser';
+import { cilPlus } from '@coreui/icons';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
   ) {
     titleService.setTitle(this.title);
     // iconSet singleton
-    iconSetService.icons = { ...iconSubset };
+    iconSetService.icons = { ...iconSubset,cilPlus };
   }
   
 
@@ -35,6 +36,6 @@ export class AppComponent implements OnInit {
     this.router.navigate([`${'/newquote'}`])
   }
   goToPage1(PageName:string):void{
-    this.router.navigate([`${'/advancesearch'}`])
+    this.router.navigate([`${'/newinvoice'}`])
   }
 }

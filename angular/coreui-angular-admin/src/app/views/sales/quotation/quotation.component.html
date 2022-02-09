@@ -15,7 +15,7 @@
           </c-col>
           <c-col [md]="3">
             <label cLabel for="lblQdrange">Quotation Date Range</label>
-            <input cFormControl id="QDrange" type="text" />
+            <input cFormControl id="QDrange" type="date" />
           </c-col>
           <c-col [md]="3">
             <label cLabel for="lblCref">Client Ref </label>
@@ -28,7 +28,7 @@
 
           <c-col [xs]="12">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button cButton type="submit" cButton color="dark" shape="rounded-0">Clear</button>
+              <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
               <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
             </div>
           </c-col>
@@ -39,6 +39,25 @@
 
       <c-tab-pane class="p-3">
 
+        <form cForm class="row g-3">
+          <c-col [md]="3">
+            <label cLabel for="lblQno">Customer Code</label>
+            <input cFormControl id="Qno" type="text" />
+          </c-col>
+          <c-col [md]="3">
+            <label cLabel for="lblQdrange">Customer Name</label>
+            <input cFormControl id="QDrange" type="text" />
+          </c-col>
+          
+
+          <c-col [xs]="12">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
+              <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
+            </div>
+          </c-col>
+
+        </form>
       </c-tab-pane>
 
     </c-tab-content>
@@ -46,15 +65,16 @@
 </c-card>
 
 
-  <c-card class="mt-4">
-    <c-card-body >
-       
+  
+       <c-card>
+      <c-card-body>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <!-- <button cButton color="dark" shape="rounded-0" class="me-md-2" routerLink="/advancesearch">Advance -->
             <!-- Search</button> -->
-            <button cButton color="dark" shape="rounded-0" routerLink="/newquote">New Quote</button>
-            <button cButton color="dark" shape="rounded-0">Column Setting</button>
-            <button cButton color="dark" shape="rounded-0">Export To Excel</button>
+            <!-- <svg [cIcon]="icons.cilList" size="xl" title="List Icon"></svg> -->
+            <button  cButton color="dark"   shape="rounded-0"  routerLink="/newquote"> <svg [cIcon]="icons.cilPlus" size="sm" title="List Icon"  ></svg>New Quote</button>
+            <button cButton color="dark" cIcon name="cilPaperclip" shape="rounded-0"><svg [cIcon]="icons.cilSettings" size="sm" title="List Icon"></svg>Column Setting</button>
+            <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilShareBoxed" size="sm" title="List Icon" ></svg>Export To Excel</button>
             
             </div>
     </c-card-body>
@@ -88,7 +108,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
 
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
@@ -104,7 +124,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -119,7 +139,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -134,7 +154,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -149,7 +169,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -164,7 +184,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -179,7 +199,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -194,7 +214,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -209,7 +229,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -224,7 +244,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -239,7 +259,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
@@ -254,7 +274,7 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex ">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
