@@ -3,7 +3,7 @@
 <c-nav variant="tabs" >
   <c-nav-item>
     <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
-      Search Transactions
+      Transactions
     </a>
   </c-nav-item>
 </c-nav>
@@ -35,7 +35,7 @@
     
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
-            <input cButton color="success" type="submit" value="Search" style="float:right;" routerLink="./" />
+            <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
           </div>
         </form>
       </c-tab-pane>
@@ -45,12 +45,12 @@
 
 <c-card>
   <c-card-body>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button cButton color="info" variant="outline" class="me-md-2" routerLink="/miscpayment">New Misc Payment</button>
-      <button cButton color="info" variant="outline" routerLink="/miscreceipt">New Misc Receipt</button>
-      <button cButton color="info" variant="outline" routerLink="/journalvoucher">New Journal Voucher</button>
-      <button cButton color="info" variant="outline" routerLink="/otherpayment">New Other Payment Entry</button>
-      <button cButton color="info" variant="outline" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
+    <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+      <button cButton color="dark" routerLink="/miscpayment">New Misc Payment</button>
+      <button cButton color="dark" routerLink="/miscreceipt">New Misc Receipt</button>
+      <button cButton color="dark" routerLink="/journalvoucher">New Journal Voucher</button>
+      <button cButton color="dark" routerLink="/otherpayment">New Other Payment Entry</button>
+      <button cButton color="dark" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
 
     </div> 
   </c-card-body>
@@ -62,11 +62,11 @@
 <c-card class="mb-4">
    <!--<c-card-header>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button cButton color="info" variant="outline" class="me-md-2" routerLink="/miscpayment">New Misc Payment</button>
-      <button cButton color="info" variant="outline" routerLink="/miscreceipt">New Misc Receipt</button>
-      <button cButton color="info" variant="outline" routerLink="/journalvoucher">New Journal Voucher</button>
-      <button cButton color="info" variant="outline" routerLink="/otherpayment">New Other Payment Entry</button>
-      <button cButton color="info" variant="outline" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
+      <button cButton color="dark" class="me-md-2" routerLink="/miscpayment">New Misc Payment</button>
+      <button cButton color="dark" routerLink="/miscreceipt">New Misc Receipt</button>
+      <button cButton color="dark" routerLink="/journalvoucher">New Journal Voucher</button>
+      <button cButton color="dark" routerLink="/otherpayment">New Other Payment Entry</button>
+      <button cButton color="dark" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
 
     </div> 
   </c-card-header>-->
