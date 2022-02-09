@@ -25,6 +25,7 @@ import {
 } from './containers';
 
 import {
+  
   AvatarModule,
   BadgeModule,
   BreadcrumbModule,
@@ -58,6 +59,7 @@ import { AdvancesearchComponent } from './views/advancesearch/advancesearch.comp
 
 import { ReportsComponent } from './views/reports/reports.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { NewinvoiceComponent } from './views/newinvoice/newinvoice.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -71,7 +73,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent,],
+  declarations: [AppComponent, ...APP_CONTAINERS, EmployeeListComponent],
  
   imports: [
     BrowserModule,

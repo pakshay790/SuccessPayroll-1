@@ -67,29 +67,29 @@
         <c-col [sm]="12">
           <c-card class="mb-4">
               <c-card-body>
-          <h5 cCardTitle>Quotation Information</h5>
+          <h5 cCardTitle>Invoice Information</h5>
           <form cForm class="row g-3">
               <c-col [md]="6">
           
-                    <label cLabel for="lblquotationno">Quotation No</label>
+                    <label cLabel for="lblinvoiceno">Invoice No</label>
           
-                    <input cFormControl id="quotationno" type="text" />
+                    <input cFormControl id="invoiceno" type="text" />
           
                   </c-col>
           
                   <c-col [md]="6">
           
-                    <label cLabel for="lblqdate">Quotation Date</label>
+                    <label cLabel for="lblidate">Invoice Date</label>
           
-                    <input cFormControl id="Qdate" type="Date" />
+                    <input cFormControl id="Idate" type="Date" />
           
                   </c-col>
           
                   <c-col [xs]="12">
           
-                    <label cLabel for="lblclientref">Client Ref</label>
+                    <label cLabel for="lblpono">P/O No</label>
           
-                    <input cFormControl id="lblclientref" placeholder="" />
+                    <input cFormControl id="lblPOno" placeholder="" />
           
                   </c-col>
           
@@ -119,9 +119,23 @@
           
                   <c-col [xs]="12">
           
-                    <label cLabel for="lblsupplier">Supplier</label>
+                    <label cLabel for="lblbranch">Branch / WH Loc</label>
           
-                    <input cFormControl id="supplier" />
+                    <select aria-label="medium select example" cSelect class="mb-3">
+                  
+                        <option>Select Value</option>
+              
+                        <option value="1">Wh1</option>
+              
+                        <option value="2">Wh2</option>
+              
+                        <option value="3">VIV</option>
+              
+                        <option value="3">BAL</option>
+              
+                        <option value="3">TAM</option>
+              
+                      </select>
           
                   </c-col>
             </form>
