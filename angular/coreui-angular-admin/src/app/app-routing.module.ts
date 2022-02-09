@@ -147,6 +147,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/advancesearch/advancesearch.module').then((m) => m.AdvancesearchModule)
       },
+      {
+        path: 'newinvoice',
+        loadChildren: () =>
+          import('./views/newinvoice/newinvoice.module').then((m) => m.NewinvoiceModule)
+      },
     ]
   },
   {
