@@ -45,7 +45,8 @@ import { WidgetsModule } from '../widgets/widgets.module';
     TableModule,OffcanvasModule,
     WidgetsModule
   ],
-  declarations: [ProfileComponent]
+  declarations: [ProfileComponent],
+  exports: [],
 })
 export class ProfileModule {
 }

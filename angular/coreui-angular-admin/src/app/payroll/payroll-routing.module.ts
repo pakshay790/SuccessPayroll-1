@@ -6,6 +6,7 @@ import { VacationComponent } from '../payroll/vacation/vacation.component';
 import { PendingComponent } from '../payroll/pending/pending.component';
 import { PayrollDashboardComponent } from '../payroll/payroll-dashboard/payroll-dashboard.component';
 import { MyTeamManagementComponent } from '../payroll/myteam-management/myteam-management.component';
+import { RunPayrollComponent } from './run-payroll/run-payroll.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,7 @@ const routes: Routes = [
         path: 'vacation',
         component: VacationComponent,
         data: {
-          title: 'Apply Vacation'
+          title: 'Apply Leave'
         }
       },
       {
@@ -47,6 +48,13 @@ const routes: Routes = [
         component: MyTeamManagementComponent,
         data: {
           title: 'Team Management'
+        }
+      },
+      {
+        path: 'run-payroll',
+        component: RunPayrollComponent,
+        data: {
+          title: 'Run Payroll'
         }
       }
     ]
