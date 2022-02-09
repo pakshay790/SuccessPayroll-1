@@ -11,9 +11,14 @@
                   <c-col [md]="6">
                     <div class="d-grid gap-2 d-md-flex float-end">
                       <button cButton color="dark" shape="rounded-0" routerLink="/payroll/employee"
-                        class="font-semibold">Add New Staff</button>
+                        class="float-right;">&nbsp;<span>
+                          <!--<svg [cIcon]="icons.cilLibraryAdd" size="xs" title="List Icon"
+                          style="align-items: center;"></svg>--><svg [cIcon]="icons.cilPlus" size="xs"
+                            title="List Icon" style="align-items: center;"></svg>
+                        </span>Add New Staff</button>
                       <button cButton color="dark" shape="rounded-0" routerLink="/payroll/pending"
-                        class="float-right;">Pending Approvals</button>
+                        class="float-right;">&nbsp;<span><svg [cIcon]="icons.cilCheckCircle" size="xs" title="List Icon"
+                            style="align-items: center;"></svg></span>Pending Approvals</button>
                     </div>
                   </c-col>
                 </c-row>
@@ -33,45 +38,6 @@
     <app-widgets-dropdown></app-widgets-dropdown>
     <c-row>
       <c-col lg=12>
-
-        <c-card class="mb-4">
-          <c-card-body>
-            <c-row>
-              <c-col sm="5">
-                <h4 class="card-title mb-0" id="traffic">
-                  Traffic
-                </h4>
-                <div class="small text-medium-emphasis">January - December 2021</div>
-              </c-col>
-              <c-col class="d-none d-md-block" sm="7">
-                <button cButton class="float-end" color="primary">
-                  <svg cIcon name="cilCloudDownload"></svg>
-                </button>
-                <form [formGroup]="trafficRadioGroup">
-                  <c-button-group class="float-end me-3" role="group">
-                    <input class="btn-check" formControlName="trafficRadio" type="radio" value="Day" />
-                    <label (click)="setTrafficPeriod('Day')" cButton cFormCheckLabel color="secondary"
-                      variant="outline">Day</label>
-
-                    <input class="btn-check" formControlName="trafficRadio" type="radio" value="Month" />
-                    <label (click)="setTrafficPeriod('Month')" cButton cFormCheckLabel color="secondary"
-                      variant="outline">Month</label>
-
-                    <input class="btn-check" formControlName="trafficRadio" type="radio" value="Year" />
-                    <label (click)="setTrafficPeriod('Year')" cButton cFormCheckLabel color="secondary"
-                      variant="outline">Year</label>
-                  </c-button-group>
-                </form>
-              </c-col>
-            </c-row>
-            <c-chart [data]="mainChart.data" [height]="300" [ngStyle]="{'marginTop.px': 40}"
-              [options]="mainChart.options" [type]="mainChart.type">
-              Main chart
-            </c-chart>
-          </c-card-body>
-        </c-card>
-      </c-col>
-      <c-col lg=12>
         <c-card class="mb-4">
           <c-card-header>Employees</c-card-header>
           <c-card-body>
@@ -85,7 +51,7 @@
                   <th>Name</th>
                   <th class="text-Left">Code</th>
                   <th>Branch</th>
-                  <th >Departments</th>
+                  <th>Departments</th>
                   <th>Section</th>
                   <th class="text-center">Action</th>
                 </tr>
@@ -116,8 +82,8 @@
                   </td>
                   <td>
                     <div>
-                        <span>DRV</span>
-                      </div>
+                      <span>DRV</span>
+                    </div>
                   </td>
                   <td>
                     <div>
