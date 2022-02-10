@@ -60,7 +60,7 @@
       <!-- <svg [cIcon]="icons.cilList" size="xl" title="List Icon"></svg> -->
       <button cButton color="dark" shape="rounded-0" routerLink="/sales/newquote"> <svg [cIcon]="icons.cilPlus" size="sm"
           title="List Icon" style="margin-right: 5px;"></svg>New Quote</button>
-      <button cButton color="dark" cIcon name="cilPaperclip" shape="rounded-0"><svg [cIcon]="icons.cilSettings"
+      <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilSettings"
           size="sm" title="List Icon" style="margin-right: 5px;"></svg>Column Setting</button>
       <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilShareBoxed" size="sm"
           title="List Icon" style="margin-right: 5px;"></svg>Export To Excel</button>
@@ -70,7 +70,7 @@
 <br>
 <c-card class="mt">
   <c-card-body>
-    <table cTable>
+    <table cTable style="justify-content: center;">
       <thead cTableColor="light">
         <tr>
           <th scope="col">QUOTE NO</th>
@@ -79,7 +79,7 @@
           <th scope="col">TOTAL DUE AMOUNT</th>
           <th scope="col">CUSTOMER NAME</th>
           <th scope="col">DELIVERY ADD</th>
-          <th scope="col">ACTIONS</th>
+          <th scope="col" class="text-center">ACTIONS</th>
         </tr>
       </thead>
       <tbody>
@@ -91,9 +91,25 @@
           <td> ALAN NG-96884338</td>
           <td></td>
           <td>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
+            </div>
+          </td>
+          
+        </tr>
+
+        <tr>
+          <th scope="row">QBL9000092</th>
+          <td> 13/08/2021</td>
+          <td>A000432</td>
+          <td> 127.33</td>
+          <td> ALAN NG-96884338</td>
+          <td></td>
+          <td>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
+              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -108,7 +124,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -123,7 +139,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -138,7 +154,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -153,7 +169,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -168,7 +184,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -183,7 +199,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -198,7 +214,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>
@@ -213,22 +229,7 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">QBL9000092</th>
-          <td> 13/08/2021</td>
-          <td>A000432</td>
-          <td> 127.33</td>
-          <td> ALAN NG-96884338</td>
-          <td></td>
-          <td>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-center ">
-              <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-              <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
+              <svg [cIcon]="icons.cilCart" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
         </tr>

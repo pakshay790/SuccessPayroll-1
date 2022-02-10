@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt } from '@coreui/icons';
+import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt, } from '@coreui/icons';
 
 @Component({
   selector: 'app-quotation',
