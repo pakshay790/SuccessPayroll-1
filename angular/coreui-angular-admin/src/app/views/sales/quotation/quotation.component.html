@@ -1,13 +1,11 @@
 <c-nav variant="tabs">
-  <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Quotation Information</a>
-  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Customer Details</a>
-
+  <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink style="color: grey">Quotation Information</a>
+  <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink style="color: grey">Customer Details</a>
 </c-nav>
-<c-card class="mb">
+<c-card>
   <c-card-body>
     <c-tab-content #tabContent="cTabContent">
-      <c-tab-pane class="p-3">
-
+      <c-tab-pane>
         <form cForm class="row g-3">
           <c-col [md]="3">
             <label cLabel for="lblQno">Quotation No</label>
@@ -25,20 +23,15 @@
             <label cLabel for="lblAcode">Agent Code</label>
             <input cFormControl id="Acode" placeholder="" />
           </c-col>
-
           <c-col [xs]="12">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
               <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
             </div>
           </c-col>
-
         </form>
-
       </c-tab-pane>
-
-      <c-tab-pane class="p-3">
-
+      <c-tab-pane>
         <form cForm class="row g-3">
           <c-col [md]="3">
             <label cLabel for="lblQno">Customer Code</label>
@@ -48,49 +41,39 @@
             <label cLabel for="lblQdrange">Customer Name</label>
             <input cFormControl id="QDrange" type="text" />
           </c-col>
-          
-
           <c-col [xs]="12">
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
               <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
             </div>
           </c-col>
-
         </form>
       </c-tab-pane>
-
     </c-tab-content>
   </c-card-body>
 </c-card>
-
-
-  
-       <c-card>
-      <c-card-body>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <!-- <button cButton color="dark" shape="rounded-0" class="me-md-2" routerLink="/advancesearch">Advance -->
-            <!-- Search</button> -->
-            <!-- <svg [cIcon]="icons.cilList" size="xl" title="List Icon"></svg> -->
-            <button  cButton color="dark"   shape="rounded-0"  routerLink="/newquote"> <svg [cIcon]="icons.cilPlus" size="sm" title="List Icon"  ></svg>New Quote</button>
-            <button cButton color="dark" cIcon name="cilPaperclip" shape="rounded-0"><svg [cIcon]="icons.cilSettings" size="sm" title="List Icon"></svg>Column Setting</button>
-            <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilShareBoxed" size="sm" title="List Icon" ></svg>Export To Excel</button>
-            
-            </div>
-    </c-card-body>
-  </c-card>
-
-
+<c-card class="mt-4">
+  <c-card-body>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <!-- <button cButton color="dark" shape="rounded-0" class="me-md-2" routerLink="/advancesearch">Advance -->
+      <!-- Search</button> -->
+      <!-- <svg [cIcon]="icons.cilList" size="xl" title="List Icon"></svg> -->
+      <button cButton color="dark" shape="rounded-0" routerLink="/newquote"> <svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon" style="margin-right: 5px;"></svg>New Quote</button>
+      <button cButton color="dark" cIcon name="cilPaperclip" shape="rounded-0"><svg [cIcon]="icons.cilSettings"
+          size="sm" title="List Icon" style="margin-right: 5px;"></svg>Column Setting</button>
+      <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilShareBoxed" size="sm"
+          title="List Icon" style="margin-right: 5px;"></svg>Export To Excel</button>
+    </div>
+  </c-card-body>
+</c-card>
 <br>
-
-
-<c-card class="mt-2">
+<c-card class="mt">
   <c-card-body>
     <table cTable>
       <thead cTableColor="light">
         <tr>
           <th scope="col">QUOTE NO</th>
-
           <th scope="col">QUOTE DATE</th>
           <th scope="col">CUSTOMER CODE</th>
           <th scope="col">TOTAL DUE AMOUNT</th>
@@ -110,7 +93,6 @@
           <td>
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
               <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
-
               <svg cIcon name="cilPaperclip" size="sm" title="Numbered List Icon"></svg>
             </div>
           </td>
@@ -310,25 +292,26 @@
     </table>
     <c-pagination aria-label="Page navigation example">
       <li cPageItem>
-        <a cPageLink [routerLink]>Previous</a>
+        <a cPageLink [routerLink] style="color: gray;">Previous</a>
       </li>
       <li cPageItem>
-        <a cPageLink [routerLink]>1</a>
+        <a cPageLink [routerLink] style="color: gray;">1</a>
       </li>
       <li cPageItem>
-        <a cPageLink [routerLink]>2</a>
+        <a cPageLink [routerLink] style="color: gray;">2</a>
       </li>
       <li cPageItem>
-        <a cPageLink [routerLink]>3</a>
+        <a cPageLink [routerLink] style="color: gray;">3</a>
       </li>
       <li cPageItem>
-        <a cPageLink [routerLink]>Next</a>
+        <a cPageLink [routerLink] style="color: gray;">Next</a>
       </li>
-
-
-      <label cLabel for="lblAcode">Total Record: 75</label>
-
+<li>
+  <label cLabel for="lblAcode"  style=" margin-left:50px; margin-top: 6px;">Total Record: 75</label>
+</li>
     </c-pagination>
     <label cLabel for="lblAcode">Record per page: 10</label>
+    
+   
   </c-card-body>
 </c-card>

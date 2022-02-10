@@ -140,7 +140,7 @@ const routes: Routes = [
       {
         path: 'newquote',
         loadChildren: () =>
-          import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
+          import('./views/sales/newquote/newquote.module').then((m) => m.NewquoteModule)
       },
       {
         path: 'advancesearch',
