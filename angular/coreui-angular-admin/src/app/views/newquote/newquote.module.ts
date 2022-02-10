@@ -24,7 +24,7 @@ import { ChartjsModule } from '@coreui/angular-chartjs';
 
 
 
-import { WidgetsModule } from '../../widgets/widgets.module';
+import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
   imports: [
