@@ -1,9 +1,3 @@
-import { ProfileModule } from './views/profile/profile.module';
-import { ReportModule } from './views/reports/report.module';
-import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
-
-
-
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,10 +7,6 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
-import { EmployeeComponent } from './payroll/employee/employee.component';
-import { VacationComponent } from './payroll/vacation/vacation.component';
-import { PendingComponent } from './payroll/pending/pending.component';
-import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -46,31 +36,6 @@ const routes: Routes = [
         path: 'accounting',
         loadChildren: () =>
           import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
-      },
-      {
-        path: 'miscpayment',
-        loadChildren: () =>
-          import('./views/miscpayment/miscpayment.module').then((m) => m.MiscPaymentModule)
-      },
-      {
-        path: 'miscreceipt',
-        loadChildren: () =>
-          import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
-      },
-      {
-        path: 'journalvoucher',
-        loadChildren: () =>
-          import('./views/journalvoucher/journalvoucher.module').then((m) => m.JournalVoucherModule)
-      },
-      {
-        path: 'otherpayment',
-        loadChildren: () =>
-          import('./views/newotherpayment/newotherpayment.module').then((m) => m.NewOtherPaymentModule)
-      },
-      {
-        path: 'uploadbankstmt',
-        loadChildren: () =>
-          import('./views/uploadbankstmt/uploadbankstmt.module').then((m) => m.UploadBankStmtModule)
       },
       {
         path: 'reports',

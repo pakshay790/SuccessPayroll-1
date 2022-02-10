@@ -51,17 +51,6 @@ import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 
-import { MiscreceiptComponent } from './views/miscreceipt/miscreceipt.component';
-import { JournalvoucherComponent } from './views/journalvoucher/journalvoucher.component';
-import { UploadbankstmtComponent } from './views/uploadbankstmt/uploadbankstmt.component';
-import { LandingComponent } from './views/landing/landing.component';
-import { AdvancesearchComponent } from './views/advancesearch/advancesearch.component';
-
-import { ReportsComponent } from './views/reports/reports.component';
-import { ProfileComponent } from './views/profile/profile.component';
-import { NewinvoiceComponent } from './views/newinvoice/newinvoice.component';
-
-
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };

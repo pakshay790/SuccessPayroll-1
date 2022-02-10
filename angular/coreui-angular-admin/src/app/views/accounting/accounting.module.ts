@@ -1,3 +1,7 @@
+import { NewotherpaymentComponent } from './newotherpayment/newotherpayment.component';
+import { UploadbankstmtComponent } from './uploadbankstmt/uploadbankstmt.component';
+import { JournalvoucherComponent } from './journalvoucher/journalvoucher.component';
+import { MiscreceiptComponent } from './miscreceipt/miscreceipt.component';
 import { AccoutingRoutingModule } from './accounting-routing.module';
 import { ReconciliationComponent } from './reconciliation/reconciliation.component';
 import { CoaComponent } from './coa/coa.component';
@@ -7,6 +11,7 @@ import { ComponentsModule } from '../../../components/components.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OffcanvasModule } from '@coreui/angular';
 
 // CoreUI Modules
 import {
@@ -31,9 +36,11 @@ import {
     TabsModule,
     TooltipModule,
     UtilitiesModule,
+    
   } from '@coreui/angular';
   
   import { IconModule } from '@coreui/icons-angular';
+import { MiscpaymentComponent } from './miscpayment/miscpayment.component';
 
 
 
@@ -68,13 +75,18 @@ import {
         PaginationModule,
         PopoverModule,
         TableModule,
+        OffcanvasModule
 
     ],
     declarations :[
         TransactionsComponent,
         ReconciliationComponent,
         CoaComponent,
-        
+        MiscreceiptComponent,
+        MiscpaymentComponent,
+        JournalvoucherComponent,
+        UploadbankstmtComponent,
+        NewotherpaymentComponent,
         
     ],
 })
