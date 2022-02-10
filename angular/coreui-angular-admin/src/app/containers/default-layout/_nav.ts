@@ -75,7 +75,7 @@ export const navItems: INavData[] = [
         name: 'My HR',
         url: '/payroll/payroll-dashboard',
       },
-      {
+      /*{
         name: 'Employees',
         url: '/payroll/employee',
       },
@@ -86,10 +86,14 @@ export const navItems: INavData[] = [
       {
         name: 'Pending Approval',
         url: '/payroll/pending',
-      },
+      },*/
       {
         name: 'Team Management',
         url: '/payroll/myteam-management',
+      },
+      {
+        name: 'Run Payroll',
+        url: '/payroll/run-payroll',
       },
     ]
   },
