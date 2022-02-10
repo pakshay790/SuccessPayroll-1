@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -44,7 +45,8 @@ import { RunPayrollComponent } from './run-payroll/run-payroll.component';
     VacationComponent, 
     EmployeeComponent,
     MyTeamManagementComponent, 
-    RunPayrollComponent
+    RunPayrollComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

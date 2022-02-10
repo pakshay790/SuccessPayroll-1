@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -55,6 +56,13 @@ const routes: Routes = [
         component: RunPayrollComponent,
         data: {
           title: 'Run Payroll'
+        }
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        data: {
+          title: 'Profile'
         }
       }
     ]
