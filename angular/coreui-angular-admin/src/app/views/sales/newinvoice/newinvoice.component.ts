@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class NewinvoiceComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  goToPage(PageName:string):void{
-    this.router.navigate([`${'/newinvoice'}`])
-  }
+  // goToPage(PageName:string):void{
+  //   this.router.navigate([`${'/newinvoice'}`])
+  // }
 
 }

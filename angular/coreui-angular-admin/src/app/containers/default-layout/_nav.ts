@@ -6,7 +6,7 @@ export const navItems: INavData[] = [
     name: 'Sales',
     url: '/sales',
     iconComponent: { name: 'cil-Basket' },
-  },
+    children: [
       {
         name: 'Quotations',
        
@@ -36,11 +36,16 @@ export const navItems: INavData[] = [
         name: 'Purchases',
         url: '/purchases',
         iconComponent: { name: 'cil-Tags' },
-        
-        
-      },
-    
-  
+        children: [
+          {
+            name: '',
+           
+            url: '/sales/quotation'
+          },
+        ]
+      }
+    ]
+  },
   {  
     name: 'Accounting',
     url: '/accounting',

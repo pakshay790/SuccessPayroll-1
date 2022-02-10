@@ -1,3 +1,5 @@
+
+
 import { InvoiceComponent } from './invoice/invoice.component';
 import { QuotationComponent } from './quotation/quotation.component';
 import { SalesRoutingModule } from './sales-routing.module';
@@ -34,6 +36,8 @@ import { IconModule } from '@coreui/icons-angular';
 
 // utils
 import { ComponentsModule } from '../../../components/components.module';
+import { NewquoteComponent } from './newquote/newquote.component';
+import { NewinvoiceComponent } from './newinvoice/newinvoice.component';
 
 
 
@@ -72,8 +76,8 @@ import { ComponentsModule } from '../../../components/components.module';
   declarations: [
     QuotationComponent,
     InvoiceComponent,
-   
-   
+   NewquoteComponent,
+   NewinvoiceComponent,
   ],
   
 })

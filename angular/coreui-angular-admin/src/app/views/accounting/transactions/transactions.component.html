@@ -1,6 +1,6 @@
 <!--  -->
 
-<c-nav variant="tabs" >
+<c-nav variant="tabs">
   <c-nav-item>
     <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
       Transactions
@@ -9,50 +9,55 @@
 </c-nav>
 
 <c-card class="mb">
-  <c-card-body>
-    
-    <c-tab-content #tabContent="cTabContent" [activeTabPaneIdx]="1">
-      <c-tab-pane class="p-3">
-        <form cForm class="row g-3">
-          <c-col [md]="3">
-            <label cLabel for="lblrefno">RefNo</label>
-            <input aria-label="RefNo" cFormControl id="refNo" type="text"  placeholder="JV20220101">
-          </c-col>
-          <c-col [md]="3">
-            <label cLabel for="lblchequenumber">Account</label>
-            <input cFormControl id="chqNumber" placeholder="3-2000" />
-          </c-col>
-    
-          <c-col [md]="3">
-            <label cLabel for="lblchequenumber">Category</label>
-            <input cFormControl id="chqNumber" placeholder="Journal Voucher" />
-          </c-col>
-    
-          <c-col [md]="3">
-            <label cLabel for="lbldateissued">Date </label>
-            <input cFormControl id="dateIssued" type="date" value="" />
-          </c-col>
-    
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
-            <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
-          </div>
-        </form>
-      </c-tab-pane>
-    </c-tab-content>
-  </c-card-body>
+  <c-tab-content #tabContent="cTabContent" [activeTabPaneIdx]="1">
+    <c-tab-pane class="p-3">
+      <form cForm class="row g-2">
+        <c-col [md]="3">
+          <label cLabel for="lblrefno">RefNo</label>
+          <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="JV20220101">
+        </c-col>
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Account</label>
+          <input cFormControl id="chqNumber" placeholder="3-2000" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Category</label>
+          <input cFormControl id="chqNumber" placeholder="Journal Voucher" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lbldateissued">Date </label>
+          <input cFormControl id="dateIssued" type="date" value="" />
+        </c-col>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
+          <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+        </div>
+      </form>
+    </c-tab-pane>
+  </c-tab-content>
+  <!-- <c-card-body> 
+   
+  </c-card-body> -->
 </c-card>
 
 <c-card>
   <c-card-body>
     <div class="d-grid gap-1 d-md-flex justify-content-md-end">
-      <button cButton color="dark" routerLink="/miscpayment">New Misc Payment</button>
-      <button cButton color="dark" routerLink="/miscreceipt">New Misc Receipt</button>
-      <button cButton color="dark" routerLink="/journalvoucher">New Journal Voucher</button>
-      <button cButton color="dark" routerLink="/otherpayment">New Other Payment Entry</button>
-      <button cButton color="dark" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
+      <button cButton color="dark" routerLink="/accounting/miscpayment"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Payment</button>
+      <button cButton color="dark" routerLink="/accounting/miscreceipt"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Receipt</button>
+      <button cButton color="dark" routerLink="/accounting/journalvoucher"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Journal Voucher</button>
+      <button cButton color="dark" routerLink="/accounting/otherpayment"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Other Payment Entry</button>
+      <button cButton color="dark" routerLink="/accounting/uploadbankstmt"><svg [cIcon]="icons.cilCloudUpload" size="sm"
+          title="List Icon"></svg> Bank Statement</button>
 
-    </div> 
+    </div>
   </c-card-body>
 </c-card>
 
@@ -60,20 +65,10 @@
 
 
 <c-card class="mb-4">
-   <!--<c-card-header>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button cButton color="dark" class="me-md-2" routerLink="/miscpayment">New Misc Payment</button>
-      <button cButton color="dark" routerLink="/miscreceipt">New Misc Receipt</button>
-      <button cButton color="dark" routerLink="/journalvoucher">New Journal Voucher</button>
-      <button cButton color="dark" routerLink="/otherpayment">New Other Payment Entry</button>
-      <button cButton color="dark" routerLink="/uploadbankstmt">Upload a Bank Statement</button>
-
-    </div> 
-  </c-card-header>-->
   <c-card-body>
-    
+
     <br>
-    <table class="table table-striped" cTable>
+    <table class="table table-striped" style="justify-content: center;" cTable>
       <thead>
         <tr>
           <th scope="col">Ref No.</th>
@@ -82,7 +77,7 @@
           <th scope="col">Description</th>
           <th scope="col">Amount</th>
           <th scope="col">Date</th>
-          <th scope="col">Actions</th>
+          <th scope="col" class="text-center">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -93,7 +88,7 @@
           <td>DESC</td>
           <td>1000</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -105,7 +100,7 @@
           <td>DESC</td>
           <td>500</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -117,7 +112,7 @@
           <td>DESC</td>
           <td>370</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -129,7 +124,7 @@
           <td>DESC</td>
           <td>420</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -141,7 +136,7 @@
           <td>DESC</td>
           <td>115</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -153,7 +148,7 @@
           <td>DESC</td>
           <td>385</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -165,7 +160,7 @@
           <td>DESC</td>
           <td>295</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -177,7 +172,7 @@
           <td>DESC</td>
           <td>510</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -189,7 +184,7 @@
           <td>DESC</td>
           <td>475</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -201,7 +196,7 @@
           <td>DESC</td>
           <td>175</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -213,7 +208,7 @@
           <td>DESC</td>
           <td>890</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>
@@ -225,7 +220,7 @@
           <td>DESC</td>
           <td>750</td>
           <td>Jan 27, 2022</td>
-          <td>
+          <td class="text-center">
             <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg>
           </td>
         </tr>

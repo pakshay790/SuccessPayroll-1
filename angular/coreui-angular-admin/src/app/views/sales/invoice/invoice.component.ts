@@ -10,14 +10,14 @@ import { cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt } 
 export class InvoiceComponent implements OnInit {
   icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed };
 visible = false;
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  toggleCollapse(): void {
-    this.visible = !this.visible;
-  }
-  goToPage(PageName:string):void{
-    this.router.navigate([`${'/newinvoice'}`])
-  }
+  // toggleCollapse(): void {
+  //   this.visible = !this.visible;
+  // }
+  // goToPage(PageName:string):void{
+  //   this.router.navigate([`${'/newinvoice'}`])
+  // }
 }

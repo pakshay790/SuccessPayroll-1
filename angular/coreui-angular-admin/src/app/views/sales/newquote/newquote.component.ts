@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class NewquoteComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  goToPage(PageName:string):void{
-    this.router.navigate([`${'/newquote'}`])
-  }
+  // goToPage(PageName:string):void{
+  //   this.router.navigate([`${'/newquote'}`])
+  // }
   
  
 }

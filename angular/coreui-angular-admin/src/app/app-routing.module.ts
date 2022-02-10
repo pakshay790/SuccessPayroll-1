@@ -1,9 +1,3 @@
-import { ProfileModule } from './views/profile/profile.module';
-import { ReportModule } from './views/reports/report.module';
-import { JournalVoucherModule } from './views/journalvoucher/journalvoucher.module';
-
-
-
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,10 +7,6 @@ import { Page404Component } from './views/pages/page404/page404.component';
 import { Page500Component } from './views/pages/page500/page500.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { RegisterComponent } from './views/pages/register/register.component';
-import { EmployeeComponent } from './payroll/employee/employee.component';
-import { VacationComponent } from './payroll/vacation/vacation.component';
-import { PendingComponent } from './payroll/pending/pending.component';
-import { PayrollDashboardComponent } from './payroll/payroll-dashboard/payroll-dashboard.component';
 
 const routes: Routes = [
   {
@@ -48,39 +38,9 @@ const routes: Routes = [
           import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
       },
       {
-        path: 'miscpayment',
-        loadChildren: () =>
-          import('./views/miscpayment/miscpayment.module').then((m) => m.MiscPaymentModule)
-      },
-      {
-        path: 'miscreceipt',
-        loadChildren: () =>
-          import('./views/miscreceipt/miscreceipt.module').then((m) => m.MiscReceiptModule)
-      },
-      {
-        path: 'journalvoucher',
-        loadChildren: () =>
-          import('./views/journalvoucher/journalvoucher.module').then((m) => m.JournalVoucherModule)
-      },
-      {
-        path: 'otherpayment',
-        loadChildren: () =>
-          import('./views/newotherpayment/newotherpayment.module').then((m) => m.NewOtherPaymentModule)
-      },
-      {
-        path: 'uploadbankstmt',
-        loadChildren: () =>
-          import('./views/uploadbankstmt/uploadbankstmt.module').then((m) => m.UploadBankStmtModule)
-      },
-      {
         path: 'reports',
         loadChildren: () =>
           import('./views/reports/report.module').then((m) => m.ReportModule)
-      },
-      {
-        path: 'profile',
-        loadChildren: () =>
-          import('./views/profile/profile.module').then((m) => m.ProfileModule)
       },
       {
         path: 'theme',
@@ -137,21 +97,21 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/sales/sales.module').then((m) => m.SalesModule)
       },
-      {
-        path: 'newquote',
-        loadChildren: () =>
-          import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
-      },
+      // {
+      //   path: 'newquote',
+      //   loadChildren: () =>
+      //     import('./views/sales/newquote/newquote.module').then((m) => m.NewquoteModule)
+      // },
       {
         path: 'advancesearch',
         loadChildren: () =>
           import('./views/advancesearch/advancesearch.module').then((m) => m.AdvancesearchModule)
       },
-      {
-        path: 'newinvoice',
-        loadChildren: () =>
-          import('./views/newinvoice/newinvoice.module').then((m) => m.NewinvoiceModule)
-      },
+      // {
+      //   path: 'newinvoice',
+      //   loadChildren: () =>
+      //     import('./views/sales/newinvoice/newinvoice.module').then((m) => m.NewinvoiceModule)
+      // },
     ]
   },
   {
