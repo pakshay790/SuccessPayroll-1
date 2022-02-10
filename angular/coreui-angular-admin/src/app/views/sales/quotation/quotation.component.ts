@@ -10,17 +10,17 @@ import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cil
 })
 export class QuotationComponent implements OnInit {
   icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed,cilCart,cilChildFriendly };
-  visible = false;
-  constructor(private router: Router) { }
+  // visible = false;
+  constructor() { }
 
   ngOnInit(): void {
     
   }
-  goToPage(PageName:string):void{
-    this.router.navigate([`${'/newquote'}`])
-  }
-  toggleCollapse(): void {
-    this.visible = !this.visible;
-  }
+  // goToPage(PageName:string):void{
+  //   this.router.navigate([`${'/newquote'}`])
+  // }
+  // toggleCollapse(): void {
+  //   this.visible = !this.visible;
+  // }
 
 }

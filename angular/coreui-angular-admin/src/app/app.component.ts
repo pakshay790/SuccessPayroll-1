@@ -32,9 +32,9 @@ export class AppComponent implements OnInit {
       }
     });
   }
-  goToPage(PageName:string):void{
-    this.router.navigate([`${'/newquote'}`])
-  }
+  // goToPage(PageName:string):void{
+  //   this.router.navigate([`${'/newquote'}`])
+  // }
   goToPage1(PageName:string):void{
     this.router.navigate([`${'/newinvoice'}`])
   }

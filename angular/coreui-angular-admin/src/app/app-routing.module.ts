@@ -102,21 +102,21 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/sales/sales.module').then((m) => m.SalesModule)
       },
-      {
-        path: 'newquote',
-        loadChildren: () =>
-          import('./views/newquote/newquote.module').then((m) => m.NewquoteModule)
-      },
+      // {
+      //   path: 'newquote',
+      //   loadChildren: () =>
+      //     import('./views/sales/newquote/newquote.module').then((m) => m.NewquoteModule)
+      // },
       {
         path: 'advancesearch',
         loadChildren: () =>
           import('./views/advancesearch/advancesearch.module').then((m) => m.AdvancesearchModule)
       },
-      {
-        path: 'newinvoice',
-        loadChildren: () =>
-          import('./views/newinvoice/newinvoice.module').then((m) => m.NewinvoiceModule)
-      },
+      // {
+      //   path: 'newinvoice',
+      //   loadChildren: () =>
+      //     import('./views/sales/newinvoice/newinvoice.module').then((m) => m.NewinvoiceModule)
+      // },
     ]
   },
   {
