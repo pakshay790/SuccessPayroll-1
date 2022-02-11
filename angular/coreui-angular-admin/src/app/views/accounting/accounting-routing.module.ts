@@ -47,11 +47,25 @@ const routes: Routes = [
         path: 'miscpayment',
         component: MiscpaymentComponent,
         data: {
+          title: 'Misc Payment',
+        },
+      },
+      {
+        path: 'newmiscpayment',
+        component: MiscpaymentComponent,
+        data: {
           title: 'New Misc Payment',
         },
       },
       {
         path: 'miscreceipt',
+        component: MiscreceiptComponent,
+        data: {
+          title: 'Misc Receipt',
+        },
+      },
+      {
+        path: 'newmiscreceipt',
         component: MiscreceiptComponent,
         data: {
           title: 'New Misc Receipt',

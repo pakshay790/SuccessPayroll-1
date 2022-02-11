@@ -21,10 +21,10 @@
                 </div>
               </form>
             </div>
-            <div>
-              <select aria-label="Default select example" cSelect class="col-md-3">
+            <div class="float-right col-md-2">
+              <select class="form-select secondary float-end" aria-label="Default select example" cSelect class="col-md-3">
                 <option>-- select options --</option>
-                <option value="EMPLOYEE ANW">EMPLOYEE ANW</option>
+                <option value="EMPLOYEE ANW" class="p-2">EMPLOYEE ANW</option>
                 <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
                 <option value="EMPLOYEE KAN">EMPLOYEE KAN</option>
                 <option value="EMPLOYEE KEE">EMPLOYEE KEE</option>
@@ -32,19 +32,19 @@
                 <option value="EMPLOYEE KU">EMPLOYEE KU</option>
                 <option value="EMPLOYEE NG">EMPLOYEE NG</option>
               </select>
-            </div>
+            </div> 
             <div class="col px-md-5">
-              <button cButton color="dark" shape="rounded-0" routerLink="" class="font-semibold"
-                class="float-end">Print</button>
+              <button cButton color="dark" shape="rounded-0" routerLink=""
+                class="font-semibold float-end">Print</button>
             </div>
+            
           </c-nav>
-        </c-card-body>
-      </c-card>
-      <c-tab-content #tabContent="cTabContent">
-        <c-tab-pane class="">
-          <div class="fade-in">
-            <c-card class="mb-4">
-              <c-card-body>
+          
+
+          <c-tab-content #tabContent="cTabContent">
+            <c-tab-pane class="">
+              <div class="fade-in">
+
                 <c-row>
                   <c-col class="col-md-6">
                     <div>
@@ -188,17 +188,18 @@
                   </c-col>
                 </c-row>
 
-              </c-card-body>
-            </c-card>
-          </div>
-        </c-tab-pane>
-        <c-tab-pane class="p-3">
 
-        </c-tab-pane>
-        <c-tab-pane class="p-3">
+              </div>
+            </c-tab-pane>
+            <c-tab-pane class="p-3">
 
-        </c-tab-pane>
-      </c-tab-content>
+            </c-tab-pane>
+            <c-tab-pane class="p-3">
+
+            </c-tab-pane>
+          </c-tab-content>
+          </c-card-body>
+          </c-card>
     </c-col>
   </c-row>
 </div>

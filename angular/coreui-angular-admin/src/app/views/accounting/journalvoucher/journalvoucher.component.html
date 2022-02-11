@@ -5,48 +5,53 @@
       <c-card class="mb-4">
         <c-card-body>
           <form cForm class="row g-3">
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblrefno">RefNo</label>
               <input aria-label="RefNo" cFormControl disabled id="refNo" type="text">
             </c-col>
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblchequenumber">Cheque No</label>
               <input cFormControl id="chqNumber" placeholder="ABC112233" />
             </c-col>
 
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lbldateissued">Date Issued</label>
               <input cFormControl id="dateIssued" type="date" value="" />
             </c-col>
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblamountpaid">Amount Paid</label>
               <input cFormControl id="amtPaid" placeholder="$20" />
             </c-col>
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblvoucherno">Voucher No</label>
               <input cFormControl id="vouchernumber" placeholder="Vm01020" />
             </c-col>
 
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblpermitNo">Permit No</label>
               <input cFormControl id="permitNo" placeholder="PM01022022" />
             </c-col>
 
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblDesc">Description</label>
               <input cFormControl id="desc" placeholder="Enter description here..." />
             </c-col>
 
-            <c-col [md]="6">
+            <c-col [md]="4">
               <label cLabel for="lblpayto">Pay To</label>
               <input cFormControl id="payTo" placeholder="Mr. XYZ" />
             </c-col>
 
-         
-
-          
-        
-
+            <c-col [md]="4">
+              <label cLabel for="lblpayto">Uppload</label>
+              <c-input-group>
+                <input aria-describedby="inputGroupFileAddon04"
+                       aria-label="Upload"
+                       cFormControl
+                       id="inputGroupFile04"
+                       type="file">
+            </c-input-group>
+            </c-col>
         <c-card>
          <c-card-body>
           <table [striped]="true" cTable>

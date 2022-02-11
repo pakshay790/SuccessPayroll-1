@@ -1,1 +1,36 @@
 <p>run-payroll works!</p>
+<router-outlet></router-outlet>
+<c-row>
+    <c-col xs>
+      <c-card class="mb-4">
+        <c-card-header>Progress Stacked</c-card-header>
+        <c-card-body>
+          <table
+            [hover]="true"
+            [responsive]="true"
+            [striped]="true"
+            align="middle"
+            cTable
+            class="mb-0 border"
+          >
+            <thead cTableColor="light">
+            </thead>
+            <tbody>
+            <tr >
+                <div class="col-md-12 progress" *ngFor="let user of users; index as i">
+                <div class="col-md-12" >
+                    <c-progress thin>
+                        <c-progress-bar
+                            [value]="user.usage"
+                            color="{{ user.color }}"></c-progress-bar>
+                    </c-progress>
+                </div>
+            </div>
+            </tr>
+            </tbody>
+          </table>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  
