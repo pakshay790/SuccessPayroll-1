@@ -37,6 +37,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 import { MyTeamManagementComponent } from './myteam-management/myteam-management.component';
 import { RunPayrollComponent } from './run-payroll/run-payroll.component';
+import { PayrollReportsComponent } from './payroll-reports/payroll-reports.component';
 
 @NgModule({
   declarations: [ 
@@ -46,7 +47,8 @@ import { RunPayrollComponent } from './run-payroll/run-payroll.component';
     EmployeeComponent,
     MyTeamManagementComponent, 
     RunPayrollComponent,
-    ProfileComponent
+    ProfileComponent,
+    PayrollReportsComponent
   ],
   imports: [
     CommonModule,

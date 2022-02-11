@@ -8,6 +8,7 @@ import { PendingComponent } from '../payroll/pending/pending.component';
 import { PayrollDashboardComponent } from '../payroll/payroll-dashboard/payroll-dashboard.component';
 import { MyTeamManagementComponent } from '../payroll/myteam-management/myteam-management.component';
 import { RunPayrollComponent } from './run-payroll/run-payroll.component';
+import { PayrollReportsComponent } from './payroll-reports/payroll-reports.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,7 @@ const routes: Routes = [
         path: 'pending',
         component: PendingComponent,
         data: {
-          title: 'Pending Approval'
+          title: 'Pending Approvals'
         }
       },
       {
@@ -63,6 +64,13 @@ const routes: Routes = [
         component: ProfileComponent,
         data: {
           title: 'Profile'
+        }
+      },
+      {
+        path: 'payroll-reports',
+        component: PayrollReportsComponent,
+        data: {
+          title: 'Run Payroll'
         }
       }
     ]
