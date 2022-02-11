@@ -74,7 +74,7 @@
       <button cButton color="dark" shape="rounded-0" routerLink="/sales/newinvoice"><svg [cIcon]="icons.cilPlus"
           title="Plus Icon" style="margin-right: 5px;"></svg>New Invoice</button>
       <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilSettings" size="sm" title="List Icon"
-          style="margin-right: 5px;"></svg>Colunm Setting</button>
+          style="margin-right: 5px;"></svg>Column Setting</button>
       <button cButton color="dark" shape="rounded-0"><svg [cIcon]="icons.cilShareBoxed" size="sm" title="List Icon"
           style="margin-right: 5px;"></svg>Export To Excel</button>
     </div>
@@ -93,7 +93,7 @@
             <th scope="col">TOTAL DUE AMOUNT</th>
             <th scope="col">CUSTOMER NAME</th>
             <th scope="col">DELIVERY ADD</th>
-            <th scope="col">ACTIONS</th>
+            <th scope="col" class="text-center">ACTIONS</th>
           </tr>
         </thead>
         <tbody>
@@ -106,7 +106,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -120,7 +120,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -134,7 +134,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -148,7 +148,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -162,7 +162,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -176,7 +176,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -190,7 +190,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -204,7 +204,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -218,7 +218,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -232,7 +232,7 @@
             <td></td>
             <td>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                <svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg>
+                <a cTooltip="Edit"  [routerLink] cTooltipTrigger="hover"><svg cIcon name="cilPencil" size="sm" title="Numbered List Icon"></svg></a>
               </div>
             </td>
           </tr>
@@ -256,10 +256,10 @@
           <a cPageLink [routerLink] style="color: gray;">Next</a>
         </li>
   <li>
-    <label cLabel for="lblAcode"  style=" margin-left:50px; margin-top: 6px;">Total Record: 75</label>
+    <label cLabel for="lblAcode"  style=" margin-left:50px; margin-top: 6px;">Total Records: 75</label>
   </li>
       </c-pagination>
-      <label cLabel for="lblAcode">Record per page: 10</label>
+      <label cLabel for="lblAcode">Records per page: 10</label>
       
     </c-card-body>
   </c-card>
