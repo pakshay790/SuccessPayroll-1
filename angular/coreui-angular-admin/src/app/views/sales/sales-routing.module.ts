@@ -18,7 +18,7 @@ const routes: Routes = [{
       path: 'quotation',
       component: QuotationComponent,
       data: {
-        title: 'Quotation',
+        title: 'Quotations',
       },
     },
     {
@@ -33,6 +33,13 @@ const routes: Routes = [{
       component: NewquoteComponent,
       data: {
         title: 'New Quotation',
+      },
+    },
+    {
+      path: 'quote',
+      component: NewquoteComponent,
+      data: {
+        title: 'Quotation',
       },
     },
     {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { cilArrowThickRight, cilPlus, cilCart } from '@coreui/icons';
 
 @Component({
   selector: 'app-newquote',
@@ -7,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./newquote.component.scss']
 })
 export class NewquoteComponent implements OnInit {
-
+  icons = { cilPlus,cilArrowThickRight,cilCart};
+  isShow = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +18,7 @@ export class NewquoteComponent implements OnInit {
   //   this.router.navigate([`${'/newquote'}`])
   // }
   
- 
+  toggleShow() {
+    this.isShow = !this.isShow;
+  }
 }
