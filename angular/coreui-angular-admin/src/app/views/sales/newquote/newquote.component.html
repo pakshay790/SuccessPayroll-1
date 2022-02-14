@@ -27,7 +27,7 @@
 
                             </c-col>
                      
-                            <c-col [xs]="12">
+                            <c-col [md]="4">
 
                                 <label cLabel for="lbladress1">Address 1</label>
 
@@ -35,7 +35,7 @@
 
                             </c-col>
 
-                            <c-col [xs]="12">
+                            <c-col [md]="4">
 
                                 <label cLabel for="lblAddress2">Address 2</label>
 
@@ -43,7 +43,7 @@
 
                             </c-col>
 
-                            <c-col [xs]="12">
+                            <c-col [md]="4">
 
                                 <label cLabel for="lblAddress">Address 3</label>
 
@@ -69,59 +69,56 @@
               <c-card-body>
           <h5 cCardTitle>Quotation Information</h5>
           <form cForm class="row g-3">
-              <c-col [md]="6">
+              <c-col [md]="4">
           
-                    <label cLabel for="lblquotationno">Quotation No</label>
+                    <label cLabel for="lblquotationno" >Quotation No</label>
           
-                    <input cFormControl id="quotationno" type="text" />
+                    <input cFormControl id="quotationno" type="text"  readOnly
+                    type="text"/>
           
                   </c-col>
           
-                  <c-col [md]="6">
+                  <c-col [md]="4">
           
                     <label cLabel for="lblqdate">Quotation Date</label>
           
-                    <input cFormControl id="Qdate" type="Date" />
+                    <input cFormControl id="Qdate" type="Date"  readOnly
+                    type="text"/>
           
                   </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblclientref">Client Ref</label>
-          
-                    <input cFormControl id="lblclientref" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblsman">S'man</label>
-          
-                    <input cFormControl id="sman" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblagent">Agent</label>
-          
-                    <input cFormControl id="agent" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
+                  <c-col [md]="4">
           
                     <label cLabel for="lblpaymentterm">Payment Term</label>
           
                     <input cFormControl id="paymentterm" placeholder="" />
           
                   </c-col>
+                  <c-col [md]="3">
           
-                  <c-col [xs]="12">
+                    <label cLabel for="lblclientref">Client Ref</label>
+          
+                    <input cFormControl id="lblclientref" placeholder="" />
+          
+                  </c-col>
+                  <c-col [md]="3">
+          
+                    <label cLabel for="lblagent">Agent</label>
+          
+                    <input cFormControl id="agent" placeholder="" />
+          
+                  </c-col>
+                <c-col [md]="3">
           
                     <label cLabel for="lblsupplier">Supplier</label>
           
                     <input cFormControl id="supplier" />
+          
+                  </c-col>
+                  <c-col [md]="3">
+          
+                    <label cLabel for="lblsman">Salesman</label>
+          
+                    <input cFormControl id="sman" placeholder="" />
           
                   </c-col>
             </form>
@@ -395,10 +392,13 @@
     <c-card-footer>
        
        
-           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button cButton color="secondary" variant="outline">Convert To Invoice</button>
-            <button cButton color="success" variant="outline" type="submit">Save</button>
-            <button cButton color="dark" variant="outline">Cancel</button>
+           <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button cButton color="secondary" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
+              title="List Icon"style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 5px;"></svg>Invoice</button>
+              
+            <button cButton color="dark" ><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>Edit</button>
+            <button cButton color="success"  type="submit"><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>Save</button>
+            
           </div>
        
     </c-card-footer>
