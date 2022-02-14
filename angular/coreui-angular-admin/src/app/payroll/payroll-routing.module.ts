@@ -63,7 +63,7 @@ const routes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         data: {
-          title: 'Profile'
+          title: 'Employee Profile'
         }
       },
       {

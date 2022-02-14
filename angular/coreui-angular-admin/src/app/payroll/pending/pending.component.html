@@ -5,49 +5,40 @@
     <c-col lg=12>
       <c-card>
         <c-card-body>
-          <c-nav variant="tabs">
+          <c-nav variant="tabs" class="">
             <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Leave</a>
             <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Expense</a>
-            <!--<a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>Apply Leave</a>-->
-            <div>
-              <form class="form-inline my-2 my-lg-0">
-                <div>
-                  <!--<c-row>
-                    <c-col class="col-md-6"><span><input class="form-control mr-sm-2" type="search" placeholder="Search"
-                          aria-label="Search"></span></c-col>
-                    <c-col><span><button class="btn btn-outline-success my-2 my-sm-0"
-                          type="submit">Search</button></span></c-col>
-                  </c-row>-->
+            <div style="margin-left: 52%;">
+              <c-row><c-col>
+                <div style="width:150%;">
+                  <select aria-label="select" cSelect style="overflow: hidden;">
+                    <option>Select Employee</option>
+                    <option value="EMPLOYEE ANW" >EMPLOYEE ANW</option>
+                    <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
+                    <option value="EMPLOYEE KAN">EMPLOYEE KAN</option>
+                    <option value="EMPLOYEE KEE">EMPLOYEE KEE</option>
+                    <option value="EMPLOYEE GA1">EMPLOYEE GA1</option>
+                    <option value="EMPLOYEE KU">EMPLOYEE KU</option>
+                    <option value="EMPLOYEE NG">EMPLOYEE NG</option>
+                  </select>
                 </div>
-              </form>
+              </c-col>
+            <c-col>
+              <div style="margin-left: 55%;">
+                <button cButton class="printbutton btn-sm"  
+                routerLink="" >
+                Print</button>
+              </div>
+            </c-col></c-row>
             </div>
-            <div class="float-right col-md-2">
-              <select class="form-select secondary float-end" aria-label="Default select example" cSelect class="col-md-3">
-                <option>-- select options --</option>
-                <option value="EMPLOYEE ANW" class="p-2">EMPLOYEE ANW</option>
-                <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
-                <option value="EMPLOYEE KAN">EMPLOYEE KAN</option>
-                <option value="EMPLOYEE KEE">EMPLOYEE KEE</option>
-                <option value="EMPLOYEE GA1">EMPLOYEE GA1</option>
-                <option value="EMPLOYEE KU">EMPLOYEE KU</option>
-                <option value="EMPLOYEE NG">EMPLOYEE NG</option>
-              </select>
-            </div> 
-            <div class="col px-md-5">
-              <button cButton color="dark" shape="rounded-0" routerLink=""
-                class="font-semibold float-end">Print</button>
-            </div>
-            
           </c-nav>
-          
-
           <c-tab-content #tabContent="cTabContent">
             <c-tab-pane class="">
               <div class="fade-in">
 
                 <c-row>
                   <c-col class="col-md-6">
-                    <div>
+                    <div class="title">
                       <h3>Leave Taken Summary</h3>
                     </div>
                   </c-col>
@@ -198,8 +189,8 @@
 
             </c-tab-pane>
           </c-tab-content>
-          </c-card-body>
-          </c-card>
+        </c-card-body>
+      </c-card>
     </c-col>
   </c-row>
 </div>
