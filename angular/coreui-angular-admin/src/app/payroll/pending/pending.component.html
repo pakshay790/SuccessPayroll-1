@@ -9,29 +9,29 @@
             <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>Leave</a>
             <a [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>Expense</a>
             <div style="margin-left: 52%;">
-              <c-row><c-col>
-                <div style="width:150%;">
-                  <select aria-label="select" cSelect style="overflow: hidden;">
-                    <option>Select Employee</option>
-                    <option value="EMPLOYEE ANW" >EMPLOYEE ANW</option>
-                    <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
-                    <option value="EMPLOYEE KAN">EMPLOYEE KAN</option>
-                    <option value="EMPLOYEE KEE">EMPLOYEE KEE</option>
-                    <option value="EMPLOYEE GA1">EMPLOYEE GA1</option>
-                    <option value="EMPLOYEE KU">EMPLOYEE KU</option>
-                    <option value="EMPLOYEE NG">EMPLOYEE NG</option>
-                  </select>
-                </div>
-              </c-col>
-            <c-col>
-              <div style="margin-left: 55%;">
-                <button cButton class="printbutton btn-sm"  
-                routerLink="" >
-                Print</button>
-              </div>
-            </c-col></c-row>
+              <c-row>
+                <c-col>
+                  <div>
+                    <select aria-label="select" cSelect style="overflow: hidden;" class="btn selectButton dropdown-toggle" type="button" >
+                      <option>Select Employee</option>
+                      <option value="EMPLOYEE ANW">EMPLOYEE ANW</option>
+                      <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
+                      <option value="EMPLOYEE KAN">EMPLOYEE KAN</option>
+                      <option value="EMPLOYEE KEE">EMPLOYEE KEE</option>
+                      <option value="EMPLOYEE GA1">EMPLOYEE GA1</option>
+                      <option value="EMPLOYEE KU">EMPLOYEE KU</option>
+                      <option value="EMPLOYEE NG">EMPLOYEE NG</option>
+                    </select>
+                  </div>
+                </c-col>
+                <c-col>
+                  <div>
+                    <button cButton class="printbutton btn-sm" routerLink="">
+                      Print</button>
+                  </div>
+                </c-col>
+              </c-row>
             </div>
-            
           </c-nav>
 
           <c-tab-content #tabContent="cTabContent">

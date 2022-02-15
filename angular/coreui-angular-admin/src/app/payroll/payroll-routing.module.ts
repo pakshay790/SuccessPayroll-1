@@ -70,7 +70,7 @@ const routes: Routes = [
         path: 'payroll-reports',
         component: PayrollReportsComponent,
         data: {
-          title: 'Payroll Reports'
+          title: 'Team Reports'
         }
       },
       {
