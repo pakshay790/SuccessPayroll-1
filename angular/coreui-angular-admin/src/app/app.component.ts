@@ -12,7 +12,7 @@ import { cilPlus } from '@coreui/icons';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'Success Book';
+  title = 'Success Books';
 
   constructor(
     private router: Router,

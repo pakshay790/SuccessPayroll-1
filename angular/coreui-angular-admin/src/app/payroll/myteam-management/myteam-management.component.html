@@ -9,16 +9,27 @@
               <div class=".float-md-left">
                 <c-row class="justify-content-md-end">
                   <c-col [md]="6">
-                    <div class="d-grid gap-2 d-md-flex float-end">
-                      <button cButton color="dark" shape="rounded-0" routerLink="/payroll/employee"
-                        class="float-right;">&nbsp;<span>
-                          <!--<svg [cIcon]="icons.cilLibraryAdd" size="xs" title="List Icon"
-                          style="align-items: center;"></svg>--><svg [cIcon]="icons.cilPlus" size="xs"
-                            title="List Icon" style="align-items: center;margin-right: 5px;"></svg>
-                        </span>Add New Staff</button>
-                      <button cButton color="dark" shape="rounded-0" routerLink="/payroll/pending"
-                        class="float-right;">&nbsp;<span><svg [cIcon]="icons.cilCheckCircle" size="xs" title="List Icon"
-                            style="align-items: center;margin-right: 5px;"></svg></span>Pending Approvals</button>
+                    <div class="float-end">
+                      <c-row>
+                        <c-col>
+                          <button cButton color="dark" shape="rounded-0" routerLink="/payroll/payroll-reports"
+                            class="float-right btn-sm buttonBlock">&nbsp;<span><svg [cIcon]="icons.cilChartPie" size="xs"
+                                title="List Icon" style="align-items: center;margin-right: 5px;"></svg>
+                            </span>Payroll Reports</button>
+                        </c-col>
+                        <c-col>
+                          <button cButton color="dark" shape="rounded-0" routerLink="/payroll/employee"
+                            class="float-right btn-sm buttonBlock">&nbsp;<span><svg [cIcon]="icons.cilPlus" size="xs" title="List Icon"
+                                style="align-items: center;margin-right: 5px;"></svg>
+                            </span>Add New Staff</button>
+                        </c-col>
+                        <c-col>
+                          <button cButton color="dark" shape="rounded-0" routerLink="/payroll/pending"
+                            class="float-right btn-sm buttonPendingApprovalsBlock">&nbsp;<span><svg [cIcon]="icons.cilCheckCircle" size="xs"
+                                title="List Icon" style="align-items: center;margin-right: 5px;"></svg></span>Pending
+                            Approvals</button>
+                        </c-col>
+                      </c-row>
                     </div>
                   </c-col>
                 </c-row>
@@ -96,7 +107,7 @@
                       <ul class="list-inline m-0">
                         <li class="list-inline-item">
                           <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
-                            data-placement="top" title="Edit"><i class="fa fa-edit"></i>Edit</button>
+                            data-placement="top" title="Edit" routerLink="/payroll/profile"><i class="fa fa-edit"></i>Edit</button>
                         </li>
                         <li class="list-inline-item">
                           <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"

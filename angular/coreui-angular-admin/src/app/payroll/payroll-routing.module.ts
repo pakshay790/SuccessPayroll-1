@@ -63,7 +63,14 @@ const routes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         data: {
-          title: 'Profile'
+          title: 'Employee Profile'
+        }
+      },
+      {
+        path: 'payroll-reports',
+        component: PayrollReportsComponent,
+        data: {
+          title: 'Payroll Reports'
         }
       },
       {
