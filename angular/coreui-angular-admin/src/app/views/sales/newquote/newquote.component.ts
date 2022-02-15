@@ -10,6 +10,7 @@ import { cilArrowThickRight, cilPlus, cilCart } from '@coreui/icons';
 export class NewquoteComponent implements OnInit {
   icons = { cilPlus,cilArrowThickRight,cilCart};
   isShow = false;
+  notEditMode = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +21,8 @@ export class NewquoteComponent implements OnInit {
   
   toggleShow() {
     this.isShow = !this.isShow;
+  }
+  onTogglenotEditMode() {
+    this.notEditMode = !this.notEditMode;
   }
 }

@@ -25,7 +25,7 @@ const routes: Routes = [{
       path: 'invoice',
       component: InvoiceComponent,
       data: {
-        title: 'Invoice',
+        title: 'Invoices',
       },
     },
     {
@@ -44,6 +44,13 @@ const routes: Routes = [{
     },
     {
       path: 'newinvoice',
+      component: NewinvoiceComponent,
+      data: {
+        title: 'New Invoice',
+      },
+    },
+    {
+      path: 'addinvoice',
       component: NewinvoiceComponent,
       data: {
         title: 'New Invoice',

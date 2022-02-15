@@ -9,11 +9,11 @@
                         <form cForm class="row g-3">
                             <c-col [md]="3">
                                 <label cLabel for="lablecode">code</label>
-                                <input cFormControl id="code" type="text" />
+                                <input cFormControl id="code" type="text" placeholder="A000432" [disabled]="notEditMode"/>
                             </c-col>
                             <c-col [md]="3">
                                 <label cLabel for="lblname">Name</label>
-                                <input cFormControl id="name" type="text" />
+                                <input cFormControl id="name" type="text" placeholder="ALAN NG-96884338" [disabled]="notEditMode"/>
                             </c-col>
                             <c-col [md]="3">
                                 <label cLabel for="labletel">Tel</label>
@@ -31,7 +31,7 @@
 
                                 <label cLabel for="lbladress1">Address 1</label>
 
-                                <input cFormControl id="Address1" placeholder="1234 Main St" />
+                                <input cFormControl id="Address1" placeholder="eg.1234 Main St" />
 
                             </c-col>
 
@@ -39,7 +39,7 @@
 
                                 <label cLabel for="lblAddress2">Address 2</label>
 
-                                <input cFormControl id="Address2" placeholder="Apartment, studio, or floor" />
+                                <input cFormControl id="Address2" placeholder="eg.Apartment, studio, or floor" />
 
                             </c-col>
 
@@ -47,7 +47,7 @@
 
                                 <label cLabel for="lblAddress">Address 3</label>
 
-                                <input cFormControl id="Address3" placeholder="1234 Main St" />
+                                <input cFormControl id="Address3" placeholder="eg.1234 Main St" />
 
                             </c-col>
                         </form>
@@ -73,8 +73,7 @@
           
                     <label cLabel for="lblquotationno" >Quotation No</label>
           
-                    <input cFormControl id="quotationno" type="text"  readOnly
-                    type="text"/>
+                    <input cFormControl id="quotationno" type="text"  [disabled]="notEditMode" placeholder="QBL9000092"/>
           
                   </c-col>
           
@@ -82,8 +81,7 @@
           
                     <label cLabel for="lblqdate">Quotation Date</label>
           
-                    <input cFormControl id="Qdate" type="Date"  readOnly
-                    type="text"/>
+                    <input cFormControl id="Qdate" type="Date"  [disabled]="notEditMode" placeholder="13/08/2021"/>
           
                   </c-col>
                   <c-col [md]="4">
@@ -392,14 +390,28 @@
     <c-card-footer>
        
        
-           <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+           <!-- <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button cButton color="secondary" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
               title="List Icon"style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 5px;"></svg>Invoice</button>
               
             <button cButton color="dark" ><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>Edit</button>
             <button cButton color="success"  type="submit"><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>Save</button>
             
-          </div>
+          </div> -->
+
+          <div class="stickyFooter">
+            <div style="float:right;">
+               <button cButton  class="stickyFooterPillButton btn-sm invoiceStickyFooterButton" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
+              style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 8px;" ></svg>Invoice</button>
+                <button cButton class="stickyFooterPillButton btn-sm editStickyFooterButton"(click)="onTogglenotEditMode()"><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>
+                    Edit</button>
+        
+                <div style="float:right;">
+                    <button cButton class="stickyFooterPillButton btn-sm saveStickyFooterButton" routerLink=""><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>
+                        Save</button>
+                </div>
+            </div>
+        </div>
        
     </c-card-footer>
 </c-card>

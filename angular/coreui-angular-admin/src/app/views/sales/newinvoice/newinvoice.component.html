@@ -9,11 +9,11 @@
                         <form cForm class="row g-3">
                             <c-col [md]="3">
                                 <label cLabel for="lablecode">code</label>
-                                <input cFormControl id="code" type="text" />
+                                <input cFormControl id="code" type="text" placeholder="A000432" [disabled]="notEditMode"/>
                             </c-col>
                             <c-col [md]="3">
                                 <label cLabel for="lblname">Name</label>
-                                <input cFormControl id="name" type="text" />
+                                <input cFormControl id="name" type="text" placeholder="ALAN NG-96884338" [disabled]="notEditMode" />
                             </c-col>
                             <c-col [md]="3">
                                 <label cLabel for="labletel">Tel</label>
@@ -27,27 +27,27 @@
 
                             </c-col>
                      
-                            <c-col [xs]="12">
+                            <c-col [md]="4">
 
                                 <label cLabel for="lbladress1">Address 1</label>
 
-                                <input cFormControl id="Address1" placeholder="1234 Main St" />
+                                <input cFormControl id="Address1" placeholder="eg.1234 Main St" />
 
                             </c-col>
 
-                            <c-col [xs]="12">
+                            <c-col  [md]="4">
 
                                 <label cLabel for="lblAddress2">Address 2</label>
 
-                                <input cFormControl id="Address2" placeholder="Apartment, studio, or floor" />
+                                <input cFormControl id="Address2" placeholder="eg.Apartment, studio, or floor" />
 
                             </c-col>
 
-                            <c-col [xs]="12">
+                            <c-col  [md]="4">
 
                                 <label cLabel for="lblAddress">Address 3</label>
 
-                                <input cFormControl id="Address3" placeholder="1234 Main St" />
+                                <input cFormControl id="Address3" placeholder="eg.1234 Main St" />
 
                             </c-col>
                         </form>
@@ -69,47 +69,22 @@
               <c-card-body>
           <h5 cCardTitle>Invoice Information</h5>
           <form cForm class="row g-3">
-              <c-col [md]="6">
+              <c-col [md]="4">
           
                     <label cLabel for="lblinvoiceno">Invoice No</label>
           
-                    <input cFormControl id="invoiceno" type="text" />
+                    <input cFormControl id="invoiceno" type="text" [disabled]="notEditMode" placeholder="BL9002079"/>
           
                   </c-col>
           
-                  <c-col [md]="6">
+                  <c-col [md]="4">
           
                     <label cLabel for="lblidate">Invoice Date</label>
           
-                    <input cFormControl id="Idate" type="Date" />
+                    <input cFormControl id="Idate" type="Date"  [disabled]="notEditMode" placeholder="13/08/2021"/>
           
                   </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblpono">P/O No</label>
-          
-                    <input cFormControl id="lblPOno" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblsman">S'man</label>
-          
-                    <input cFormControl id="sman" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
-          
-                    <label cLabel for="lblagent">Agent</label>
-          
-                    <input cFormControl id="agent" placeholder="" />
-          
-                  </c-col>
-          
-                  <c-col [xs]="12">
+                  <c-col [md]="4">
           
                     <label cLabel for="lblpaymentterm">Payment Term</label>
           
@@ -117,7 +92,33 @@
           
                   </c-col>
           
-                  <c-col [xs]="12">
+                  
+                  <c-col [md]="3">
+          
+                    <label cLabel for="lblpono">P/O No</label>
+          
+                    <input cFormControl id="lblPOno" placeholder="" />
+          
+                  </c-col>
+                  <c-col [md]="3">
+          
+                    <label cLabel for="lblsman">Salesman</label>
+          
+                    <input cFormControl id="sman" placeholder="" />
+          
+                  </c-col>
+          
+                  <c-col [md]="3">
+          
+                    <label cLabel for="lblagent">Agent</label>
+          
+                    <input cFormControl id="agent" placeholder="" />
+          
+                  </c-col>
+          
+                  
+          
+                  <c-col [md]="3">
           
                     <label cLabel for="lblbranch">Branch / WH Loc</label>
           
@@ -409,11 +410,19 @@
     <c-card-footer>
        
        
-           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button cButton color="secondary" variant="outline">Convert To Invoice</button>
-            <button cButton color="success" variant="outline" type="submit">Save</button>
-            <button cButton color="dark" variant="outline">Cancel</button>
-          </div>
+      <div class="stickyFooter">
+        <div style="float:right;">
+           <button cButton  class="stickyFooterPillButton btn-sm invoiceStickyFooterButton" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
+          style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 8px;" ></svg>Invoice</button>
+            <button cButton class="stickyFooterPillButton btn-sm editStickyFooterButton"  (click)="onTogglenotEditMode()"><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>
+                Edit</button>
+    
+            <div style="float:right;">
+                <button cButton class="stickyFooterPillButton btn-sm saveStickyFooterButton" routerLink=""><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>
+                    Save</button>
+            </div>
+        </div>
+    </div>
        
     </c-card-footer>
 </c-card>
