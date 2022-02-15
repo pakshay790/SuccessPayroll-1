@@ -2,8 +2,28 @@
 
 <c-nav variant="tabs">
   <c-nav-item>
-    <a [active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
+    <a class= "text-dark"[active]="true" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="0" cNavLink>
       Transactions
+    </a>
+  </c-nav-item>
+  <c-nav-item>
+    <a class="text-dark"  [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="1" cNavLink>
+      Misc Payment​
+    </a>
+  </c-nav-item>
+  <c-nav-item>
+    <a  class="text-dark" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="2" cNavLink>
+      Misc Receipt​
+    </a>
+  </c-nav-item>
+  <c-nav-item>
+    <a class="text-dark"  [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="3" cNavLink>
+      Journal Voucher​
+    </a>
+  </c-nav-item>
+  <c-nav-item>
+    <a class="text-dark" [cTabContent]="tabContent" [routerLink] [tabPaneIdx]="4" cNavLink>
+      Other Payment Entry​
     </a>
   </c-nav-item>
 </c-nav>
@@ -30,6 +50,102 @@
           <label cLabel for="lbldateissued">Date </label>
           <input cFormControl id="dateIssued" type="date" value="" />
         </c-col>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
+          <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+        </div>
+      </form>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      <form cForm class="row g-2">
+        <c-col [md]="3">
+          <label cLabel for="lblrefno">RefNo</label>
+          <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="JV20220101">
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lbldateissued">Date Issued</label>
+          <input cFormControl id="dateIssued" type="date" value="" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Pay To</label>
+          <input cFormControl id="payto" placeholder="" />
+        </c-col>
+
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
+          <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+        </div>
+      </form>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      <form cForm class="row g-2">
+        <c-col [md]="3">
+          <label cLabel for="lblrefno">RefNo</label>
+          <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="JV20220101">
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lbldateissued">Date Issued</label>
+          <input cFormControl id="dateIssued" type="date" value="" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Pay To</label>
+          <input cFormControl id="payto" placeholder="" />
+        </c-col>
+
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
+          <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+        </div>
+      </form>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      <form cForm class="row g-2">
+        <c-col [md]="3">
+          <label cLabel for="lblrefno">RefNo</label>
+          <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="JV20220101">
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lbldateissued">Date Issued</label>
+          <input cFormControl id="dateIssued" type="date" value="" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Pay To</label>
+          <input cFormControl id="payto" placeholder="" />
+        </c-col>
+
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />
+          <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+        </div>
+      </form>
+    </c-tab-pane>
+    <c-tab-pane class="p-3">
+      <form cForm class="row g-2">
+        <c-col [md]="3">
+          <label cLabel for="lblrefno">RefNo</label>
+          <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="JV20220101">
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lbldateissued">Date Issued</label>
+          <input cFormControl id="dateIssued" type="date" value="" />
+        </c-col>
+
+        <c-col [md]="3">
+          <label cLabel for="lblchequenumber">Pay To</label>
+          <input cFormControl id="payto" placeholder="" />
+        </c-col>
+
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
           <input cButton color="light" type="reset" value="Reset" style="float:right;" routerLink="./" />

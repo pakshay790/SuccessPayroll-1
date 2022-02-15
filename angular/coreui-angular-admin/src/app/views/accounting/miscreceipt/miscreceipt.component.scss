@@ -1,0 +1,54 @@
+.leftdiv
+{
+float: left;
+}
+.middlediv
+{
+float: left;
+
+}
+.rightdiv
+{
+float: left;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    
+  }
+
+  .stickyFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+ }
+
+ .stickyFooterPillButton {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius:16px;
+}
+
+.stickyFooterPillButton:hover {
+  background-color: #807e7e;
+}
+
+.editStickyFooterButton{
+  background-color: #303C54;
+}
+
+.saveStickyFooterButton{
+  background-color: #1aa808;
+}

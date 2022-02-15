@@ -103,16 +103,16 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Reports',
-    url: '/reports',
+    url: '',
     iconComponent: { name: 'cil-spreadsheet' },
     children: [
       {
         name: 'Financial Reports',
-        url: '/sales/customer',
+        url: '//reports',
       },
       {
         name: 'Tax Reports',
-        url: '/sales/customer',
+        url: '/reports',
       },
     ]
   },

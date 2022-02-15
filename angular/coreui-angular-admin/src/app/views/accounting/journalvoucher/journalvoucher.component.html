@@ -43,7 +43,7 @@
             </c-col>
 
             <c-col [md]="4">
-              <label cLabel for="lblpayto">Uppload</label>
+              <label cLabel for="lblpayto">Upload</label>
               <c-input-group>
                 <input aria-describedby="inputGroupFileAddon04"
                        aria-label="Upload"
@@ -84,16 +84,14 @@
               <td>20</td>
               <td>Income</td>
               <td>Tan hui cha</td>
-              <td><svg cIcon name="cilPaperPlane" size="xl" title="Paper Plane Icon"></svg></td>
+              <td><svg cIcon name="cilPencil" size="xl" title="Paper Plane Icon"></svg></td>
             </tr>
            
             </tbody>
           </table>
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <input cButton color="light" cOffcanvasToggle="offcanvasNoBackdrop.id" type="reset" value="Add Transaction" style="float:right;"
-              routerLink="./" />
-            <input cButton color="success" type="submit" value="Save" style="float:right;"
+            <input cButton color="light" cOffcanvasToggle="offcanvasNoBackdrop.id" type="reset" value="Add Line" style="float:right;"
               routerLink="./" />
 
               <c-offcanvas  [scroll]="true" id="offcanvasNoBackdrop.id" placement="end"
@@ -169,7 +167,7 @@
                     </c-col>
                     <c-col [md]="12">
                       <div class="d-grid gap-2 col-6 mx-auto">
-                        <button cButton size="lg" routerLink="./">Add</button>
+                        <button cButton size="lg" routerLink="./">Update</button>
                       </div>
                      
                     </c-col>
@@ -188,4 +186,16 @@
       </c-card>
     </c-col>
   </c-row>
+</div>
+
+<div class="stickyFooter ">
+  <div style="float:right;">
+      <button cButton class="stickyFooterPillButton me-md-2 btn-sm editStickyFooterButton" routerLink="./">
+          Edit</button>
+
+      <div style="float:right;">
+          <button cButton class="stickyFooterPillButton btn-sm me-md-2 saveStickyFooterButton" routerLink="./">
+              Save</button>
+      </div>
+  </div>
 </div>
