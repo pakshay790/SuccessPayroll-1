@@ -91,33 +91,34 @@
             </table>
   
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <input cButton color="light" cOffcanvasToggle="OffcanvasBottom" type="reset" value="Add Transaction" style="float:right;"
+              <input cButton color="light" cOffcanvasToggle="offcanvasNoBackdrop.id" type="reset" value="Add Transaction" style="float:right;"
                 routerLink="./" />
               <input cButton color="success" type="submit" value="Save" style="float:right;"
                 routerLink="./" />
   
-                <c-offcanvas  [scroll]="true" placement="bottom" id="OffcanvasBottom">
+                <c-offcanvas  [scroll]="true" id="offcanvasNoBackdrop.id" placement="end"
+                #offcanvasNoBackdrop>
                   <c-offcanvas-header>
                     <h5 cOffcanvasTitle> Transaction Records</h5>
-                    <button cButtonClose class="text-reset" cOffcanvasToggle="OffcanvasBottom" aria-label="Close"></button>
+                    <button cButtonClose class="text-reset" cOffcanvasToggle="offcanvasNoBackdrop.id" aria-label="Close"></button>
                   </c-offcanvas-header>
                   <c-offcanvas-body>
                     <form cForm class="row g-3">
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <input cFormControl id="cvsdate" type="date" value="2020-12-31" />
                           <label cLabel for="lblchequenumber">Date</label>
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <input cFormControl id="cvsdesc" placeholder="Write a Description" />
                           <label cLabel for="lblchequenumber">Description</label>
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <select cSelect id="cvsaccount">
                             <option>4-1000</option>
@@ -130,7 +131,7 @@
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <select cSelect id="cvstranstype">
                             <option>Debit</option>
@@ -140,14 +141,14 @@
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <input cFormControl id="cvsamount" placeholder="SGD" />
                           <label cLabel for="lblchequenumber">Amount</label>
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <select cSelect id="cvscatogury">
                             <option>Income</option>
@@ -157,7 +158,7 @@
                         </div>
                       </c-col>
         
-                      <c-col [md]="3">
+                      <c-col [md]="6">
                         <div [cFormFloating]="true" class="mb-2">
                           <select cSelect id="cvscustomer">
                             <option>Tan hui cha</option>
@@ -166,10 +167,11 @@
                           <label cLabel for="lblchequenumber">Customer</label>
                         </div>
                       </c-col>
-                      <c-col [md]="3">
-                        <div class="mb-2">
+                      <c-col [md]="12">
+                        <div class="d-grid gap-2 col-6 mx-auto">
                           <button cButton size="lg" routerLink="./">Add</button>
                         </div>
+                       
                       </c-col>
                     </form>
                    

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt,cilCloudUpload} from '@coreui/icons';
 
 @Component({
   selector: 'app-landing',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
 
   constructor() { }
+  icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed,cilCloudUpload };
+
 
   ngOnInit(): void {
   }

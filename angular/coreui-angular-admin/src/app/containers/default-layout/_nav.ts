@@ -57,11 +57,15 @@ export const navItems: INavData[] = [
         
       },
       {
+        name: 'Cash Book',
+        url: '/accounting/recon',
+      },
+      {
         name: 'Reconciliation',
         url: '/accounting/recon',
       },
       {
-        name: 'Chart of Accounts',
+        name: 'Chart of Account Maintenance',
         url: '/accounting/coa',
       },
     ]
@@ -101,6 +105,16 @@ export const navItems: INavData[] = [
     name: 'Reports',
     url: '/reports',
     iconComponent: { name: 'cil-spreadsheet' },
+    children: [
+      {
+        name: 'Financial Reports',
+        url: '/sales/customer',
+      },
+      {
+        name: 'Tax Reports',
+        url: '/sales/customer',
+      },
+    ]
   },
 ];
   

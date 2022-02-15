@@ -1,7 +1,33 @@
-<c-card class="mb-3">
-    <c-card-img-overlay>
-      <h3 cCardTitle>Dashboard</h3>
-      
-    </c-card-img-overlay>
-    
+<c-col>
+  <c-card style="border-radius:10px;">
+      <c-card-body >
+          <div>
+              <c-row>
+                  <c-col xs="12">
+                      <div style="font-family:Verdana;word-wrap: break-word;">
+                          <h2>Hello, John Doe</h2>
+                          <br>
+                          <h6> Welcome to your Success Dashboard</h6>
+                      </div>
+                  </c-col>
+              </c-row>
+          </div>
+      </c-card-body>
   </c-card>
+</c-col>
+
+<c-card  class="mt-4">
+  <c-card-body>
+    <div class="d-grid gap-1 d-md-flex justify-content-md-end">
+      <button cButton color="dark" routerLink="/accounting/newmiscpayment"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Payment</button>
+      <button cButton color="dark" routerLink="/accounting/miscreceipt"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Receipt</button>
+      <button cButton color="dark" routerLink="/sales/newquote"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Quotation</button>
+      <button cButton color="dark" routerLink="/sales/newinvoice"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Invoice</button>
+
+    </div>
+  </c-card-body>
+</c-card>
