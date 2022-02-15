@@ -8,7 +8,7 @@
                     </c-col>
                     <c-col [xs]>
                         <div><strong>
-                                <h4>John Doe</h4>
+                                <h4>Jane Doe</h4>
                             </strong></div>
                         <div class="small text-medium-empha>sis">
                             <span>Software Engineer, Registered : S1739313H </span>
@@ -21,11 +21,11 @@
         <c-row class="g-3">
             <c-col [xs]>
                 <label cLabel for="inputEmail4">First Name</label>
-                <input aria-label="First name" cFormControl placeholder="John" />
+                <input aria-label="First name" cFormControl placeholder="John" disabled />
             </c-col>
             <c-col [xs]>
                 <label cLabel for="inputEmail4">Last Name</label>
-                <input aria-label="Last name" cFormControl placeholder="Doe" />
+                <input aria-label="Last name" cFormControl placeholder="Doe" disabled />
             </c-col>
             <hr>
             <h5>Address</h5>
@@ -367,7 +367,7 @@
             <hr>
             <h5>Remarks</h5>
             <c-input-group>
-                <textarea  cFormControl></textarea>
+                <textarea cFormControl></textarea>
             </c-input-group>
 
 
@@ -375,3 +375,14 @@
         </c-row>
     </c-card-body>
 </c-card>
+<div class="stickyFooter">
+    <div style="float:right;">
+        <button cButton class="stickyFooterPillButton btn-sm editStickyFooterButton" routerLink="">
+            Edit</button>
+
+        <div style="float:right;">
+            <button cButton class="stickyFooterPillButton btn-sm saveStickyFooterButton" routerLink="">
+                Save</button>
+        </div>
+    </div>
+</div>
