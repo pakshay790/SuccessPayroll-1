@@ -21,8 +21,8 @@ float: left;
 
   .stickyFooter {
     position: fixed;
-    left: 0;
-    bottom: 0;
+    left: 5px;
+    bottom: 5px;
     width: 100%;
     background-color: white;
     color: white;
@@ -36,7 +36,7 @@ float: left;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 2px 2px;
+  margin: 5px 5px;
   cursor: pointer;
   border-radius:16px;
 }

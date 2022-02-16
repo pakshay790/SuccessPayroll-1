@@ -38,6 +38,7 @@ import { ChartjsModule } from '@coreui/angular-chartjs';
 import { MyTeamManagementComponent } from './myteam-management/myteam-management.component';
 import { RunPayrollComponent } from './run-payroll/run-payroll.component';
 import { PayrollReportsComponent } from './payroll-reports/payroll-reports.component';
+import { DatepikerRangePopupComponent } from './datepiker-range-popup/datepiker-range-popup.component';
 
 @NgModule({
   declarations: [ 
@@ -49,6 +50,7 @@ import { PayrollReportsComponent } from './payroll-reports/payroll-reports.compo
     RunPayrollComponent,
     ProfileComponent,
     PayrollReportsComponent,
+    DatepikerRangePopupComponent,
   ],
   imports: [
     CommonModule,
