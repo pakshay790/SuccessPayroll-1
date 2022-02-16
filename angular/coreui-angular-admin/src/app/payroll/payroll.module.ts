@@ -48,7 +48,7 @@ import { PayrollReportsComponent } from './payroll-reports/payroll-reports.compo
     MyTeamManagementComponent, 
     RunPayrollComponent,
     ProfileComponent,
-    PayrollReportsComponent
+    PayrollReportsComponent,
   ],
   imports: [
     CommonModule,

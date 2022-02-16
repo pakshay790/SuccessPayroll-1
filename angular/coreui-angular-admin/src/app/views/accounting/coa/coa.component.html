@@ -1,163 +1,130 @@
-<c-card class="mb-4">
-  <!--   <c-card-header>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button cButton color="info" variant="outline" class="me-md-2" routerLink="/miscpayment" >New Misc Payment</button>
-        <button cButton color="info" variant="outline" routerLink="/miscreceipt">New Misc Receipt</button>
-        <button cButton color="info" variant="outline">New Journal Voucher</button>
-        <button cButton color="info" variant="outline">New Other Payment Entry</button>
-        <button cButton color="info" variant="outline">Upload a Bank Statement</button>
-  
-      </div> 
-    </c-card-header>-->
-    <c-card-body>
-      <table class="table table-striped" cTable>
-        <thead>
-          <tr>
-            <th scope="col">Ref No.</th>
-        <th scope="col">Account</th>
-        <th scope="col">Category</th>
-        <th scope="col">Description</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Date</th>
-        <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">JV202220113</th>
-            <td>Cash on Hand</td>
-            <td>Journal Entry</td>
-            <td>DESC</td>
-            <td>1000</td>
-            <td>Jan 27, 2022</td>
-            <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220114</th>
-            <td>Bank</td>
-            <td>Misc Payment Entry</td>
-            <td>DESC</td>
-            <td>500</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220103</th>
-            <td>DBO Bank</td>
-            <td>Misc Reciept Entry</td>
-            <td>DESC</td>
-            <td>370</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220104</th>
-            <td>Cash on Hand</td>
-            <td>Journal Entry</td>
-            <td>DESC</td>
-            <td>420</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220105</th>
-            <td>Bank</td>
-            <td>Misc Payment Entry</td>
-            <td>DESC</td>
-            <td>115</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220106</th>
-            <td>DOB Bank</td>
-            <td>Misc Reciept Entry</td>
-            <td>DESC</td>
-            <td>385</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220107</th>
-            <td>Cash on Hand</td>
-            <td>Journal Entry</td>
-            <td>DESC</td>
-            <td>295</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220108</th>
-            <td>Bank</td>
-            <td>Misc Payment Entry</td>
-            <td>DESC</td>
-            <td>510</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220109</th>
-            <td>DBO Bank</td>
-            <td>Misc Reciept Entry</td>
-            <td>DESC</td>
-            <td>475</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220110</th>
-            <td>Cash on Hand</td>
-            <td>Journal Entry</td>
-            <td>DESC</td>
-            <td>175</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220111</th>
-            <td>Bank</td>
-            <td>Misc Payment Entry</td>
-            <td>DESC</td>
-            <td>890</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-          <tr>
-            <th scope="row">JV202220121</th>
-            <td>DBO Bank</td>
-            <td>Misc Reciept Entry</td>
-            <td>DESC</td>
-            <td>750</td>
-            <td>Jan 27, 2022</td>
-           <td>
-              <svg cIcon name="cilPaperPlane" size="xl" title="Numbered List Icon"></svg></td>
-          </tr>
-      
-      
-      
-        </tbody>
-      </table>
-    </c-card-body>
-  </c-card>
+<c-card class="mt-4">
+  <c-card-body>
+    <table style="justify-content: center;" cTable>
+      <thead cTableColor="light">
+        <tr>
+          <th scope="col">Ref No.</th>
+          <th scope="col">Date Issued</th>
+          <th scope="col">Cheque No.</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Pay To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <a style="text-decoration:none" style="text-decoration:none" routerLink="/accounting/miscpayment"
+              class="text-info">JV202220113</a>
+          </th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>1000</td>
+          <td>Ryann Isaak </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220114</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>500</td>
+          <td>Anton Hákun </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220103</a></th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>370</td>
+          <td>Sky Joakim </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220104</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>420</td>
+          <td>Jamal ad-Din </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220105</a></th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>115</td>
+          <td>Olaf Edvardsen </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220106</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>385</td>
+          <td>Jamal ad-Din </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220107</a></th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>295</td>
+          <td>Katja Bakalov </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220108</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>510</td>
+          <td>Jamal ad-Din </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220109</a></th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>475</td>
+          <td>Dragiša Fredriksson </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220110</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>175</td>
+          <td>Dora Bengoetxea </td>
+
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220111</a></th>
+          <td>Jan 27, 2022</td>
+          <td>0fge9xd</td>
+          <td>890</td>
+          <td>Tereza</td>
+        </tr>
+
+        <tr>
+          <th scope="row"><a style="text-decoration:none" style="text-decoration:none" href=""
+              class="text-info">JV202220121</a></th>
+          <td>Jan 27, 2022</td>
+          <td>o0rzcyh</td>
+          <td>750</td>
+          <td>Dora</td>
+
+        </tr>
+
+
+
+      </tbody>
+    </table>
+  </c-card-body>
+</c-card>
