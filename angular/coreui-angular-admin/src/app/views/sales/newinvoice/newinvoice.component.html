@@ -403,28 +403,31 @@
       
             </c-col>
       
-      
+            <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button cButton color="secondary" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"></svg>
+                <svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 5px;"></svg>Invoice</button>
+             </div>
           </form>
     </c-card-body>
 
-    <c-card-footer>
+    <!-- <c-card-footer> -->
        
        
       <div class="stickyFooter">
         <div style="float:right;">
-           <button cButton  class="stickyFooterPillButton btn-sm invoiceStickyFooterButton" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
-          style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 8px;" ></svg>Invoice</button>
-            <button cButton class="stickyFooterPillButton btn-sm editStickyFooterButton"  (click)="onTogglenotEditMode()"><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>
+           <!-- <button cButton  class="stickyFooterPillButton btn-sm invoiceStickyFooterButton" > <svg [cIcon]="icons.cilArrowThickRight" size="sm"
+          style="margin-right: 5px;"></svg><svg [cIcon]="icons.cilCart" size="sm" style="margin-right: 8px;" ></svg>Invoice</button> -->
+            <button cButton class="stickyFooterPillButton btn-sm editStickyFooterButton"  (click)="onTogglenotEditMode()" style="margin:3px;"><svg cIcon name="cilPencil" size="sm" style="margin-right: 5px;"></svg>
                 Edit</button>
     
             <div style="float:right;">
-                <button cButton class="stickyFooterPillButton btn-sm saveStickyFooterButton" routerLink=""><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>
+                <button cButton class="stickyFooterPillButton btn-sm saveStickyFooterButton" routerLink="" style="margin:3px;"><svg cIcon name="cilSave" size="sm" style="margin-right: 5px;"></svg>
                     Save</button>
             </div>
         </div>
     </div>
        
-    </c-card-footer>
+    <!-- </c-card-footer> -->
 </c-card>
 
 

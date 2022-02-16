@@ -1,7 +1,17 @@
 import { INavData } from '@coreui/angular';
-import { IconComponent } from '@coreui/icons-angular';
 
 export const navItems: INavData[] = [
+  {
+    name: 'Home',
+    url: '/home',
+    iconComponent: { name: 'cil-speedometer' },
+  },
+  {
+    name: 'Insurance',
+    url: '/insurance',
+    iconComponent: { name: 'cilShieldAlt' },
+    
+  },
   {
     name: 'Sales',
     url: '/sales',

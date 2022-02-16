@@ -37,7 +37,22 @@
     </c-header-nav>
 
     <c-header-nav class="d-none d-lg-flex">
+      <c-input-group >
+        <input aria-describedby="basic-addon2"
+               aria-label="Recipient&#39;s username"
+               cFormControl
+               placeholder="Search"
+               
+               
+        />
+        <span cInputGroupText   class="btn btn-dark" ><svg [cIcon]="icons.cilSearch" size="sm" ></svg></span>
+      </c-input-group>
       
+          
+            <!-- <input type="email" class="form-control" id="floatingInputGrid" placeholder="Search" value="Search" > -->
+           
+          
+        
       <!-- <c-nav-item>
         <a routerLink="./" cNavLink>
           <svg cIcon name="cilBell" size="lg"></svg>

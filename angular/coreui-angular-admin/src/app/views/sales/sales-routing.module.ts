@@ -18,14 +18,14 @@ const routes: Routes = [{
       path: 'quotation',
       component: QuotationComponent,
       data: {
-        title: 'Quotations',
+        title: 'Quotation Details',
       },
     },
     {
       path: 'invoice',
       component: InvoiceComponent,
       data: {
-        title: 'Invoices',
+        title: 'Invoice Details',
       },
     },
     {

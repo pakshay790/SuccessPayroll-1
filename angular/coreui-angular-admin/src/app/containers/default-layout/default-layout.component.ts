@@ -1,3 +1,4 @@
+import { cilShieldAlt } from '@coreui/icons';
 import { Component } from '@angular/core';
 
 import { navItems } from './_nav';
@@ -13,6 +14,6 @@ export class DefaultLayoutComponent {
   public perfectScrollbarConfig = {
     suppressScrollX: true,
   };
-
+  icons = {cilShieldAlt};
   constructor() {}
 }

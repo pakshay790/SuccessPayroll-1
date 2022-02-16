@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt, } from '@coreui/icons';
+import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cilShareBoxed, cilShieldAlt,  cilSearch } from '@coreui/icons';
 
 @Component({
   selector: 'app-quotation',
@@ -9,7 +9,7 @@ import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cil
   styleUrls: ['./quotation.component.scss']
 })
 export class QuotationComponent implements OnInit {
-  icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed,cilCart,cilChildFriendly };
+  icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed,cilCart,cilChildFriendly,cilSearch };
   // visible = false;
   constructor() { }
 
