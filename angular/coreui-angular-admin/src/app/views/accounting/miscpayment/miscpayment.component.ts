@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
+
+import { cilArrowCircleLeft} from '@coreui/icons';
 
 @Component({
   selector: 'app-miscpayment',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiscpaymentComponent implements OnInit {
 
+  icons = { cilArrowCircleLeft};
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
