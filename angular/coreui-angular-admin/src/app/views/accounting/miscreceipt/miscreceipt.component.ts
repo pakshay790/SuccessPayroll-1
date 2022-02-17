@@ -8,11 +8,21 @@ import { cilArrowCircleLeft} from '@coreui/icons';
   styleUrls: ['./miscreceipt.component.scss']
 })
 export class MiscreceiptComponent implements OnInit {
+  notEditMode = true;
   icons = { cilArrowCircleLeft};
-
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTogglenotEditMode() {
+
+    if (this.notEditMode = true) {
+
+      this.notEditMode = !this.notEditMode;
+      
+    }
+    
   }
 
 }

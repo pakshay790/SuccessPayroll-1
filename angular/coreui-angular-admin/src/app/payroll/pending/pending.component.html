@@ -1,3 +1,8 @@
+<script>
+  $('.datepicker').datepicker({
+    inline: true
+  });
+</script>
 <!--<p>pending works!</p>-->
 <router-outlet></router-outlet>
 <div class="fade-in">
@@ -12,7 +17,8 @@
               <c-row>
                 <c-col>
                   <div>
-                    <select aria-label="select" cSelect style="overflow: hidden;" class="btn selectButton dropdown-toggle" type="button" >
+                    <select aria-label="select" cSelect style="overflow: hidden;"
+                      class="btn selectButton dropdown-toggle" type="button">
                       <option>Select Employee</option>
                       <option value="EMPLOYEE ANW">EMPLOYEE ANW</option>
                       <option value="EMPLOYEE LOW">EMPLOYEE LOW</option>
@@ -37,59 +43,325 @@
           <c-tab-content #tabContent="cTabContent">
             <c-tab-pane class="">
               <div class="fade-in">
-
                 <c-row>
-                  <c-col class="col-md-6">
-                    <div class="title">
-                      <h3>Leave Taken Summary</h3>
+                  <c-col lg=12>
+                          <div>
+                            <form cForm class="row g-3" style="margin-top: 5px;">
+                              <c-col [md]="3">
+                                <label cLabel for="lblPendingFromDateRange">From Date</label>
+                                <input cFormControl id="pendingFromDateRange" type="date" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblPendingToDateRange">To Date</label>
+                                <input cFormControl id="pendingToDateRange" type="date" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblBranch">Branch </label>
+                                <input cFormControl id="branch" placeholder="" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblAcode">Section</label>
+                                <input cFormControl id="section" placeholder="" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblAcode">Leave Type</label>
+                                <select aria-label="select" cSelect style="overflow: hidden;" name="leaveType"
+                                  id="leaveType">
+                                  <option>-- select options --</option>
+                                  <option value="Annual Leave">Annual Leave</option>
+                                  <option value="Compensate Leave">Compensate Leave</option>
+                                  <option value="Hospitalisation Leave">Hospitalisation Leave</option>
+                                  <option value="Company Holidays">Company Holidays</option>
+                                  <option value="Medical Leave (Sick Leave)">Compensate Leave</option>
+                                  <option value="Marriage Leave">Marriage Leave</option>
+                                  <option value="Maternity Leave">Maternity Leave</option>
+                                  <option value="No pay leave">No pay leave</option>
+                                  <option value="Absence from Work">Absence from Work</option>
+                                  <option value="National Services Leave">National Services Leave</option>
+                                  <option value="Child Care Leave">Child Care Leave</option>
+                                  <option value="Compassionate Leave">Compassionate Leave</option>
+                                  <option value="Annual Leave Balance Not Used">Annual Leave Balance Not
+                                    Used</option>
+                                  <option value="OT Convert to Annual Leave">OT Convert to Annual Leave
+                                  </option>
+                                </select>
+                              </c-col>
+                              <c-col [xs]="12">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                  <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
+                                  <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
+                                </div>
+                              </c-col>
+                            </form>
+                          </div>
+                        </c-col>
+                      </c-row>
+                      <c-row>
+                        <c-col class="col-md-6">
+                          <div class="title">
+                            <h3>Leave Taken Summary</h3>
+                          </div>
+                        </c-col>
+                      </c-row>
+                      <table [hover]="true" [responsive]="true" [striped]="true" style="justify-content: center;" cTable
+                        class="mb-0 border">
+                        <thead cTableColor="light">
+                          <tr>
+                            <th>Fiscal Year</th>
+                            <th class="text-Left">Days</th>
+                            <th>Times</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-left">
+                              Entitled Days
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">
+                              Yearly
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">
+                              Current Month
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <c-row>
+                        <c-col xs="12">&nbsp;</c-col>
+                      </c-row>
+                      <c-row>
+                        <c-col xs="12">
+                          <c-card class="mb-4">
+                            <c-card-header>
+                              <strong>Leave To Approve</strong> <small></small>
+                            </c-card-header>
+                            <c-card-body>
+                              <div class="fade-in">
+                                <table class="table table-striped" cTable>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Start Date</th>
+                                      <th scope="col">End Date</th>
+                                      <th scope="col">Type</th>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">Actions</th>
+                                      <th scope="col">Status</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>31/01/2022</td>
+                                      <td>31/01/2022</td>
+                                      <td>Medical Leave (Sick Leave)</td>
+                                      <td>EMPLOYEE ANW</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                    <tr>
+                                      <td>01/02/2022</td>
+                                      <td>01/02/2022</td>
+                                      <td>Company Holidays</td>
+                                      <td>EMPLOYEE ANW</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                    <tr>
+                                      <td>01/02/2022</td>
+                                      <td>01/02/2022</td>
+                                      <td>Company Holidays</td>
+                                      <td>EMPLOYEE KU</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                    <tr>
+                                      <td>02/02/2022</td>
+                                      <td>02/02/2022</td>
+                                      <td>Company Holidays</td>
+                                      <td>EMPLOYEE ANW</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                    <tr>
+                                      <td>02/02/2022</td>
+                                      <td>02/02/2022</td>
+                                      <td>Company Holidays</td>
+                                      <td>EMPLOYEE NG</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                    <tr>
+                                      <td>01/02/2022</td>
+                                      <td>01/02/2022</td>
+                                      <td>Compensate Leave</td>
+                                      <td>EMPLOYEE TA1</td>
+                                      <td><button type="button"
+                                          class="btn btn-success">Approve</button><span>&nbsp;</span>
+                                        <button type="button" class="btn btn-danger">Reject</button>
+                                      </td>
+                                      <td>Applied</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </c-card-body>
+                          </c-card>
+                        </c-col>
+                      </c-row>
+                    </div>
+            </c-tab-pane>
+            <c-tab-pane class="p-3">
+              <div class="fade-in">
+                <c-row>
+                  <c-col lg=12>
+                    <div class="fade-in">
+                      <c-row>
+                        <c-col>
+                          <div>
+                            <form cForm class="row g-3">
+                              <c-col [md]="3">
+                                <label cLabel for="lblPendingFromDateRange">From Date</label>
+                                <input cFormControl id="pendingFromDateRange" type="date" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblPendingToDateRange">To Date</label>
+                                <input cFormControl id="pendingToDateRange" type="date" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblBranch">Branch </label>
+                                <input cFormControl id="branch" placeholder="" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblAcode">Section</label>
+                                <input cFormControl id="section" placeholder="" />
+                              </c-col>
+                              <c-col [md]="3">
+                                <label cLabel for="lblAcode">Leave Type</label>
+                                <select aria-label="select" cSelect style="overflow: hidden;" name="leaveType"
+                                  id="leaveType">
+                                  <option>-- select options --</option>
+                                  <option value="Annual Leave">Annual Leave</option>
+                                  <option value="Compensate Leave">Compensate Leave</option>
+                                  <option value="Hospitalisation Leave">Hospitalisation Leave</option>
+                                  <option value="Company Holidays">Company Holidays</option>
+                                  <option value="Medical Leave (Sick Leave)">Compensate Leave</option>
+                                  <option value="Marriage Leave">Marriage Leave</option>
+                                  <option value="Maternity Leave">Maternity Leave</option>
+                                  <option value="No pay leave">No pay leave</option>
+                                  <option value="Absence from Work">Absence from Work</option>
+                                  <option value="National Services Leave">National Services Leave</option>
+                                  <option value="Child Care Leave">Child Care Leave</option>
+                                  <option value="Compassionate Leave">Compassionate Leave</option>
+                                  <option value="Annual Leave Balance Not Used">Annual Leave Balance Not
+                                    Used</option>
+                                  <option value="OT Convert to Annual Leave">OT Convert to Annual Leave
+                                  </option>
+                                </select>
+                              </c-col>
+                              <c-col [xs]="12">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                  <button cButton type="submit" cButton color="light" shape="rounded-0">Clear</button>
+                                  <button cButton type="submit" cButton color="dark" shape="rounded-0">Search</button>
+                                </div>
+                              </c-col>
+                            </form>
+                          </div>
+                        </c-col>
+                      </c-row>
+                      <c-row>
+                        <c-col class="col-md-6">
+                          <div class="title">
+                            <h3>Expense Summary</h3>
+                          </div>
+                        </c-col>
+                      </c-row>
+                      <table [hover]="true" [responsive]="true" [striped]="true" style="justify-content: center;" cTable
+                        class="mb-0 border">
+                        <thead cTableColor="light">
+                          <tr>
+                            <th>Fiscal Year</th>
+                            <th class="text-Left">Days</th>
+                            <th>Times</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-left">
+                              Entitled Days
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">
+                              Yearly
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-left">
+                              Current Month
+                            </td>
+                            <td class="text-left">
+                              123
+                            </td>
+                            <td class="text-left">
+                              12
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <c-row>
+                        <c-col xs="12">&nbsp;</c-col>
+                      </c-row>
                     </div>
                   </c-col>
                 </c-row>
-                <table [hover]="true" [responsive]="true" [striped]="true" style="justify-content: center;" cTable
-                  class="mb-0 border">
-                  <thead cTableColor="light">
-                    <tr>
-                      <th>Fiscal Year</th>
-                      <th class="text-Left">Days</th>
-                      <th>Times</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-left">
-                        Entitled Days
-                      </td>
-                      <td class="text-left">
-                        123
-                      </td>
-                      <td class="text-left">
-                        12
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">
-                        Yearly
-                      </td>
-                      <td class="text-left">
-                        123
-                      </td>
-                      <td class="text-left">
-                        12
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">
-                        Current Month
-                      </td>
-                      <td class="text-left">
-                        123
-                      </td>
-                      <td class="text-left">
-                        12
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
                 <c-row>
                   <c-col xs="12">&nbsp;</c-col>
                 </c-row>
@@ -180,12 +452,7 @@
                     </c-card>
                   </c-col>
                 </c-row>
-
-
               </div>
-            </c-tab-pane>
-            <c-tab-pane class="p-3">
-
             </c-tab-pane>
             <c-tab-pane class="p-3">
 
