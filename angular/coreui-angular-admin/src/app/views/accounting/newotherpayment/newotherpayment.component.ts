@@ -10,12 +10,21 @@ import { cilArrowCircleLeft} from '@coreui/icons';
 })
 export class NewotherpaymentComponent implements OnInit {
 
+  notEditMode = true;
   icons = { cilArrowCircleLeft};
-
-
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTogglenotEditMode() {
+
+    if (this.notEditMode = true) {
+
+      this.notEditMode = !this.notEditMode;
+      
+    }
+    
   }
 
 }
