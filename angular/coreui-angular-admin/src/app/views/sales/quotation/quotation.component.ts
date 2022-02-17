@@ -11,6 +11,7 @@ import { cilCart, cilChildFriendly, cilList, cilPlus, cilSettings, cilShare, cil
 export class QuotationComponent implements OnInit {
   icons = { cilList, cilShieldAlt,cilSettings,cilShare,cilPlus,cilShareBoxed,cilCart,cilChildFriendly,cilSearch };
   // visible = false;
+  
   constructor() { }
 
   ngOnInit(): void {
