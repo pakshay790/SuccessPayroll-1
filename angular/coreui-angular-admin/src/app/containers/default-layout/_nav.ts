@@ -1,4 +1,5 @@
 import { INavData } from '@coreui/angular';
+import { cilPlus, cilShieldAlt } from '@coreui/icons';
 
 export const navItems: INavData[] = [
   {
@@ -9,7 +10,7 @@ export const navItems: INavData[] = [
   {
     name: 'Insurance',
     url: '/insurance',
-    iconComponent: { name: 'cil-pencil'},
+    iconComponent: { name: 'cilShieldAlt'},
     children: [
       {
         name: 'Quotations',
