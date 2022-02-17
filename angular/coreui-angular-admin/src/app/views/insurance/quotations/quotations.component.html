@@ -1,0 +1,216 @@
+<c-card class="mt-2">
+    <c-card-body>
+        <form cForm class="row g-2">
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <input aria-label="RefNo" cFormControl id="refNo" type="text" placeholder="">
+                    <label cLabel for="lblrefno">RefNo</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <input cFormControl id="dateIssued" type="date" value='01-01-2022'/>
+                    <label cLabel for="lbldateissued">Date Issued</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <select cSelect id="selAgent">
+                        <option>Agent 1</option>
+                        <option>Agent 2</option>
+                    </select>
+                    <label cLabel for="lblchequenumber">Agent</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <select cSelect id="selConsultant">
+                        <option>Consultant 1</option>
+                        <option>Consultant 2</option>
+                    </select>
+                    <label cLabel for="lblchequenumber">Consultant</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <select cSelect id="selStatus">
+                        <option>Active</option>
+                        <option>Deactive</option>
+                    </select>
+                    <label cLabel for="lblchequenumber">Status</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <select cSelect id="selClass">
+                        <option>Fire</option>
+                        <option>Burgulary</option>
+                    </select>
+                    <label cLabel for="lblchequenumber">Class</label>
+                </div>
+            </c-col>
+
+            <c-col [md]="3">
+                <div [cFormFloating]="true" class="mb-2">
+                    <select cSelect id="selPolicySource">
+                        <option>Agent</option>
+                        <option>Firm</option>
+                    </select>
+                    <label cLabel for="lblchequenumber">PolicySource</label>
+                </div>
+            </c-col>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <input cButton color="light" type="reset" value="Clear" style="float:right;" routerLink="./" />
+                <input cButton color="dark" type="submit" value="Search" style="float:right;" routerLink="./" />
+            </div>
+        </form>
+    </c-card-body>
+</c-card>
+
+<c-card class="mt-4">
+    <c-card-body>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button cButton color="dark" routerLink="./"><svg [cIcon]="icons.cilLevelUp" size="sm"></svg>Export</button>
+            <button cButton color="dark" routerLink="./"><svg [cIcon]="icons.cilCog" size="sm"></svg> Column Settings</button>
+            <button cButton color="dark" routerLink="/sales/newquote"><svg [cIcon]="icons.cilPlus" size="sm"></svg> New Quote</button>
+            
+          </div>
+    </c-card-body>
+</c-card>
+
+<c-card class="mt-4">
+    <c-card-body>
+      <table style="justify-content: center;"  cTable>
+        <thead cTableColor="light">
+          <tr>
+            <th scope="col">Ref No.</th>
+            <th scope="col">Date Issued</th>
+            <th scope="col">Cheque No.</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Pay To</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">
+              <a style="text-decoration:none" style="text-decoration:none" routerLink="/sales/newquote"
+                class="text-info">JV202220113</a>
+            </th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>1000</td>
+            <td>Ryann Isaak </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220114</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>500</td>
+            <td>Anton Hákun </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220103</a></th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>370</td>
+            <td>Sky Joakim </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220104</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>420</td>
+            <td>Jamal ad-Din </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220105</a></th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>115</td>
+            <td>Olaf Edvardsen </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220106</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>385</td>
+            <td>Jamal ad-Din </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220107</a></th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>295</td>
+            <td>Katja Bakalov </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220108</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>510</td>
+            <td>Jamal ad-Din </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220109</a></th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>475</td>
+            <td>Dragiša Fredriksson </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220110</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>175</td>
+            <td>Dora Bengoetxea </td>
+  
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" href="" class="text-info">JV202220111</a></th>
+            <td>Jan 27, 2022</td>
+            <td>0fge9xd</td>
+            <td>890</td>
+            <td>Tereza</td>
+          </tr>
+  
+          <tr>
+            <th scope="row"><a style="text-decoration:none" style="text-decoration:none" href=""
+                class="text-info">JV202220121</a></th>
+            <td>Jan 27, 2022</td>
+            <td>o0rzcyh</td>
+            <td>750</td>
+            <td>Dora</td>
+  
+          </tr>
+  
+  
+  
+        </tbody>
+      </table>
+    </c-card-body>
+  </c-card>

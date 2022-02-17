@@ -9,8 +9,22 @@ export const navItems: INavData[] = [
   {
     name: 'Insurance',
     url: '/insurance',
-    iconComponent: { name: 'cilShieldAlt' },
-    
+    iconComponent: { name: 'cil-pencil'},
+    children: [
+      {
+        name: 'Quotations',
+       
+        url: '/insurance/quotations'
+      },
+      {
+        name: 'Policies',
+        url: '/insurance/policies'
+      },
+      {
+        name: 'Class',
+        url: '/insurance/class'
+      },
+    ]
   },
   {
     name: 'Sales',

@@ -1,3 +1,4 @@
+import { InsuranceModule } from './views/insurance/insurance.module';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -36,6 +37,11 @@ const routes: Routes = [
         path: 'accounting',
         loadChildren: () =>
           import('./views/accounting/accounting.module').then((m) => m.AccountingModule)
+      },
+      {
+        path: 'insurance',
+        loadChildren: () =>
+          import('./views/insurance/insurance.module').then((m) => m.InsuranceModule)
       },
       {
         path: 'reports',
