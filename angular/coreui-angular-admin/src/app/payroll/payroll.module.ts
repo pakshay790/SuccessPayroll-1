@@ -80,7 +80,6 @@ import { DatepikerRangePopupComponent } from './datepiker-range-popup/datepiker-
     ChartjsModule,
     AvatarModule,
     TableModule,
-    IconModule,
   ],
 })
 export class PayrollModule {

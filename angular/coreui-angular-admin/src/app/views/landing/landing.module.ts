@@ -17,7 +17,7 @@ import {
   OffcanvasModule,
   ProgressModule,
   TableModule,
-  TabsModule
+  TabsModule,
 } from '@coreui/angular';
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
@@ -42,7 +42,8 @@ import { WidgetsModule } from '../widgets/widgets.module';
     ChartjsModule,
     AvatarModule,
     TableModule,OffcanvasModule,
-    WidgetsModule
+    WidgetsModule,
+    IconModule,
   ],
   declarations: [LandingComponent]
 })

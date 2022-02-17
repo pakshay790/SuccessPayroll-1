@@ -23,10 +23,13 @@ float: left;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 99%;
     background-color: white;
     color: white;
     text-align: center;
+    border: 1px solid grey;
+    padding: 7px 10px 7px 7px;
+    
  }
 
  .stickyFooterPillButton {
@@ -36,7 +39,7 @@ float: left;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 2px 2px;
+  margin: 10px 10px;
   cursor: pointer;
   border-radius:16px;
 }

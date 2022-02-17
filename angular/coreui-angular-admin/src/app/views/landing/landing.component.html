@@ -19,14 +19,54 @@
 <c-card  class="mt-4">
   <c-card-body>
     <div class="d-grid gap-1 d-md-flex justify-content-md-end">
-      <button cButton color="dark" routerLink="/accounting/newmiscpayment"><svg [cIcon]="icons.cilPlus" size="sm"
-          title="List Icon"></svg> Misc Payment</button>
-      <button cButton color="dark" routerLink="/accounting/miscreceipt"><svg [cIcon]="icons.cilPlus" size="sm"
-          title="List Icon"></svg> Misc Receipt</button>
-      <button cButton color="dark" routerLink="/sales/newquote"><svg [cIcon]="icons.cilPlus" size="sm"
-          title="List Icon"></svg> Quotation</button>
-      <button cButton color="dark" routerLink="/sales/newinvoice"><svg [cIcon]="icons.cilPlus" size="sm"
-          title="List Icon"></svg> Invoice</button>
+        <div style="text-align: center;" class="sm-4">
+            <a cButton color="default"
+                routerLink="/accounting/newmiscpayment" role="button">
+                <svg [cIcon]="icons.cilMoney" size="3xl" class="sm-4"
+                    title="List Icon"
+                    style="align-items: center;"></svg><br />
+                <div class="sm-4" style="word-wrap: break-word;">
+                    <h6>Misc Payment</h6>
+                </div></a>
+        </div>
+        <div style="text-align: center;" class="sm-4">
+            <a cButton color="default"
+                routerLink="/accounting/miscreceipt" role="button">
+                <svg [cIcon]="icons.cilNotes" size="3xl" class="sm-4"
+                    title="List Icon"
+                    style="align-items: center;"></svg><br />
+                <div class="sm-4" style="word-wrap: break-word;">
+                    <h6>Misc Receipt</h6>
+                </div></a>
+        </div>
+        <div style="text-align: center;" class="sm-4">
+            <a cButton color="default"
+                routerLink="/sales/newquote" role="button">
+                <svg [cIcon]="icons.cilNoteAdd" size="3xl" class="sm-4"
+                    title="List Icon"
+                    style="align-items: center;"></svg><br />
+                <div class="sm-4" style="word-wrap: break-word;">
+                    <h6>Quotation</h6>
+                </div></a>
+        </div>
+        <div style="text-align: center;" class="sm-4">
+            <a cButton color="default"
+                routerLink="/sales/newinvoice" role="button">
+                <svg [cIcon]="icons.cilCart" size="3xl" class="sm-4"
+                    title="List Icon"
+                    style="align-items: center;"></svg><br />
+                <div class="sm-4" style="word-wrap: break-word;">
+                    <h6>Invoice</h6>
+                </div></a>
+        </div>
+      <!--<button cButton color="dark" routerLink="/accounting/newmiscpayment"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Payment</button>-->
+      <!--<button cButton color="dark" routerLink="/accounting/miscreceipt"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Misc Receipt</button>-->
+      <!--<button cButton color="dark" routerLink="/sales/newquote"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Quotation</button>-->
+      <!--<button cButton color="dark" routerLink="/sales/newinvoice"><svg [cIcon]="icons.cilPlus" size="sm"
+          title="List Icon"></svg> Invoice</button>-->
 
     </div>
   </c-card-body>
