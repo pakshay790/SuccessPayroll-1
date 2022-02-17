@@ -6,7 +6,7 @@
           <form cForm class="row g-3">
             <c-col [md]="4">
               <label cLabel for="lblrefno">RefNo</label>
-              <input aria-label="RefNo" cFormControl disabled id="refNo" type="text">
+              <input aria-label="RefNo" cFormControl [disabled]="notEditMode" id="refNo" type="text">
             </c-col>
 
             <c-col [md]="4">
@@ -276,7 +276,7 @@
 
 <div class="stickyFooter ">
   <div style="float:right;">
-    <button cButton class="stickyFooterPillButton me-md-2 btn-sm editStickyFooterButton" routerLink="./">
+    <button cButton class="stickyFooterPillButton me-md-2 btn-sm editStickyFooterButton" (click)="onTogglenotEditMode()" routerLink="./">
       Edit</button>
 
     <div style="float:right;">
