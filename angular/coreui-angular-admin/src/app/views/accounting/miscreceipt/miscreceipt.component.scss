@@ -53,3 +53,7 @@ float: left;
 .saveStickyFooterButton{
   background-color: #1aa808;
 }
+
+.noscroll{
+  overflow: hidden; /* Hide scrollbars */
+}
